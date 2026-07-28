@@ -8,6 +8,7 @@ test.beforeEach("Go to url", async({homePage,page})=>{
         await homePage.clickOnPlaywrightPracticeLink();
         expect(page).toHaveURL("https://testautomationpractice.blogspot.com/p/playwrightpractice.html");
 
+        //page.pause();
 
     })
 
