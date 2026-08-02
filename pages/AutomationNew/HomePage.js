@@ -4,6 +4,11 @@ export default class HomePage{
         this.page=page;
         //WikiPediaLink Locator
         this.wikiPediaLink= page.locator(".wikipedia-icon");
+
+        //multiple files locator
+        this.multipleFiles= page.locator("#multipleFilesInput");
+
+
         //WikiPediaTextBox
         this.wikiPediaTextBox=page.locator("#Wikipedia1_wikipedia-search-input");
         //WikiSearchBox Locator
@@ -15,6 +20,13 @@ export default class HomePage{
         this.playwrightPracticeLink=page.locator("[href='https://testautomationpractice.blogspot.com/p/playwrightpractice.html']")
 
 
+    }
+
+    //click on the multiple Files upload
+
+    async clickOnUploadMultipleFiles(){
+        await this.multipleFiles.setInputFiles(["C:\\Users\\Admin\\Desktop\\Asam Ajay\\Ideas\\Farms_1.png","C:\\Users\\Admin\\Desktop\\Asam Ajay\\Welcome to Word.docx"]);
+        await this.page.getByText("Upload Multiple Files").click();
     }
 
     

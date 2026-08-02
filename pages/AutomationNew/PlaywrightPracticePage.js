@@ -1,132 +1,132 @@
-        import{expect} from "@playwright/test";
-        //import brokenLinks from "../../data/brokenLinks.json";
+            import{expect} from "@playwright/test";
 
-        export default class PlaywrightPractice{
 
-            constructor(page){
-                this.page=page;
+            export default class PlaywrightPractice{
 
-                //HoverButton
-                this.pointMe= page.getByRole("button", {name: "Point Me"});
+                constructor(page){
+                    this.page=page;
 
-                //double Click Button
-    this.copyText=page.getByText("Copy Text");
-                //this.copyText= page.getByRole("button", {name: "Copy Text"});
+                    //HoverButton
+                    this.pointMe= page.getByRole("button", {name: "Point Me"});
 
-                //new Tab locator
-                this.newTabButton=page.getByText("New Tab");
+                    //double Click Button
+        this.copyText=page.getByText("Copy Text");
+                    //this.copyText= page.getByRole("button", {name: "Copy Text"});
 
-                //confirmation buttton locator
-                this.confirmButton=page.getByRole("button", {name: "Confirmation Alert"});
+                    //new Tab locator
+                    this.newTabButton=page.getByText("New Tab");
+
+                    //confirmation buttton locator
+                    this.confirmButton=page.getByRole("button", {name: "Confirmation Alert"});
+                    
+                //prompt button locator
+                this.promptAlert=page.getByRole("button", {name:"Prompt Alert"});
+
+                //popup Windows Locator
+                this.PopupWindowsButton=page.getByRole("button", {name: "Popup Windows"});
+
+                    //Email Address Locator
+                    this.emailAdressBox=page.getByRole("textbox",{name:"email"});
+
+                    //Password 
+                    this.passwordBox=page.getByLabel("Password");
+
+                    //age
+                    this.ageBox=page.getByLabel("Your Age:")
+
+                    //RadioButton
+                    this.radioButton=page.getByRole("radio", {name:" Standard"})
+
+                    this.userNameBox= page.getByRole("textbox",{name:'Username'})
+
+                    //CheckBox Accept Terms
+
+                    this.tickBox= page.getByRole("checkbox", {name: ' Accept terms '})
+
+                    //dynamic start/stop locator
+
+                    this.startButton = page.getByRole("button", {name:"START"});
+                    this.stopButton = page.getByRole("button", {name:"STOP"});
+
+                }
+
+                //Functions
                 
-            //prompt button locator
-            this.promptAlert=page.getByRole("button", {name:"Prompt Alert"});
+                //Click on Broken Links
 
-            //popup Windows Locator
-            this.PopupWindowsButton=page.getByRole("button", {name: "Popup Windows"});
+                async clickOnBrokenLinks(link){
 
-                //Email Address Locator
-                this.emailAdressBox=page.getByRole("textbox",{name:"email"});
+                    await this.page.getByRole("link", {name:link.name}).click();
+                }
 
-                //Password 
-                this.passwordBox=page.getByLabel("Password");
 
-                //age
-                this.ageBox=page.getByLabel("Your Age:")
 
-                //RadioButton
-                this.radioButton=page.getByRole("radio", {name:" Standard"})
 
-                this.userNameBox= page.getByRole("textbox",{name:'Username'})
 
-                //CheckBox Accept Terms
 
-                this.tickBox= page.getByRole("checkbox", {name: ' Accept terms '})
+                //click on hover Mouse Event
 
-                //dynamic start/stop locator
+                async mouseHover(){
+                    await this.pointMe.hover();
+                }
 
-                this.startButton = page.getByRole("button", {name:"START"});
-                this.stopButton = page.getByRole("button", {name:"STOP"});
+                //double click Mouse Events
 
+                async doubleClick(){
+                    await this.copyText.dblclick();
+                }
+
+
+                //click on new tab
+
+                async clickOnNewTab(){
+
+                    await this.newTabButton.click();
+                }
+
+                //click on confirmation alert
+
+                async clickOnConfirmAlert(){
+                    await this.confirmButton.click();
+                }
+
+                //click on prompt alert
+
+                async clickOnPromptAlert(){
+
+                    await this.promptAlert.click();
+
+                }
+
+                //click on popup Windows button
+
+                async clickOnWindowsPopUp(){
+                    await this.PopupWindowsButton.click();
+
+                }
+
+            //enter details
+
+            async dynamicButtonClick(){
+                if(await this.startButton.isVisible){
+                    await this.startButton.click();
+                }
+                else{
+                    await this.stopButton.click();
+                }
             }
+                async enterDetails(){
 
-            //Functions
-            
-            //Click on Broken Links
+                    await this.emailAdressBox.fill("sdet123@gmail.com");
+                    await this.passwordBox.fill("SDETPassword@123");
+                    await this.ageBox.fill("19");
+                    await this.radioButton.check();
+                }
 
-            async clickOnBrokenLinks(link){
+            //clickoncheckbox and enter username
+                async enterUserNameClickcheckBox(){
 
-                await this.page.getByRole("link", {name:link.name}).click();
+                    await this.userNameBox.fill("SDET");
+                    await this.tickBox.check();
+                }
             }
-
-
-
-
-
-
-            //click on hover Mouse Event
-
-            async mouseHover(){
-                await this.pointMe.hover();
-            }
-
-            //double click Mouse Events
-
-            async doubleClick(){
-                await this.copyText.dblclick();
-            }
-
-
-            //click on new tab
-
-            async clickOnNewTab(){
-
-                await this.newTabButton.click();
-            }
-
-            //click on confirmation alert
-
-            async clickOnConfirmAlert(){
-                await this.confirmButton.click();
-            }
-
-            //click on prompt alert
-
-            async clickOnPromptAlert(){
-
-                await this.promptAlert.click();
-
-            }
-
-            //click on popup Windows button
-
-            async clickOnWindowsPopUp(){
-                await this.PopupWindowsButton.click();
-
-            }
-
-        //enter details
-
-        async dynamicButtonClick(){
-            if(await this.startButton.isVisible){
-                await this.startButton.click();
-            }
-            else{
-                await this.stopButton.click();
-            }
-        }
-            async enterDetails(){
-
-                await this.emailAdressBox.fill("sdet123@gmail.com");
-                await this.passwordBox.fill("SDETPassword@123");
-                await this.ageBox.fill("19");
-                await this.radioButton.check();
-            }
-
-        //clickoncheckbox and enter username
-            async enterUserNameClickcheckBox(){
-
-                await this.userNameBox.fill("SDET");
-                await this.tickBox.check();
-            }
-        }
