@@ -4,7 +4,9 @@ import {test, expect} from "../fixtures/fixture1.js";
 
 test("UploadFiles", async ({page,homePage})=>{
 
-    await page.goto("https://testautomationpractice.blogspot.com/");
+    await page.goto("https://testautomationpractice.blogspot.com/"
+    );
+    await page.waitForURL("https://testautomationpractice.blogspot.com/");
 
     await homePage.clickOnUploadMultipleFiles();
 })

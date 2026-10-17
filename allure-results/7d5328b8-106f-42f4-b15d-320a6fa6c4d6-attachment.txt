@@ -1,0 +1,5 @@
+4
+Chrome 79.6 MB
+Firefox 85.2 MB
+System 46.4 MB
+Internet Explorer 47.1 MB

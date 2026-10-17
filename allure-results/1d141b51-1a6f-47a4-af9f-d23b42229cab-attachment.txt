@@ -1,0 +1,5 @@
+4
+Chrome memory using is 0.07 MB/s
+System memory using is 0.43 MB/s
+Firefox memory using is 0.03 MB/s
+Internet Explorer memory using is 0.94 MB/s

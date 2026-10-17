@@ -1,0 +1,9 @@
+4
+Internet Explorer
+6.0%
+Firefox
+8.6%
+System
+7.8%
+Chrome
+4.0%

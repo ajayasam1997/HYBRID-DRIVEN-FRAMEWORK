@@ -1,0 +1,5 @@
+4
+Firefox memory using is 7.7%
+System memory using is 1.0%
+Chrome memory using is 8.6%
+Internet Explorer memory using is 3.6%

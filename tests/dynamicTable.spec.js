@@ -7,7 +7,7 @@
 
         test("Table1", async ({page})=>{
 
-            await page.goto("https://testautomationpractice.blogspot.com/");
+            await page.goto("https://testautomationpractice.blogspot.com/",{timeout:5000});
             await expect(page).toHaveURL("https://testautomationpractice.blogspot.com/");
 
             //Table get name and memory row completely

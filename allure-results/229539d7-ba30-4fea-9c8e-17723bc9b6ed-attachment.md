@@ -1,0 +1,6912 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: wikipedia.spec.js >> Test1
+- Location: tests\wikipedia.spec.js:5:9
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: locator('#mwbw tbody tr').getByRole('link', { name: 'Afghanistan' }) resolved to 2 elements:
+    1) <a id="mwjw" about="#mwt64" rel="mw:WikiLink" title="Afghanistan" href="https://en.wikipedia.org/wiki/Afghanistan">Afghanistan</a> aka getByRole('link', { name: 'Afghanistan', exact: true })
+    2) <a rel="mw:WikiLink" title="Islamic Republic of Afghanistan" href="https://en.wikipedia.org/wiki/Islamic_Republic_of_Afghanistan">Islamic Republic of Afghanistan</a> aka getByRole('link', { name: 'Islamic Republic of' })
+
+Call log:
+  - waiting for locator('#mwbw tbody tr').getByRole('link', { name: 'Afghanistan' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Jump to content" [ref=e2] [cursor=pointer]:
+    - /url: "#bodyContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - navigation "Site" [ref=e6]:
+        - generic "Main menu" [ref=e7]:
+          - button "Main menu" [ref=e8] [cursor=pointer]
+          - generic [ref=e11]: Main menu
+      - link "Wikipedia The Free Encyclopedia" [ref=e12] [cursor=pointer]:
+        - /url: /wiki/Main_Page
+        - generic [ref=e13]:
+          - img "Wikipedia" [ref=e14]
+          - img "The Free Encyclopedia" [ref=e15]
+    - generic [ref=e16]:
+      - search [ref=e17]:
+        - generic [ref=e20]:
+          - searchbox "Search Wikipedia" [ref=e23]
+          - button "Search" [ref=e25]
+      - navigation "Personal tools" [ref=e26]:
+        - list [ref=e30]:
+          - listitem [ref=e31]:
+            - link "Donate" [ref=e32] [cursor=pointer]:
+              - /url: https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=en.wikipedia.org&uselang=en
+          - listitem [ref=e33]:
+            - link "Create account" [ref=e34] [cursor=pointer]:
+              - /url: /w/index.php?title=Special:CreateAccount&returnto=List+of+sovereign+states
+          - listitem [ref=e35]:
+            - link "Log in" [ref=e36] [cursor=pointer]:
+              - /url: /w/index.php?title=Special:UserLogin&returnto=List+of+sovereign+states
+  - generic [ref=e38]:
+    - main [ref=e42]:
+      - generic [ref=e43]:
+        - heading "List of sovereign states" [level=1] [ref=e44]:
+          - generic [ref=e45]: List of sovereign states
+        - generic [ref=e46]:
+          - button "229 languages" [ref=e47] [cursor=pointer]
+          - generic [ref=e50]: 229 languages
+      - generic [ref=e52]:
+        - navigation "Namespaces" [ref=e54]:
+          - list [ref=e57]:
+            - listitem [ref=e58]:
+              - link "Article" [ref=e59] [cursor=pointer]:
+                - /url: /wiki/List_of_sovereign_states
+                - generic [ref=e60]: Article
+            - listitem [ref=e61]:
+              - link "Talk" [ref=e62] [cursor=pointer]:
+                - /url: /wiki/Talk:List_of_sovereign_states
+                - generic [ref=e63]: Talk
+        - generic [ref=e64]:
+          - navigation "Views" [ref=e65]:
+            - list [ref=e68]:
+              - listitem [ref=e69]:
+                - link "Read" [ref=e70] [cursor=pointer]:
+                  - /url: /wiki/List_of_sovereign_states
+                  - generic [ref=e71]: Read
+              - listitem [ref=e72]:
+                - link "View source" [ref=e73] [cursor=pointer]:
+                  - /url: /w/index.php?title=List_of_sovereign_states&action=edit
+                  - generic [ref=e74]: View source
+              - listitem [ref=e75]:
+                - link "View history" [ref=e76] [cursor=pointer]:
+                  - /url: /w/index.php?title=List_of_sovereign_states&action=history
+                  - generic [ref=e77]: View history
+          - navigation "Page tools" [ref=e78]:
+            - generic [ref=e79]:
+              - button "Tools" [ref=e80] [cursor=pointer]
+              - generic [ref=e83]: Tools
+      - navigation "Appearance" [ref=e86]:
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - generic [ref=e90]: Appearance
+            - button "Hide Appearance" [ref=e91] [cursor=pointer]: hide
+          - generic [ref=e92]:
+            - generic [ref=e93]: Text
+            - list [ref=e95]:
+              - listitem [ref=e96]:
+                - generic [ref=e98]:
+                  - generic [ref=e99]:
+                    - radio "Small" [ref=e100]
+                    - generic [ref=e103]: Small
+                  - generic [ref=e104]:
+                    - radio "Standard" [checked] [ref=e105]
+                    - generic [ref=e108]: Standard
+                  - generic [ref=e109]:
+                    - radio "Large" [ref=e110]
+                    - generic [ref=e113]: Large
+          - generic [ref=e114]:
+            - generic [ref=e115]: Width
+            - list [ref=e117]:
+              - listitem [ref=e118]:
+                - generic [ref=e120]:
+                  - generic [ref=e121]:
+                    - radio "Standard" [checked] [ref=e122]
+                    - generic [ref=e125]: Standard
+                  - generic [ref=e126]:
+                    - radio "Wide" [ref=e127]
+                    - generic [ref=e130]: Wide
+          - generic [ref=e131]:
+            - generic [ref=e132]: Color
+            - list [ref=e134]:
+              - listitem [ref=e135]:
+                - generic [ref=e137]:
+                  - generic [ref=e138]:
+                    - radio "Automatic" [ref=e139]
+                    - generic [ref=e142]: Automatic
+                  - generic [ref=e143]:
+                    - radio "Light" [checked] [ref=e144]
+                    - generic [ref=e147]: Light
+                  - generic [ref=e148]:
+                    - radio "Dark" [ref=e149]
+                    - generic [ref=e152]: Dark
+      - generic "List of sovereign states" [ref=e153]:
+        - generic [ref=e154]:
+          - link "Page semi-protected" [ref=e159] [cursor=pointer]:
+            - /url: https://en.wikipedia.org/wiki/Wikipedia:Protection_policy#semi
+            - img "Page semi-protected" [ref=e160]
+          - generic [ref=e161]: From Wikipedia, the free encyclopedia
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - note [ref=e165]:
+              - text: "\"List of countries\" and \"List of nations\" redirect here. For other lists of countries, see"
+              - link "Lists of sovereign states and dependent territories" [ref=e166] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Lists_of_sovereign_states_and_dependent_territories
+              - text: . For non-sovereign dependencies, see
+              - link "Dependent territory" [ref=e167] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Dependent_territory
+              - text: .
+            - figure "Flags of the 193 United Nations member and 2 non-member GA observer states in front of the Palace of Nations in Geneva, Switzerland" [ref=e168]:
+              - link "A long row of flags" [ref=e169] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/File:Palais_des_Nations_unies,_à_Genève.jpg
+                - img "A long row of flags" [ref=e170]
+              - generic [ref=e171]:
+                - text: Flags of the 193
+                - link "United Nations member" [ref=e172] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Member_states_of_the_United_Nations
+                - text: and 2 non-member GA observer states in front of the
+                - link "Palace of Nations" [ref=e173] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Palace_of_Nations
+                - text: in
+                - link "Geneva" [ref=e174] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Geneva
+                - text: ", Switzerland"
+            - paragraph [ref=e175]:
+              - text: The following is a list providing an overview of
+              - link "sovereign states" [ref=e176] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sovereign_state
+              - text: around the world with information on their status and recognition of their
+              - link "sovereignty" [ref=e177] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sovereignty
+              - text: .
+            - paragraph [ref=e178]:
+              - text: The 205 listed states can be divided into three categories based on membership within the
+              - link "United Nations System" [ref=e179] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/United_Nations_System
+              - text: ": 193"
+              - link "UN member states" [ref=e180] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Member_states_of_the_United_Nations
+              - text: ","
+              - superscript [ref=e181]:
+                - link "[1]" [ref=e182] [cursor=pointer]:
+                  - /url: "#cite_note-unms-1"
+                  - generic: "[1]"
+              - text: two
+              - link "UN General Assembly non-member observer states" [ref=e183] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/United_Nations_General_Assembly_observers#Current_non-member_observers
+              - text: ", and ten other states. The sovereignty dispute column indicates states having undisputed sovereignty (190 states, of which there are 189 UN member states and one UN General Assembly non-member observer state), states having disputed sovereignty (13 states, of which there are four UN member states, one UN General Assembly non-member observer state, and eight de facto states), and states having a"
+              - link "special political status" [ref=e184] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Political_status_of_the_Cook_Islands_and_Niue
+              - text: (two states, both in
+              - link "free association" [ref=e185] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Associated_state
+              - text: with New Zealand).
+            - paragraph [ref=e186]:
+              - text: Compiling a list such as this can be complicated and controversial, as there is no definition that is binding on all the members of the community of nations concerning the criteria for
+              - link "statehood" [ref=e187] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/State_(polity)
+              - text: . For more information on the criteria used to determine the contents of this list, please see the
+              - link "criteria for inclusion" [ref=e189] [cursor=pointer]:
+                - /url: "#Criteria_for_inclusion"
+              - text: section below. The list is intended to include entities that have been recognised as having
+              - link "de facto" [ref=e191] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/De_facto
+              - text: status as sovereign states, and inclusion should not be seen as an endorsement of any specific claim to statehood in legal terms.
+            - paragraph [ref=e192]
+            - navigation "Alphabetical list of sovereign states:" [ref=e194]:
+              - generic [ref=e195]:
+                - generic [ref=e197]: "Alphabetical list of sovereign states:"
+                - list [ref=e199]:
+                  - listitem [ref=e200]:
+                    - link "A" [ref=e201] [cursor=pointer]:
+                      - /url: "#A"
+                    - text: ·
+                  - listitem [ref=e202]:
+                    - link "B" [ref=e203] [cursor=pointer]:
+                      - /url: "#B"
+                    - text: ·
+                  - listitem [ref=e204]:
+                    - link "C" [ref=e205] [cursor=pointer]:
+                      - /url: "#C"
+                    - text: ·
+                  - listitem [ref=e206]:
+                    - link "D" [ref=e207] [cursor=pointer]:
+                      - /url: "#D"
+                    - text: ·
+                  - listitem [ref=e208]:
+                    - link "E" [ref=e209] [cursor=pointer]:
+                      - /url: "#E"
+                    - text: ·
+                  - listitem [ref=e210]:
+                    - link "F" [ref=e211] [cursor=pointer]:
+                      - /url: "#F"
+                    - text: ·
+                  - listitem [ref=e212]:
+                    - link "G" [ref=e213] [cursor=pointer]:
+                      - /url: "#G"
+                    - text: ·
+                  - listitem [ref=e214]:
+                    - link "H" [ref=e215] [cursor=pointer]:
+                      - /url: "#H"
+                    - text: ·
+                  - listitem [ref=e216]:
+                    - link "I" [ref=e217] [cursor=pointer]:
+                      - /url: "#I"
+                    - text: ·
+                  - listitem [ref=e218]:
+                    - link "J" [ref=e219] [cursor=pointer]:
+                      - /url: "#J"
+                    - text: ·
+                  - listitem [ref=e220]:
+                    - link "K" [ref=e221] [cursor=pointer]:
+                      - /url: "#K"
+                    - text: ·
+                  - listitem [ref=e222]:
+                    - link "L" [ref=e223] [cursor=pointer]:
+                      - /url: "#L"
+                    - text: ·
+                  - listitem [ref=e224]:
+                    - link "M" [ref=e225] [cursor=pointer]:
+                      - /url: "#M"
+                    - text: ·
+                  - listitem [ref=e226]:
+                    - link "N" [ref=e227] [cursor=pointer]:
+                      - /url: "#N"
+                    - text: ·
+                  - listitem [ref=e228]:
+                    - link "O" [ref=e229] [cursor=pointer]:
+                      - /url: "#O"
+                    - text: ·
+                  - listitem [ref=e230]:
+                    - link "P" [ref=e231] [cursor=pointer]:
+                      - /url: "#P"
+                    - text: ·
+                  - listitem [ref=e232]:
+                    - link "Q" [ref=e233] [cursor=pointer]:
+                      - /url: "#Q"
+                    - text: ·
+                  - listitem [ref=e234]:
+                    - link "R" [ref=e235] [cursor=pointer]:
+                      - /url: "#R"
+                    - text: ·
+                  - listitem [ref=e236]:
+                    - link "S" [ref=e237] [cursor=pointer]:
+                      - /url: "#S"
+                    - text: ·
+                  - listitem [ref=e238]:
+                    - link "T" [ref=e239] [cursor=pointer]:
+                      - /url: "#T"
+                    - text: ·
+                  - listitem [ref=e240]:
+                    - link "U" [ref=e241] [cursor=pointer]:
+                      - /url: "#U"
+                    - text: ·
+                  - listitem [ref=e242]:
+                    - link "V" [ref=e243] [cursor=pointer]:
+                      - /url: "#V"
+                    - text: ·
+                  - listitem [ref=e244]:
+                    - link "Y" [ref=e245] [cursor=pointer]:
+                      - /url: "#Y"
+                    - text: ·
+                  - listitem [ref=e246]:
+                    - link "Z" [ref=e247] [cursor=pointer]:
+                      - /url: "#Z"
+                    - text: ·
+                  - listitem [ref=e248]:
+                    - link "Other states" [ref=e249] [cursor=pointer]:
+                      - /url: "#Other_states"
+            - paragraph [ref=e250]
+          - region "Criteria for inclusion" [ref=e251]:
+            - heading "Criteria for inclusion" [level=2] [ref=e253]
+            - paragraph [ref=e254]:
+              - text: The dominant
+              - link "customary international law" [ref=e255] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Customary_international_law
+              - text: standard of statehood is the
+              - link "declarative theory of statehood" [ref=e256] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sovereign_state#Declarative_theory
+              - text: ", which was codified by the"
+              - link "Montevideo Convention" [ref=e257] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Montevideo_Convention
+              - text: of 1933. The Convention defines the state as a
+              - link "person" [ref=e258] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Legal_person
+              - text: "of international law if it \"possess[es] the following qualifications: (a) a permanent population; (b) a defined territory; (c) government; and (d) a capacity to enter into relations with the other states\" so long as it was not \"obtained by force whether this consists in the employment of arms, in threatening diplomatic representations, or in any other effective coercive measure\"."
+              - superscript [ref=e259]:
+                - link "[2]" [ref=e260] [cursor=pointer]:
+                  - /url: "#cite_note-2"
+                  - generic: "[2]"
+            - paragraph [ref=e261]:
+              - text: Debate exists on the degree to which
+              - link "recognition" [ref=e262] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Diplomatic_recognition
+              - text: should be included as a criterion of statehood.
+              - superscript [ref=e263]:
+                - link "[3]" [ref=e264] [cursor=pointer]:
+                  - /url: "#cite_note-3"
+                  - generic: "[3]"
+              - text: The declarative theory of statehood argues that statehood is purely objective and recognition of a state by other states is irrelevant. On the other end of the spectrum, the
+              - link "constitutive theory of statehood" [ref=e265] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sovereign_state#Constitutive_theory
+              - text: defines a state as a person under international law only if it is recognised as
+              - link "sovereign" [ref=e266] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Sovereignty
+              - text: by other states. For the purposes of this list, included are all polities that consider themselves sovereign states (through a
+              - link "declaration of independence" [ref=e267] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Declaration_of_independence
+              - text: "or some other means) and either:"
+            - list [ref=e268]:
+              - listitem [ref=e269]: are often regarded as satisfying the declarative theory of statehood, or
+              - listitem [ref=e270]:
+                - text: are recognised as a sovereign state by at least one
+                - link "UN member state" [ref=e271] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Member_states_of_the_United_Nations
+            - paragraph [ref=e272]:
+              - text: In some cases, there is a divergence of opinion over the interpretation of the first point, and whether an entity satisfies it is disputed. Unique political entities which fail to meet the classification of a sovereign state are considered
+              - link "proto-states" [ref=e273] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Quasi-state
+              - text: .
+              - superscript [ref=e274]:
+                - link "[4]" [ref=e275] [cursor=pointer]:
+                  - /url: "#cite_note-Hahn-4"
+                  - generic: "[4]"
+              - superscript [ref=e276]:
+                - link "[5]" [ref=e277] [cursor=pointer]:
+                  - /url: "#cite_note-Griffiths-5"
+                  - generic: "[5]"
+            - paragraph [ref=e278]:
+              - text: "On the basis of the above criteria, this list includes the following 205 entities:"
+              - superscript [ref=e279]:
+                - link "[a]" [ref=e280] [cursor=pointer]:
+                  - /url: "#cite_note-6"
+                  - generic: "[a]"
+              - superscript [ref=e281]:
+                - link "[b]" [ref=e282] [cursor=pointer]:
+                  - /url: "#cite_note-micros-7"
+                  - generic: "[b]"
+            - list [ref=e283]:
+              - listitem [ref=e284]: 204 states recognised by at least one UN member state
+              - listitem [ref=e285]:
+                - text: One state (
+                - link "Transnistria" [ref=e286] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Transnistria
+                - text: ) that satisfies the declarative theory of statehood and is recognised only by non-UN member states
+            - paragraph [ref=e287]: "The table includes bullets in the right-hand column representing entities that are either not sovereign states or have a close association to another sovereign state. It also includes subnational areas where the sovereignty of the titular state is limited by an international agreement. Taken together, these include:"
+            - list [ref=e288]:
+              - listitem [ref=e289]:
+                - text: Entities that are in a
+                - link "free association" [ref=e290] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Associated_state
+                - text: relationship with another state
+              - listitem [ref=e291]:
+                - text: "Two entities controlled by Pakistan which are neither sovereign states, dependent territories, nor part of another state:"
+                - link "Azad Kashmir" [ref=e292] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Azad_Kashmir
+                - text: and
+                - link "Gilgit-Baltistan" [ref=e293] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Gilgit-Baltistan
+              - listitem [ref=e294]:
+                - text: Dependent territories of another state, as well as areas that exhibit many characteristics of dependent territories according to the
+                - link "dependent territory" [ref=e295] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Dependent_territory
+                - text: page
+              - listitem [ref=e296]: Subnational entities created by international agreements
+          - region "List of states" [ref=e297]:
+            - heading "List of states" [level=2] [ref=e299]
+            - region "UN member states and General Assembly observer states" [ref=e300]:
+              - heading "UN member states and General Assembly observer states" [level=3] [ref=e302]
+              - generic [ref=e303]:
+                - table [ref=e304]:
+                  - rowgroup [ref=e305]:
+                    - row "Membership within the UN System UN member state UN General Assembly observer state" [ref=e306]:
+                      - cell "Membership within the UN System UN member state UN General Assembly observer state" [ref=e307]:
+                        - generic [ref=e308]:
+                          - text: Membership within the
+                          - link "UN System" [ref=e309] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/United_Nations_System
+                        - link "UN member state" [ref=e312] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Member_states_of_the_United_Nations
+                        - link "UN General Assembly observer state" [ref=e315] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/United_Nations_General_Assembly_observers
+                - table [ref=e316]:
+                  - rowgroup [ref=e317]:
+                    - row "Sovereignty dispute Undisputed sovereignty Disputed sovereignty" [ref=e318]:
+                      - cell "Sovereignty dispute Undisputed sovereignty Disputed sovereignty" [ref=e319]:
+                        - link "Sovereignty dispute" [ref=e321] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/List_of_states_with_limited_recognition
+                        - generic [ref=e322]: Undisputed sovereignty
+                        - generic [ref=e324]: Disputed sovereignty
+                - paragraph
+              - table [ref=e326]:
+                - rowgroup [ref=e327]:
+                  - row "Short name and/or formal name[c] Membership within the UN System[d] Sovereignty dispute[e] Further information on status and recognition of sovereignty[g]" [ref=e328]:
+                    - columnheader [ref=e329]
+                    - columnheader "Short name and/or formal name[c]" [ref=e330] [cursor=pointer]:
+                      - text: Short name and/or
+                      - text: formal name
+                      - superscript [ref=e331]:
+                        - link "[c]" [ref=e332]:
+                          - /url: "#cite_note-bold-8"
+                          - generic: "[c]"
+                    - columnheader "Membership within the UN System[d]" [ref=e333] [cursor=pointer]:
+                      - text: Membership within the UN System
+                      - superscript [ref=e334]:
+                        - link "[d]" [ref=e335]:
+                          - /url: "#cite_note-membership-9"
+                          - generic: "[d]"
+                    - columnheader "Sovereignty dispute[e]" [ref=e336] [cursor=pointer]:
+                      - text: Sovereignty dispute
+                      - superscript [ref=e337]:
+                        - link "[e]" [ref=e338]:
+                          - /url: "#cite_note-sd-10"
+                          - generic: "[e]"
+                    - columnheader "Further information on status and recognition of sovereignty[g]" [ref=e339]:
+                      - text: Further information on status and recognition of sovereignty
+                      - superscript [ref=e340]:
+                        - link "[g]" [ref=e341] [cursor=pointer]:
+                          - /url: "#cite_note-fi-12"
+                          - generic: "[g]"
+                - rowgroup [ref=e342]:
+                  - row "A Afghanistan – Islamic Emirate of Afghanistan UN member state None The ruling Islamic Emirate of Afghanistan, in power since 2021, has not been recognised by the United Nations or any other state except Russia.[6] The United Nations decided in 2022 that the defunct Islamic Republic of Afghanistan had stopped being the official representative of Afghanistan at the United Nations on 15 August 2021, when it ceased functioning, though has not recognised the Islamic Emirate or any other representative. Most countries still recognise the Islamic Republic.[7][8][9]" [ref=e343]:
+                    - rowheader "A" [ref=e344]:
+                      - link "A" [ref=e345] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Afghanistan – Islamic Emirate of Afghanistan" [ref=e346]:
+                      - link "Afghanistan" [ref=e351] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Afghanistan
+                      - text: – Islamic Emirate of Afghanistan
+                    - cell "UN member state" [ref=e352]
+                    - cell "None" [ref=e353]
+                    - cell "The ruling Islamic Emirate of Afghanistan, in power since 2021, has not been recognised by the United Nations or any other state except Russia.[6] The United Nations decided in 2022 that the defunct Islamic Republic of Afghanistan had stopped being the official representative of Afghanistan at the United Nations on 15 August 2021, when it ceased functioning, though has not recognised the Islamic Emirate or any other representative. Most countries still recognise the Islamic Republic.[7][8][9]" [ref=e354]:
+                      - text: The ruling Islamic Emirate of Afghanistan, in power since 2021,
+                      - link "has not been recognised" [ref=e355] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Recognition_of_the_Islamic_Emirate_of_Afghanistan
+                      - text: by the United Nations or any other state except Russia.
+                      - superscript [ref=e356]:
+                        - link "[6]" [ref=e357] [cursor=pointer]:
+                          - /url: "#cite_note-13"
+                          - generic: "[6]"
+                      - text: The United Nations decided in 2022 that the defunct
+                      - link "Islamic Republic of Afghanistan" [ref=e361] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Islamic_Republic_of_Afghanistan
+                      - text: had stopped being the official representative of Afghanistan at the United Nations on 15 August 2021, when it ceased functioning, though has not recognised the Islamic Emirate or any other representative. Most countries still recognise the Islamic Republic.
+                      - superscript [ref=e362]:
+                        - link "[7]" [ref=e363] [cursor=pointer]:
+                          - /url: "#cite_note-TOLOnews-14"
+                          - generic: "[7]"
+                      - superscript [ref=e364]:
+                        - link "[8]" [ref=e365] [cursor=pointer]:
+                          - /url: "#cite_note-akhund2-15"
+                          - generic: "[8]"
+                      - superscript [ref=e366]:
+                        - link "[9]" [ref=e367] [cursor=pointer]:
+                          - /url: "#cite_note-UN_Seats_Denied-16"
+                          - generic: "[9]"
+                  - row "Albania – Republic of Albania UN member state None" [ref=e368]:
+                    - cell "Albania – Republic of Albania" [ref=e369]:
+                      - link "Albania" [ref=e374] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Albania
+                      - text: – Republic of Albania
+                    - cell "UN member state" [ref=e375]
+                    - cell "None" [ref=e376]
+                    - cell [ref=e377]
+                  - row "Algeria – People's Democratic Republic of Algeria UN member state None" [ref=e378]:
+                    - cell "Algeria – People's Democratic Republic of Algeria" [ref=e379]:
+                      - link "Algeria" [ref=e384] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Algeria
+                      - text: – People's Democratic Republic of Algeria
+                    - cell "UN member state" [ref=e385]
+                    - cell "None" [ref=e386]
+                    - cell [ref=e387]
+                  - row "Andorra – Principality of Andorra UN member state None Andorra is a co-principality in which the office of head of state is jointly held ex officio by the French president and the bishop of the Roman Catholic diocese of Urgell,[10] who himself is appointed by the Pope." [ref=e388]:
+                    - cell "Andorra – Principality of Andorra" [ref=e389]:
+                      - link "Andorra" [ref=e394] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Andorra
+                      - text: – Principality of Andorra
+                    - cell "UN member state" [ref=e395]
+                    - cell "None" [ref=e396]
+                    - cell "Andorra is a co-principality in which the office of head of state is jointly held ex officio by the French president and the bishop of the Roman Catholic diocese of Urgell,[10] who himself is appointed by the Pope." [ref=e397]:
+                      - text: Andorra is a
+                      - link "co-principality" [ref=e398] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Coregency#Andorra
+                      - text: in which the office of head of state is jointly held ex officio by the
+                      - link "French president" [ref=e399] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/President_of_France
+                      - text: and the bishop of the Roman Catholic
+                      - link "diocese of Urgell" [ref=e400] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Roman_Catholic_Diocese_of_Urgell
+                      - text: ","
+                      - superscript [ref=e401]:
+                        - link "[10]" [ref=e402] [cursor=pointer]:
+                          - /url: "#cite_note-17"
+                          - generic: "[10]"
+                      - text: who himself is appointed by the
+                      - link "Pope" [ref=e403] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Pope
+                      - text: .
+                  - row "Angola – Republic of Angola UN member state None" [ref=e404]:
+                    - cell "Angola – Republic of Angola" [ref=e405]:
+                      - link "Angola" [ref=e410] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Angola
+                      - text: – Republic of Angola
+                    - cell "UN member state" [ref=e411]
+                    - cell "None" [ref=e412]
+                    - cell [ref=e413]
+                  - row "Antigua and Barbuda UN member state None Antigua and Barbuda is a Commonwealth realm[h] with one autonomous region, Barbuda.[11][i]" [ref=e414]:
+                    - cell "Antigua and Barbuda" [ref=e415]:
+                      - link "Antigua and Barbuda" [ref=e420] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Antigua_and_Barbuda
+                    - cell "UN member state" [ref=e421]
+                    - cell "None" [ref=e422]
+                    - cell "Antigua and Barbuda is a Commonwealth realm[h] with one autonomous region, Barbuda.[11][i]" [ref=e423]:
+                      - text: Antigua and Barbuda is a
+                      - link "Commonwealth realm" [ref=e424] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Commonwealth_realm
+                      - superscript [ref=e425]:
+                        - link "[h]" [ref=e426] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                      - text: with one autonomous region,
+                      - link "Barbuda" [ref=e427] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Barbuda
+                      - text: .
+                      - superscript [ref=e428]:
+                        - link "[11]" [ref=e429] [cursor=pointer]:
+                          - /url: "#cite_note-19"
+                          - generic: "[11]"
+                      - superscript [ref=e430]:
+                        - link "[i]" [ref=e431] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Argentina – Argentine Republic[j] UN member state None Argentina is a federation of 23 provinces and one autonomous city.[k][l]" [ref=e432]:
+                    - cell "Argentina – Argentine Republic[j]" [ref=e433]:
+                      - link "Argentina" [ref=e438] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Argentina
+                      - text: – Argentine Republic
+                      - superscript [ref=e439]:
+                        - link "[j]" [ref=e440] [cursor=pointer]:
+                          - /url: "#cite_note-21"
+                          - generic: "[j]"
+                    - cell "UN member state" [ref=e441]
+                    - cell "None" [ref=e442]
+                    - cell "Argentina is a federation of 23 provinces and one autonomous city.[k][l]" [ref=e443]:
+                      - text: Argentina is a
+                      - link "federation" [ref=e444] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Federation
+                      - text: of
+                      - link "23 provinces and one autonomous city" [ref=e445] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Provinces_of_Argentina
+                      - text: .
+                      - superscript [ref=e446]:
+                        - link "[k]" [ref=e447] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                      - superscript [ref=e448]:
+                        - link "[l]" [ref=e449] [cursor=pointer]:
+                          - /url: "#cite_note-ArgentineAntarctica-24"
+                          - generic: "[l]"
+                  - row "Armenia – Republic of Armenia UN member state None" [ref=e450]:
+                    - cell "Armenia – Republic of Armenia" [ref=e451]:
+                      - link "Armenia" [ref=e456] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Armenia
+                      - text: – Republic of Armenia
+                    - cell "UN member state" [ref=e457]
+                    - cell "None" [ref=e458]
+                    - cell [ref=e459]
+                  - 'row "Australia – Commonwealth of Australia UN member state None Australia is a Commonwealth realm[h] and a federation of both states and territories. There are six states, three internal territories, six external territories and one claimed Antarctic external territory. The external territories of Australia are: Ashmore and Cartier Islands Christmas Island Cocos (Keeling) Islands Coral Sea Islands Territory Heard Island and McDonald Islands Norfolk Island Australian Antarctic Territory" [ref=e460]':
+                    - cell "Australia – Commonwealth of Australia" [ref=e461]:
+                      - link "Australia" [ref=e466] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Australia
+                      - text: – Commonwealth of Australia
+                    - cell "UN member state" [ref=e467]
+                    - cell "None" [ref=e468]
+                    - 'cell "Australia is a Commonwealth realm[h] and a federation of both states and territories. There are six states, three internal territories, six external territories and one claimed Antarctic external territory. The external territories of Australia are: Ashmore and Cartier Islands Christmas Island Cocos (Keeling) Islands Coral Sea Islands Territory Heard Island and McDonald Islands Norfolk Island Australian Antarctic Territory" [ref=e469]':
+                      - text: Australia is a Commonwealth realm
+                      - superscript [ref=e470]:
+                        - link "[h]" [ref=e471] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                      - text: and a federation of both
+                      - link "states and territories" [ref=e472] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/States_and_territories_of_Australia
+                      - text: . There are six states, three internal territories, six external territories and one
+                      - link "claimed" [ref=e473] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Territorial_claims_in_Antarctica
+                      - text: "Antarctic external territory. The external territories of Australia are:"
+                      - list [ref=e474]:
+                        - listitem [ref=e475]:
+                          - link "Ashmore and Cartier Islands" [ref=e477] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Ashmore_and_Cartier_Islands
+                        - listitem [ref=e478]:
+                          - link "Christmas Island" [ref=e482] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Christmas_Island
+                        - listitem [ref=e483]:
+                          - link "Cocos (Keeling) Islands" [ref=e487] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Cocos_(Keeling)_Islands
+                        - listitem [ref=e488]:
+                          - link "Coral Sea Islands Territory" [ref=e490] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Coral_Sea_Islands_Territory
+                        - listitem [ref=e491]:
+                          - link "Heard Island and McDonald Islands" [ref=e493] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Heard_Island_and_McDonald_Islands
+                        - listitem [ref=e494]:
+                          - link "Norfolk Island" [ref=e498] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Norfolk_Island
+                        - listitem [ref=e499]:
+                          - link "Australian Antarctic Territory" [ref=e502] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Australian_Antarctic_Territory
+                  - row "Austria – Republic of Austria UN member state None Member of the European Union (EU).[f] Austria is a federation of nine states.[k]" [ref=e503]:
+                    - cell "Austria – Republic of Austria" [ref=e504]:
+                      - link "Austria" [ref=e509] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Austria
+                      - text: – Republic of Austria
+                    - cell "UN member state" [ref=e510]
+                    - cell "None" [ref=e511]
+                    - cell "Member of the European Union (EU).[f] Austria is a federation of nine states.[k]" [ref=e512]:
+                      - text: Member of the
+                      - link "European Union" [ref=e513] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/European_Union
+                      - text: (EU).
+                      - superscript [ref=e514]:
+                        - link "[f]" [ref=e515] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - text: Austria is a federation of
+                      - link "nine states" [ref=e516] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Federal_states_of_Austria
+                      - text: .
+                      - superscript [ref=e517]:
+                        - link "[k]" [ref=e518] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - row "Azerbaijan – Republic of Azerbaijan UN member state None Azerbaijan contains one autonomous region, Nakhchivan.[i]" [ref=e519]:
+                    - cell "Azerbaijan – Republic of Azerbaijan" [ref=e520]:
+                      - link "Azerbaijan" [ref=e525] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Azerbaijan
+                      - text: – Republic of Azerbaijan
+                    - cell "UN member state" [ref=e526]
+                    - cell "None" [ref=e527]
+                    - cell "Azerbaijan contains one autonomous region, Nakhchivan.[i]" [ref=e528]:
+                      - text: Azerbaijan contains one autonomous region,
+                      - link "Nakhchivan" [ref=e529] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Nakhchivan_Autonomous_Republic
+                      - text: .
+                      - superscript [ref=e530]:
+                        - link "[i]" [ref=e531] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "B Bahamas, The – Commonwealth of The Bahamas[14] UN member state None The Bahamas is a Commonwealth realm.[h]" [ref=e532]:
+                    - rowheader "B" [ref=e533]:
+                      - link "B" [ref=e534] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Bahamas, The – Commonwealth of The Bahamas[14]" [ref=e535]:
+                      - link "Bahamas, The" [ref=e540] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/The_Bahamas
+                      - text: – Commonwealth of The Bahamas
+                      - superscript [ref=e541]:
+                        - link "[14]" [ref=e542] [cursor=pointer]:
+                          - /url: "#cite_note-26"
+                          - generic: "[14]"
+                    - cell "UN member state" [ref=e543]
+                    - cell "None" [ref=e544]
+                    - cell "The Bahamas is a Commonwealth realm.[h]" [ref=e545]:
+                      - text: The Bahamas is a Commonwealth realm.
+                      - superscript [ref=e546]:
+                        - link "[h]" [ref=e547] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                  - row "Bahrain – Kingdom of Bahrain UN member state None" [ref=e548]:
+                    - cell "Bahrain – Kingdom of Bahrain" [ref=e549]:
+                      - link "Bahrain" [ref=e554] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Bahrain
+                      - text: – Kingdom of Bahrain
+                    - cell "UN member state" [ref=e555]
+                    - cell "None" [ref=e556]
+                    - cell [ref=e557]
+                  - row "Bangladesh – People's Republic of Bangladesh UN member state None" [ref=e558]:
+                    - cell "Bangladesh – People's Republic of Bangladesh" [ref=e559]:
+                      - link "Bangladesh" [ref=e564] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Bangladesh
+                      - text: – People's Republic of Bangladesh
+                    - cell "UN member state" [ref=e565]
+                    - cell "None" [ref=e566]
+                    - cell [ref=e567]
+                  - row "Barbados UN member state None" [ref=e568]:
+                    - cell "Barbados" [ref=e569]:
+                      - link "Barbados" [ref=e574] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Barbados
+                    - cell "UN member state" [ref=e575]
+                    - cell "None" [ref=e576]
+                    - cell [ref=e577]
+                  - row "Belarus – Republic of Belarus UN member state None Many states rescinded their recognition of President Alexander Lukashenko following the disputed 2020 election. Lithuania currently recognises Sviatlana Tsikhanouskaya's Coordination Council as the legitimate government of Belarus.[15]" [ref=e578]:
+                    - cell "Belarus – Republic of Belarus" [ref=e579]:
+                      - link "Belarus" [ref=e584] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Belarus
+                      - text: – Republic of Belarus
+                    - cell "UN member state" [ref=e585]
+                    - cell "None" [ref=e586]
+                    - cell "Many states rescinded their recognition of President Alexander Lukashenko following the disputed 2020 election. Lithuania currently recognises Sviatlana Tsikhanouskaya's Coordination Council as the legitimate government of Belarus.[15]" [ref=e587]:
+                      - text: Many states
+                      - link "rescinded their recognition" [ref=e588] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_reactions_to_the_2020_Belarusian_presidential_election_and_protests
+                      - text: of President
+                      - link "Alexander Lukashenko" [ref=e589] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Alexander_Lukashenko
+                      - text: following
+                      - link "the disputed 2020 election" [ref=e590] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/2020_Belarusian_presidential_election
+                      - text: .
+                      - link "Lithuania" [ref=e591] [cursor=pointer]:
+                        - /url: "#Lithuania"
+                      - text: currently recognises
+                      - link "Sviatlana Tsikhanouskaya" [ref=e592] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Sviatlana_Tsikhanouskaya
+                      - text: "'s"
+                      - link "Coordination Council" [ref=e593] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Coordination_Council_(Belarus)
+                      - text: as the legitimate government of Belarus.
+                      - superscript [ref=e594]:
+                        - link "[15]" [ref=e595] [cursor=pointer]:
+                          - /url: "#cite_note-27"
+                          - generic: "[15]"
+                  - row "Belgium – Kingdom of Belgium UN member state None Member of the EU.[f] Belgium is a federation of three linguistic communities and three regions." [ref=e596]:
+                    - cell "Belgium – Kingdom of Belgium" [ref=e597]:
+                      - link "Belgium" [ref=e602] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Belgium
+                      - text: – Kingdom of Belgium
+                    - cell "UN member state" [ref=e603]
+                    - cell "None" [ref=e604]
+                    - cell "Member of the EU.[f] Belgium is a federation of three linguistic communities and three regions." [ref=e605]:
+                      - text: Member of the EU.
+                      - superscript [ref=e606]:
+                        - link "[f]" [ref=e607] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - text: Belgium is a federation of
+                      - link "three linguistic communities and three regions" [ref=e608] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Communities,_regions,_and_language_areas_of_Belgium
+                      - text: .
+                  - row "Belize UN member state None Belize is a Commonwealth realm.[h]" [ref=e609]:
+                    - cell "Belize" [ref=e610]:
+                      - link "Belize" [ref=e615] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Belize
+                    - cell "UN member state" [ref=e616]
+                    - cell "None" [ref=e617]
+                    - cell "Belize is a Commonwealth realm.[h]" [ref=e618]:
+                      - text: Belize is a Commonwealth realm.
+                      - superscript [ref=e619]:
+                        - link "[h]" [ref=e620] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                  - row "Benin – Republic of Benin UN member state None" [ref=e621]:
+                    - cell "Benin – Republic of Benin" [ref=e622]:
+                      - link "Benin" [ref=e627] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Benin
+                      - text: – Republic of Benin
+                    - cell "UN member state" [ref=e628]
+                    - cell "None" [ref=e629]
+                    - cell [ref=e630]
+                  - row "Bhutan – Kingdom of Bhutan UN member state None" [ref=e631]:
+                    - cell "Bhutan – Kingdom of Bhutan" [ref=e632]:
+                      - link "Bhutan" [ref=e637] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Bhutan
+                      - text: – Kingdom of Bhutan
+                    - cell "UN member state" [ref=e638]
+                    - cell "None" [ref=e639]
+                    - cell [ref=e640]
+                  - row "Bolivia – Plurinational State of Bolivia UN member state None" [ref=e641]:
+                    - cell "Bolivia – Plurinational State of Bolivia" [ref=e642]:
+                      - link "Bolivia" [ref=e647] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Bolivia
+                      - text: – Plurinational State of Bolivia
+                    - cell "UN member state" [ref=e648]
+                    - cell "None" [ref=e649]
+                    - cell [ref=e650]
+                  - 'row "Bosnia and Herzegovina UN member state None Bosnia and Herzegovina has two constituent entities: Federation of Bosnia and Herzegovina Republika Srpska and Brčko District, a self-governing administrative district.[k][16]" [ref=e651]':
+                    - cell "Bosnia and Herzegovina" [ref=e652]:
+                      - link "Bosnia and Herzegovina" [ref=e657] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina
+                    - cell "UN member state" [ref=e658]
+                    - cell "None" [ref=e659]
+                    - 'cell "Bosnia and Herzegovina has two constituent entities: Federation of Bosnia and Herzegovina Republika Srpska and Brčko District, a self-governing administrative district.[k][16]" [ref=e660]':
+                      - text: "Bosnia and Herzegovina has two constituent entities:"
+                      - list [ref=e661]:
+                        - listitem [ref=e662]:
+                          - link "Federation of Bosnia and Herzegovina" [ref=e664] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Federation_of_Bosnia_and_Herzegovina
+                        - listitem [ref=e665]:
+                          - link "Republika Srpska" [ref=e669] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Republika_Srpska
+                      - paragraph [ref=e670]:
+                        - text: and
+                        - link "Brčko District" [ref=e671] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Brčko_District
+                        - text: ", a self-governing administrative district."
+                        - superscript [ref=e672]:
+                          - link "[k]" [ref=e673] [cursor=pointer]:
+                            - /url: "#cite_note-federal-22"
+                            - generic: "[k]"
+                        - superscript [ref=e674]:
+                          - link "[16]" [ref=e675] [cursor=pointer]:
+                            - /url: "#cite_note-Stjepanović2015-28"
+                            - generic: "[16]"
+                  - row "Botswana – Republic of Botswana UN member state None" [ref=e676]:
+                    - cell "Botswana – Republic of Botswana" [ref=e677]:
+                      - link "Botswana" [ref=e682] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Botswana
+                      - text: – Republic of Botswana
+                    - cell "UN member state" [ref=e683]
+                    - cell "None" [ref=e684]
+                    - cell [ref=e685]
+                  - row "Brazil – Federative Republic of Brazil UN member state None Brazil is a federation of 26 states and one federal district.[k]" [ref=e686]:
+                    - cell "Brazil – Federative Republic of Brazil" [ref=e687]:
+                      - link "Brazil" [ref=e692] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Brazil
+                      - text: – Federative Republic of Brazil
+                    - cell "UN member state" [ref=e693]
+                    - cell "None" [ref=e694]
+                    - cell "Brazil is a federation of 26 states and one federal district.[k]" [ref=e695]:
+                      - text: Brazil is a federation of
+                      - link "26 states and one federal district" [ref=e696] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Federative_units_of_Brazil
+                      - text: .
+                      - superscript [ref=e697]:
+                        - link "[k]" [ref=e698] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - row "Brunei – Brunei Darussalam UN member state None" [ref=e699]:
+                    - cell "Brunei – Brunei Darussalam" [ref=e700]:
+                      - link "Brunei" [ref=e705] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Brunei
+                      - text: – Brunei Darussalam
+                    - cell "UN member state" [ref=e706]
+                    - cell "None" [ref=e707]
+                    - cell [ref=e708]
+                  - row "Bulgaria – Republic of Bulgaria UN member state None Member of the EU.[f]" [ref=e709]:
+                    - cell "Bulgaria – Republic of Bulgaria" [ref=e710]:
+                      - link "Bulgaria" [ref=e715] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Bulgaria
+                      - text: – Republic of Bulgaria
+                    - cell "UN member state" [ref=e716]
+                    - cell "None" [ref=e717]
+                    - cell "Member of the EU.[f]" [ref=e718]:
+                      - text: Member of the EU.
+                      - superscript [ref=e719]:
+                        - link "[f]" [ref=e720] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Burkina Faso UN member state None" [ref=e721]:
+                    - cell "Burkina Faso" [ref=e722]:
+                      - link "Burkina Faso" [ref=e727] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Burkina_Faso
+                    - cell "UN member state" [ref=e728]
+                    - cell "None" [ref=e729]
+                    - cell [ref=e730]
+                  - row "Burundi – Republic of Burundi UN member state None" [ref=e731]:
+                    - cell "Burundi – Republic of Burundi" [ref=e732]:
+                      - link "Burundi" [ref=e737] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Burundi
+                      - text: – Republic of Burundi
+                    - cell "UN member state" [ref=e738]
+                    - cell "None" [ref=e739]
+                    - cell [ref=e740]
+                  - row "C Cambodia – Kingdom of Cambodia UN member state None" [ref=e741]:
+                    - rowheader "C" [ref=e742]:
+                      - link "C" [ref=e743] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Cambodia – Kingdom of Cambodia" [ref=e744]:
+                      - link "Cambodia" [ref=e749] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Cambodia
+                      - text: – Kingdom of Cambodia
+                    - cell "UN member state" [ref=e750]
+                    - cell "None" [ref=e751]
+                    - cell [ref=e752]
+                  - row "Cameroon – Republic of Cameroon UN member state None" [ref=e753]:
+                    - cell "Cameroon – Republic of Cameroon" [ref=e754]:
+                      - link "Cameroon" [ref=e759] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Cameroon
+                      - text: – Republic of Cameroon
+                    - cell "UN member state" [ref=e760]
+                    - cell "None" [ref=e761]
+                    - cell [ref=e762]
+                  - row "Canada[m] UN member state None Canada is a Commonwealth realm[h] and a federation of 10 provinces and three territories.[k]" [ref=e763]:
+                    - cell "Canada[m]" [ref=e764]:
+                      - link "Canada" [ref=e769] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Canada
+                      - superscript [ref=e770]:
+                        - link "[m]" [ref=e771] [cursor=pointer]:
+                          - /url: "#cite_note-29"
+                          - generic: "[m]"
+                    - cell "UN member state" [ref=e772]
+                    - cell "None" [ref=e773]
+                    - cell "Canada is a Commonwealth realm[h] and a federation of 10 provinces and three territories.[k]" [ref=e774]:
+                      - text: Canada is a Commonwealth realm
+                      - superscript [ref=e775]:
+                        - link "[h]" [ref=e776] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                      - text: and a federation of
+                      - link "10 provinces and three territories" [ref=e777] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Provinces_and_territories_of_Canada
+                      - text: .
+                      - superscript [ref=e778]:
+                        - link "[k]" [ref=e779] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - row "Cape Verde – Republic of Cabo Verde[n] UN member state None" [ref=e780]:
+                    - cell "Cape Verde – Republic of Cabo Verde[n]" [ref=e781]:
+                      - link "Cape Verde" [ref=e786] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Cape_Verde
+                      - text: – Republic of Cabo Verde
+                      - superscript [ref=e787]:
+                        - link "[n]" [ref=e788] [cursor=pointer]:
+                          - /url: "#cite_note-31"
+                          - generic: "[n]"
+                    - cell "UN member state" [ref=e789]
+                    - cell "None" [ref=e790]
+                    - cell [ref=e791]
+                  - row "Central African Republic UN member state None" [ref=e792]:
+                    - cell "Central African Republic" [ref=e793]:
+                      - link "Central African Republic" [ref=e798] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Central_African_Republic
+                    - cell "UN member state" [ref=e799]
+                    - cell "None" [ref=e800]
+                    - cell [ref=e801]
+                  - row "Chad – Republic of Chad UN member state None" [ref=e802]:
+                    - cell "Chad – Republic of Chad" [ref=e803]:
+                      - link "Chad" [ref=e808] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Chad
+                      - text: – Republic of Chad
+                    - cell "UN member state" [ref=e809]
+                    - cell "None" [ref=e810]
+                    - cell [ref=e811]
+                  - row "Chile – Republic of Chile UN member state None Chile has two special territories, Easter Island and Juan Fernández Islands.[o]" [ref=e812]:
+                    - cell "Chile – Republic of Chile" [ref=e813]:
+                      - link "Chile" [ref=e818] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Chile
+                      - text: – Republic of Chile
+                    - cell "UN member state" [ref=e819]
+                    - cell "None" [ref=e820]
+                    - cell "Chile has two special territories, Easter Island and Juan Fernández Islands.[o]" [ref=e821]:
+                      - text: Chile has two special territories,
+                      - link "Easter Island" [ref=e822] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Easter_Island
+                      - text: and
+                      - link "Juan Fernández Islands" [ref=e823] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Juan_Fernández_Islands
+                      - text: .
+                      - superscript [ref=e824]:
+                        - link "[o]" [ref=e825] [cursor=pointer]:
+                          - /url: "#cite_note-ChileanAntarctic-32"
+                          - generic: "[o]"
+                  - 'row "China – People''s Republic of China[p] UN member state Partially unrecognised. Claimed by the Republic of China . China contains five autonomous regions, Guangxi, Inner Mongolia, Ningxia, Tibet, and Xinjiang.[i] Additionally, it has sovereignty over two Special Administrative Regions: Hong Kong Macau China claims, but does not control, Taiwan, which is governed by a rival administration (the Republic of China) that claims all of China as its territory.[q] China is not recognised by 11 UN member states and Vatican City, which all recognise the Republic of China (Taiwan) instead.[r]" [ref=e826]':
+                    - cell "China – People's Republic of China[p]" [ref=e827]:
+                      - link "China" [ref=e832] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/China
+                      - text: – People's Republic of China
+                      - superscript [ref=e833]:
+                        - link "[p]" [ref=e834] [cursor=pointer]:
+                          - /url: "#cite_note-ChinaTaiwan-33"
+                          - generic: "[p]"
+                    - cell "UN member state" [ref=e835]
+                    - cell "Partially unrecognised. Claimed by the Republic of China ." [ref=e836]:
+                      - link "Partially unrecognised" [ref=e837] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_China#Countries_without_diplomatic_relations_with_the_PRC
+                      - text: . Claimed by the
+                      - link "Republic of China" [ref=e838] [cursor=pointer]:
+                        - /url: "#Taiwan"
+                      - text: .
+                    - 'cell "China contains five autonomous regions, Guangxi, Inner Mongolia, Ningxia, Tibet, and Xinjiang.[i] Additionally, it has sovereignty over two Special Administrative Regions: Hong Kong Macau China claims, but does not control, Taiwan, which is governed by a rival administration (the Republic of China) that claims all of China as its territory.[q] China is not recognised by 11 UN member states and Vatican City, which all recognise the Republic of China (Taiwan) instead.[r]" [ref=e839]':
+                      - text: China contains five autonomous regions,
+                      - link "Guangxi" [ref=e840] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Guangxi
+                      - text: ","
+                      - link "Inner Mongolia" [ref=e841] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Inner_Mongolia
+                      - text: ","
+                      - link "Ningxia" [ref=e842] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Ningxia
+                      - text: ","
+                      - link "Tibet" [ref=e843] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Tibet_Autonomous_Region
+                      - text: ", and"
+                      - link "Xinjiang" [ref=e844] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Xinjiang
+                      - text: .
+                      - superscript [ref=e845]:
+                        - link "[i]" [ref=e846] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                      - text: Additionally, it has sovereignty over two
+                      - link "Special Administrative Regions" [ref=e847] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Special_administrative_regions_of_China
+                      - text: ":"
+                      - list [ref=e848]:
+                        - listitem [ref=e849]:
+                          - link "Hong Kong" [ref=e853] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Hong_Kong
+                        - listitem [ref=e854]:
+                          - link "Macau" [ref=e858] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Macau
+                      - paragraph [ref=e859]:
+                        - text: China claims, but does not control,
+                        - link "Taiwan" [ref=e860] [cursor=pointer]:
+                          - /url: "#Taiwan"
+                        - text: ", which is governed by a rival administration (the Republic of China) that claims all of China as its territory."
+                        - superscript [ref=e861]:
+                          - link "[q]" [ref=e862] [cursor=pointer]:
+                            - /url: "#cite_note-TAI2-34"
+                            - generic: "[q]"
+                      - paragraph [ref=e863]:
+                        - text: China is not recognised by
+                        - link "11" [ref=e864] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_China#Countries_without_diplomatic_relations_with_the_PRC
+                        - text: UN member states and
+                        - link "Vatican City" [ref=e865] [cursor=pointer]:
+                          - /url: "#Vatican_City"
+                        - text: ", which all recognise the Republic of China (Taiwan) instead."
+                        - superscript [ref=e866]:
+                          - link "[r]" [ref=e867] [cursor=pointer]:
+                            - /url: "#cite_note-35"
+                            - generic: "[r]"
+                  - row "Colombia – Republic of Colombia UN member state None" [ref=e868]:
+                    - cell "Colombia – Republic of Colombia" [ref=e869]:
+                      - link "Colombia" [ref=e874] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Colombia
+                      - text: – Republic of Colombia
+                    - cell "UN member state" [ref=e875]
+                    - cell "None" [ref=e876]
+                    - cell [ref=e877]
+                  - row "Comoros – Union of the Comoros UN member state None Comoros is a federation of three islands.[k]" [ref=e878]:
+                    - cell "Comoros – Union of the Comoros" [ref=e879]:
+                      - link "Comoros" [ref=e884] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Comoros
+                      - text: – Union of the Comoros
+                    - cell "UN member state" [ref=e885]
+                    - cell "None" [ref=e886]
+                    - cell "Comoros is a federation of three islands.[k]" [ref=e887]:
+                      - text: Comoros is a federation of
+                      - link "three islands" [ref=e888] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Politics_of_the_Comoros#Autonomous_islands
+                      - text: .
+                      - superscript [ref=e889]:
+                        - link "[k]" [ref=e890] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - row "Congo, Democratic Republic of the[s] UN member state None" [ref=e891]:
+                    - cell "Congo, Democratic Republic of the[s]" [ref=e892]:
+                      - link "Congo, Democratic Republic of the" [ref=e897] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo
+                      - superscript [ref=e898]:
+                        - link "[s]" [ref=e899] [cursor=pointer]:
+                          - /url: "#cite_note-36"
+                          - generic: "[s]"
+                    - cell "UN member state" [ref=e900]
+                    - cell "None" [ref=e901]
+                    - cell [ref=e902]
+                  - row "Congo, Republic of the[t] UN member state None" [ref=e903]:
+                    - cell "Congo, Republic of the[t]" [ref=e904]:
+                      - link "Congo, Republic of the" [ref=e909] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Republic_of_the_Congo
+                      - superscript [ref=e910]:
+                        - link "[t]" [ref=e911] [cursor=pointer]:
+                          - /url: "#cite_note-37"
+                          - generic: "[t]"
+                    - cell "UN member state" [ref=e912]
+                    - cell "None" [ref=e913]
+                    - cell [ref=e914]
+                  - row "Costa Rica – Republic of Costa Rica UN member state None" [ref=e915]:
+                    - cell "Costa Rica – Republic of Costa Rica" [ref=e916]:
+                      - link "Costa Rica" [ref=e921] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Costa_Rica
+                      - text: – Republic of Costa Rica
+                    - cell "UN member state" [ref=e922]
+                    - cell "None" [ref=e923]
+                    - cell [ref=e924]
+                  - row "Croatia – Republic of Croatia UN member state None Member of the EU.[f]" [ref=e925]:
+                    - cell "Croatia – Republic of Croatia" [ref=e926]:
+                      - link "Croatia" [ref=e931] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Croatia
+                      - text: – Republic of Croatia
+                    - cell "UN member state" [ref=e932]
+                    - cell "None" [ref=e933]
+                    - cell "Member of the EU.[f]" [ref=e934]:
+                      - text: Member of the EU.
+                      - superscript [ref=e935]:
+                        - link "[f]" [ref=e936] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Cuba – Republic of Cuba UN member state None" [ref=e937]:
+                    - cell "Cuba – Republic of Cuba" [ref=e938]:
+                      - link "Cuba" [ref=e943] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Cuba
+                      - text: – Republic of Cuba
+                    - cell "UN member state" [ref=e944]
+                    - cell "None" [ref=e945]
+                    - cell [ref=e946]
+                  - row "Cyprus – Republic of Cyprus UN member state Not recognised by Turkey.[18] Member of the EU.[f] The northeastern part of the island is the de facto state of Northern Cyprus. Cyprus is not recognised by Turkey due to the Cyprus problem, with Turkey recognising Northern Cyprus." [ref=e947]:
+                    - cell "Cyprus – Republic of Cyprus" [ref=e948]:
+                      - link "Cyprus" [ref=e953] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Cyprus
+                      - text: – Republic of Cyprus
+                    - cell "UN member state" [ref=e954]
+                    - cell "Not recognised by Turkey.[18]" [ref=e955]:
+                      - text: Not recognised by
+                      - link "Turkey" [ref=e956] [cursor=pointer]:
+                        - /url: "#Turkey"
+                      - text: .
+                      - superscript [ref=e957]:
+                        - link "[18]" [ref=e958] [cursor=pointer]:
+                          - /url: "#cite_note-38"
+                          - generic: "[18]"
+                    - cell "Member of the EU.[f] The northeastern part of the island is the de facto state of Northern Cyprus. Cyprus is not recognised by Turkey due to the Cyprus problem, with Turkey recognising Northern Cyprus." [ref=e959]:
+                      - text: Member of the EU.
+                      - superscript [ref=e960]:
+                        - link "[f]" [ref=e961] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - text: The northeastern part of the island is the de facto state of
+                      - link "Northern Cyprus" [ref=e962] [cursor=pointer]:
+                        - /url: "#Northern_Cyprus"
+                      - text: .
+                      - paragraph [ref=e963]:
+                        - text: Cyprus is not recognised by
+                        - link "Turkey" [ref=e964] [cursor=pointer]:
+                          - /url: "#Turkey"
+                        - text: due to the
+                        - link "Cyprus problem" [ref=e965] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Cyprus_problem
+                        - text: ", with Turkey recognising"
+                        - link "Northern Cyprus" [ref=e966] [cursor=pointer]:
+                          - /url: "#Northern_Cyprus"
+                        - text: .
+                  - row "Czech Republic[u] UN member state None Member of the EU.[f]" [ref=e967]:
+                    - cell "Czech Republic[u]" [ref=e968]:
+                      - link "Czech Republic" [ref=e973] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Czech_Republic
+                      - superscript [ref=e974]:
+                        - link "[u]" [ref=e975] [cursor=pointer]:
+                          - /url: "#cite_note-39"
+                          - generic: "[u]"
+                    - cell "UN member state" [ref=e976]
+                    - cell "None" [ref=e977]
+                    - cell "Member of the EU.[f]" [ref=e978]:
+                      - text: Member of the EU.
+                      - superscript [ref=e979]:
+                        - link "[f]" [ref=e980] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - 'row "D Denmark – Kingdom of Denmark UN member state None Member of the EU.[f] The Kingdom of Denmark includes two self-governing territories: Faroe Islands Greenland The metropolitan territory of Denmark, the Faroe Islands and Greenland form the three constituent countries of the Kingdom.[v] The Kingdom of Denmark as a whole is a member of the EU, but EU law (in most cases) does not apply to the Faroe Islands and Greenland. See Greenland and the European Union, and Faroe Islands and the European Union.[19][20]" [ref=e981]':
+                    - rowheader "D" [ref=e982]:
+                      - link "D" [ref=e983] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Denmark – Kingdom of Denmark" [ref=e984]:
+                      - link "Denmark" [ref=e989] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Danish_Realm
+                      - text: – Kingdom of Denmark
+                    - cell "UN member state" [ref=e990]
+                    - cell "None" [ref=e991]
+                    - 'cell "Member of the EU.[f] The Kingdom of Denmark includes two self-governing territories: Faroe Islands Greenland The metropolitan territory of Denmark, the Faroe Islands and Greenland form the three constituent countries of the Kingdom.[v] The Kingdom of Denmark as a whole is a member of the EU, but EU law (in most cases) does not apply to the Faroe Islands and Greenland. See Greenland and the European Union, and Faroe Islands and the European Union.[19][20]" [ref=e992]':
+                      - text: Member of the EU.
+                      - superscript [ref=e993]:
+                        - link "[f]" [ref=e994] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - text: The
+                      - link "Kingdom of Denmark" [ref=e995] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Danish_Realm
+                      - text: "includes two self-governing territories:"
+                      - list [ref=e996]:
+                        - listitem [ref=e997]:
+                          - link "Faroe Islands" [ref=e1001] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Faroe_Islands
+                        - listitem [ref=e1002]:
+                          - link "Greenland" [ref=e1006] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Greenland
+                      - paragraph [ref=e1007]:
+                        - text: The
+                        - link "metropolitan territory of Denmark" [ref=e1008] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Denmark
+                        - text: ", the Faroe Islands and Greenland form the three constituent countries of the Kingdom."
+                        - superscript [ref=e1009]:
+                          - link "[v]" [ref=e1010] [cursor=pointer]:
+                            - /url: "#cite_note-40"
+                            - generic: "[v]"
+                        - text: The Kingdom of Denmark as a whole is a member of the EU, but
+                        - link "EU law" [ref=e1011] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Law_of_the_European_Union
+                        - text: (in most cases) does not apply to the Faroe Islands and Greenland. See
+                        - link "Greenland and the European Union" [ref=e1012] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Greenland_and_the_European_Union
+                        - text: ", and"
+                        - link "Faroe Islands and the European Union" [ref=e1013] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Faroe_Islands_and_the_European_Union
+                        - text: .
+                        - superscript [ref=e1014]:
+                          - link "[19]" [ref=e1015] [cursor=pointer]:
+                            - /url: "#cite_note-41"
+                            - generic: "[19]"
+                        - superscript [ref=e1016]:
+                          - link "[20]" [ref=e1017] [cursor=pointer]:
+                            - /url: "#cite_note-42"
+                            - generic: "[20]"
+                  - row "Djibouti – Republic of Djibouti UN member state None" [ref=e1018]:
+                    - cell "Djibouti – Republic of Djibouti" [ref=e1019]:
+                      - link "Djibouti" [ref=e1024] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Djibouti
+                      - text: – Republic of Djibouti
+                    - cell "UN member state" [ref=e1025]
+                    - cell "None" [ref=e1026]
+                    - cell [ref=e1027]
+                  - row "Dominica – Commonwealth of Dominica UN member state None" [ref=e1028]:
+                    - cell "Dominica – Commonwealth of Dominica" [ref=e1029]:
+                      - link "Dominica" [ref=e1034] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Dominica
+                      - text: – Commonwealth of Dominica
+                    - cell "UN member state" [ref=e1035]
+                    - cell "None" [ref=e1036]
+                    - cell [ref=e1037]
+                  - row "Dominican Republic UN member state None" [ref=e1038]:
+                    - cell "Dominican Republic" [ref=e1039]:
+                      - link "Dominican Republic" [ref=e1044] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Dominican_Republic
+                    - cell "UN member state" [ref=e1045]
+                    - cell "None" [ref=e1046]
+                    - cell [ref=e1047]
+                  - row "E Ecuador – Republic of Ecuador UN member state None" [ref=e1048]:
+                    - rowheader "E" [ref=e1049]:
+                      - link "E" [ref=e1050] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Ecuador – Republic of Ecuador" [ref=e1051]:
+                      - link "Ecuador" [ref=e1056] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Ecuador
+                      - text: – Republic of Ecuador
+                    - cell "UN member state" [ref=e1057]
+                    - cell "None" [ref=e1058]
+                    - cell [ref=e1059]
+                  - row "Egypt – Arab Republic of Egypt UN member state None" [ref=e1060]:
+                    - cell "Egypt – Arab Republic of Egypt" [ref=e1061]:
+                      - link "Egypt" [ref=e1066] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Egypt
+                      - text: – Arab Republic of Egypt
+                    - cell "UN member state" [ref=e1067]
+                    - cell "None" [ref=e1068]
+                    - cell [ref=e1069]
+                  - row "El Salvador – Republic of El Salvador UN member state None" [ref=e1070]:
+                    - cell "El Salvador – Republic of El Salvador" [ref=e1071]:
+                      - link "El Salvador" [ref=e1076] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/El_Salvador
+                      - text: – Republic of El Salvador
+                    - cell "UN member state" [ref=e1077]
+                    - cell "None" [ref=e1078]
+                    - cell [ref=e1079]
+                  - row "Equatorial Guinea – Republic of Equatorial Guinea UN member state None" [ref=e1080]:
+                    - cell "Equatorial Guinea – Republic of Equatorial Guinea" [ref=e1081]:
+                      - link "Equatorial Guinea" [ref=e1086] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Equatorial_Guinea
+                      - text: – Republic of Equatorial Guinea
+                    - cell "UN member state" [ref=e1087]
+                    - cell "None" [ref=e1088]
+                    - cell [ref=e1089]
+                  - row "Eritrea – State of Eritrea UN member state None" [ref=e1090]:
+                    - cell "Eritrea – State of Eritrea" [ref=e1091]:
+                      - link "Eritrea" [ref=e1096] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Eritrea
+                      - text: – State of Eritrea
+                    - cell "UN member state" [ref=e1097]
+                    - cell "None" [ref=e1098]
+                    - cell [ref=e1099]
+                  - row "Estonia – Republic of Estonia UN member state None Member of the EU.[f]" [ref=e1100]:
+                    - cell "Estonia – Republic of Estonia" [ref=e1101]:
+                      - link "Estonia" [ref=e1106] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Estonia
+                      - text: – Republic of Estonia
+                    - cell "UN member state" [ref=e1107]
+                    - cell "None" [ref=e1108]
+                    - cell "Member of the EU.[f]" [ref=e1109]:
+                      - text: Member of the EU.
+                      - superscript [ref=e1110]:
+                        - link "[f]" [ref=e1111] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Eswatini – Kingdom of Eswatini[w] UN member state None" [ref=e1112]:
+                    - cell "Eswatini – Kingdom of Eswatini[w]" [ref=e1113]:
+                      - link "Eswatini" [ref=e1118] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Eswatini
+                      - text: – Kingdom of Eswatini
+                      - superscript [ref=e1119]:
+                        - link "[w]" [ref=e1120] [cursor=pointer]:
+                          - /url: "#cite_note-43"
+                          - generic: "[w]"
+                    - cell "UN member state" [ref=e1121]
+                    - cell "None" [ref=e1122]
+                    - cell [ref=e1123]
+                  - row "Ethiopia – Federal Democratic Republic of Ethiopia UN member state None Ethiopia is a federation of 12 regions and two chartered cities.[k]" [ref=e1124]:
+                    - cell "Ethiopia – Federal Democratic Republic of Ethiopia" [ref=e1125]:
+                      - link "Ethiopia" [ref=e1130] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Ethiopia
+                      - text: – Federal Democratic Republic of Ethiopia
+                    - cell "UN member state" [ref=e1131]
+                    - cell "None" [ref=e1132]
+                    - cell "Ethiopia is a federation of 12 regions and two chartered cities.[k]" [ref=e1133]:
+                      - text: Ethiopia is a federation of
+                      - link "12 regions and two chartered cities" [ref=e1134] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Regions_of_Ethiopia
+                      - text: .
+                      - superscript [ref=e1135]:
+                        - link "[k]" [ref=e1136] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - row "F Fiji – Republic of Fiji UN member state None Fiji contains one autonomous region, Rotuma.[i][21][22]" [ref=e1137]:
+                    - rowheader "F" [ref=e1138]:
+                      - link "F" [ref=e1139] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Fiji – Republic of Fiji" [ref=e1140]:
+                      - link "Fiji" [ref=e1145] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Fiji
+                      - text: – Republic of Fiji
+                    - cell "UN member state" [ref=e1146]
+                    - cell "None" [ref=e1147]
+                    - cell "Fiji contains one autonomous region, Rotuma.[i][21][22]" [ref=e1148]:
+                      - text: Fiji contains one autonomous region,
+                      - link "Rotuma" [ref=e1149] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Rotuma
+                      - text: .
+                      - superscript [ref=e1150]:
+                        - link "[i]" [ref=e1151] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                      - superscript [ref=e1152]:
+                        - link "[21]" [ref=e1153] [cursor=pointer]:
+                          - /url: "#cite_note-44"
+                          - generic: "[21]"
+                      - superscript [ref=e1154]:
+                        - link "[22]" [ref=e1155] [cursor=pointer]:
+                          - /url: "#cite_note-45"
+                          - generic: "[22]"
+                  - row "Finland – Republic of Finland UN member state None Member of the EU.[f] Åland is a neutral and demilitarised autonomous region of Finland.[i][x]" [ref=e1156]:
+                    - cell "Finland – Republic of Finland" [ref=e1157]:
+                      - link "Finland" [ref=e1162] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Finland
+                      - text: – Republic of Finland
+                    - cell "UN member state" [ref=e1163]
+                    - cell "None" [ref=e1164]
+                    - cell "Member of the EU.[f] Åland is a neutral and demilitarised autonomous region of Finland.[i][x]" [ref=e1165]:
+                      - text: Member of the EU.
+                      - superscript [ref=e1166]:
+                        - link "[f]" [ref=e1167] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - list [ref=e1168]:
+                        - listitem [ref=e1169]:
+                          - link "Åland" [ref=e1173] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Åland
+                          - text: is a neutral and demilitarised autonomous region of Finland.
+                          - superscript [ref=e1174]:
+                            - link "[i]" [ref=e1175] [cursor=pointer]:
+                              - /url: "#cite_note-autonomous-20"
+                              - generic: "[i]"
+                          - superscript [ref=e1176]:
+                            - link "[x]" [ref=e1177] [cursor=pointer]:
+                              - /url: "#cite_note-46"
+                              - generic: "[x]"
+                  - 'row "France – French Republic UN member state None Member of the EU.[f] France contains five overseas regions/departments; French Guiana, Guadeloupe, Martinique, Mayotte, and Réunion. France also includes eight overseas territories: Clipperton Island French Polynesia New Caledonia Saint Barthélemy Saint Martin Saint Pierre and Miquelon Wallis and Futuna French Southern and Antarctic Lands[y]" [ref=e1178]':
+                    - cell "France – French Republic" [ref=e1179]:
+                      - link "France" [ref=e1184] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/France
+                      - text: – French Republic
+                    - cell "UN member state" [ref=e1185]
+                    - cell "None" [ref=e1186]
+                    - 'cell "Member of the EU.[f] France contains five overseas regions/departments; French Guiana, Guadeloupe, Martinique, Mayotte, and Réunion. France also includes eight overseas territories: Clipperton Island French Polynesia New Caledonia Saint Barthélemy Saint Martin Saint Pierre and Miquelon Wallis and Futuna French Southern and Antarctic Lands[y]" [ref=e1187]':
+                      - text: Member of the EU.
+                      - superscript [ref=e1188]:
+                        - link "[f]" [ref=e1189] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - text: France contains five
+                      - link "overseas regions/departments" [ref=e1190] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Overseas_departments_and_regions_of_France
+                      - text: ;
+                      - link "French Guiana" [ref=e1191] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/French_Guiana
+                      - text: ","
+                      - link "Guadeloupe" [ref=e1192] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Guadeloupe
+                      - text: ","
+                      - link "Martinique" [ref=e1193] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Martinique
+                      - text: ","
+                      - link "Mayotte" [ref=e1194] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Mayotte
+                      - text: ", and"
+                      - link "Réunion" [ref=e1195] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Réunion
+                      - text: . France also includes eight
+                      - link "overseas territories" [ref=e1196] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Overseas_France
+                      - text: ":"
+                      - list [ref=e1197]:
+                        - listitem [ref=e1198]:
+                          - link "Clipperton Island" [ref=e1200] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Clipperton_Island
+                        - listitem [ref=e1201]:
+                          - link "French Polynesia" [ref=e1205] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/French_Polynesia
+                        - listitem [ref=e1206]:
+                          - link "New Caledonia" [ref=e1210] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/New_Caledonia
+                        - listitem [ref=e1211]:
+                          - link "Saint Barthélemy" [ref=e1213] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Saint_Barthélemy
+                        - listitem [ref=e1214]:
+                          - link "Saint Martin" [ref=e1216] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Collectivity_of_Saint_Martin
+                        - listitem [ref=e1217]:
+                          - link "Saint Pierre and Miquelon" [ref=e1219] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Saint_Pierre_and_Miquelon
+                        - listitem [ref=e1220]:
+                          - link "Wallis and Futuna" [ref=e1222] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Wallis_and_Futuna
+                        - listitem [ref=e1223]:
+                          - link "French Southern and Antarctic Lands" [ref=e1227] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/French_Southern_and_Antarctic_Lands
+                          - superscript [ref=e1228]:
+                            - link "[y]" [ref=e1229] [cursor=pointer]:
+                              - /url: "#cite_note-Adélie-47"
+                              - generic: "[y]"
+                  - row "G Gabon – Gabonese Republic UN member state None" [ref=e1230]:
+                    - rowheader "G" [ref=e1231]:
+                      - link "G" [ref=e1232] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Gabon – Gabonese Republic" [ref=e1233]:
+                      - link "Gabon" [ref=e1238] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Gabon
+                      - text: – Gabonese Republic
+                    - cell "UN member state" [ref=e1239]
+                    - cell "None" [ref=e1240]
+                    - cell [ref=e1241]
+                  - row "Gambia, The – Republic of The Gambia[23] UN member state None" [ref=e1242]:
+                    - cell "Gambia, The – Republic of The Gambia[23]" [ref=e1243]:
+                      - link "Gambia, The" [ref=e1248] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/The_Gambia
+                      - text: – Republic of The Gambia
+                      - superscript [ref=e1249]:
+                        - link "[23]" [ref=e1250] [cursor=pointer]:
+                          - /url: "#cite_note-48"
+                          - generic: "[23]"
+                    - cell "UN member state" [ref=e1251]
+                    - cell "None" [ref=e1252]
+                    - cell [ref=e1253]
+                  - row "Georgia UN member state None Georgia contains two autonomous republics, Adjara and Abkhazia.[i] In Abkhazia and South Ossetia, de facto states have been formed." [ref=e1254]:
+                    - cell "Georgia" [ref=e1255]:
+                      - link "Georgia" [ref=e1260] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Georgia_(country)
+                    - cell "UN member state" [ref=e1261]
+                    - cell "None" [ref=e1262]
+                    - cell "Georgia contains two autonomous republics, Adjara and Abkhazia.[i] In Abkhazia and South Ossetia, de facto states have been formed." [ref=e1263]:
+                      - text: Georgia contains two autonomous republics,
+                      - link "Adjara" [ref=e1264] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Adjara
+                      - text: and
+                      - link "Abkhazia" [ref=e1265] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Government_of_the_Autonomous_Republic_of_Abkhazia
+                      - text: .
+                      - superscript [ref=e1266]:
+                        - link "[i]" [ref=e1267] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                      - text: In
+                      - link "Abkhazia" [ref=e1268] [cursor=pointer]:
+                        - /url: "#Abkhazia"
+                      - text: and
+                      - link "South Ossetia" [ref=e1269] [cursor=pointer]:
+                        - /url: "#South_Ossetia"
+                      - text: ", de facto states have been formed."
+                  - row "Germany – Federal Republic of Germany UN member state None Member of the EU.[f] Germany is a federation of 16 states.[k]" [ref=e1270]:
+                    - cell "Germany – Federal Republic of Germany" [ref=e1271]:
+                      - link "Germany" [ref=e1276] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Germany
+                      - text: – Federal Republic of Germany
+                    - cell "UN member state" [ref=e1277]
+                    - cell "None" [ref=e1278]
+                    - cell "Member of the EU.[f] Germany is a federation of 16 states.[k]" [ref=e1279]:
+                      - text: Member of the EU.
+                      - superscript [ref=e1280]:
+                        - link "[f]" [ref=e1281] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - text: Germany is a federation of
+                      - link "16 states" [ref=e1282] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/States_of_Germany
+                      - text: .
+                      - superscript [ref=e1283]:
+                        - link "[k]" [ref=e1284] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - row "Ghana – Republic of Ghana UN member state None" [ref=e1285]:
+                    - cell "Ghana – Republic of Ghana" [ref=e1286]:
+                      - link "Ghana" [ref=e1291] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Ghana
+                      - text: – Republic of Ghana
+                    - cell "UN member state" [ref=e1292]
+                    - cell "None" [ref=e1293]
+                    - cell [ref=e1294]
+                  - row "Greece – Hellenic Republic UN member state None Member of the EU.[f] Greece contains one autonomous area, Mount Athos.[24]" [ref=e1295]:
+                    - cell "Greece – Hellenic Republic" [ref=e1296]:
+                      - link "Greece" [ref=e1301] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Greece
+                      - text: – Hellenic Republic
+                    - cell "UN member state" [ref=e1302]
+                    - cell "None" [ref=e1303]
+                    - cell "Member of the EU.[f] Greece contains one autonomous area, Mount Athos.[24]" [ref=e1304]:
+                      - text: Member of the EU.
+                      - superscript [ref=e1305]:
+                        - link "[f]" [ref=e1306] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - text: Greece contains one autonomous area,
+                      - link "Mount Athos" [ref=e1307] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Mount_Athos
+                      - text: .
+                      - superscript [ref=e1308]:
+                        - link "[24]" [ref=e1309] [cursor=pointer]:
+                          - /url: "#cite_note-49"
+                          - generic: "[24]"
+                  - row "Grenada UN member state None Grenada is a Commonwealth realm.[h]" [ref=e1310]:
+                    - cell "Grenada" [ref=e1311]:
+                      - link "Grenada" [ref=e1316] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Grenada
+                    - cell "UN member state" [ref=e1317]
+                    - cell "None" [ref=e1318]
+                    - cell "Grenada is a Commonwealth realm.[h]" [ref=e1319]:
+                      - text: Grenada is a Commonwealth realm.
+                      - superscript [ref=e1320]:
+                        - link "[h]" [ref=e1321] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                  - row "Guatemala – Republic of Guatemala UN member state None" [ref=e1322]:
+                    - cell "Guatemala – Republic of Guatemala" [ref=e1323]:
+                      - link "Guatemala" [ref=e1328] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Guatemala
+                      - text: – Republic of Guatemala
+                    - cell "UN member state" [ref=e1329]
+                    - cell "None" [ref=e1330]
+                    - cell [ref=e1331]
+                  - row "Guinea – Republic of Guinea[z] UN member state None" [ref=e1332]:
+                    - cell "Guinea – Republic of Guinea[z]" [ref=e1333]:
+                      - link "Guinea" [ref=e1338] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Guinea
+                      - text: – Republic of Guinea
+                      - superscript [ref=e1339]:
+                        - link "[z]" [ref=e1340] [cursor=pointer]:
+                          - /url: "#cite_note-50"
+                          - generic: "[z]"
+                    - cell "UN member state" [ref=e1341]
+                    - cell "None" [ref=e1342]
+                    - cell [ref=e1343]
+                  - row "Guinea-Bissau – Republic of Guinea-Bissau UN member state None" [ref=e1344]:
+                    - cell "Guinea-Bissau – Republic of Guinea-Bissau" [ref=e1345]:
+                      - link "Guinea-Bissau" [ref=e1350] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Guinea-Bissau
+                      - text: – Republic of Guinea-Bissau
+                    - cell "UN member state" [ref=e1351]
+                    - cell "None" [ref=e1352]
+                    - cell [ref=e1353]
+                  - row "Guyana – Co-operative Republic of Guyana UN member state None" [ref=e1354]:
+                    - cell "Guyana – Co-operative Republic of Guyana" [ref=e1355]:
+                      - link "Guyana" [ref=e1360] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Guyana
+                      - text: – Co-operative Republic of Guyana
+                    - cell "UN member state" [ref=e1361]
+                    - cell "None" [ref=e1362]
+                    - cell [ref=e1363]
+                  - row "H Haiti – Republic of Haiti UN member state None" [ref=e1364]:
+                    - rowheader "H" [ref=e1365]:
+                      - link "H" [ref=e1366] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Haiti – Republic of Haiti" [ref=e1367]:
+                      - link "Haiti" [ref=e1372] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Haiti
+                      - text: – Republic of Haiti
+                    - cell "UN member state" [ref=e1373]
+                    - cell "None" [ref=e1374]
+                    - cell [ref=e1375]
+                  - row "Honduras – Republic of Honduras UN member state None" [ref=e1376]:
+                    - cell "Honduras – Republic of Honduras" [ref=e1377]:
+                      - link "Honduras" [ref=e1382] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Honduras
+                      - text: – Republic of Honduras
+                    - cell "UN member state" [ref=e1383]
+                    - cell "None" [ref=e1384]
+                    - cell [ref=e1385]
+                  - row "Hungary UN member state None Member of the EU.[f]" [ref=e1386]:
+                    - cell "Hungary" [ref=e1387]:
+                      - link "Hungary" [ref=e1392] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Hungary
+                    - cell "UN member state" [ref=e1393]
+                    - cell "None" [ref=e1394]
+                    - cell "Member of the EU.[f]" [ref=e1395]:
+                      - text: Member of the EU.
+                      - superscript [ref=e1396]:
+                        - link "[f]" [ref=e1397] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "I Iceland[aa] UN member state None" [ref=e1398]:
+                    - rowheader "I" [ref=e1399]:
+                      - link "I" [ref=e1400] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Iceland[aa]" [ref=e1401]:
+                      - link "Iceland" [ref=e1406] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Iceland
+                      - superscript [ref=e1407]:
+                        - link "[aa]" [ref=e1408] [cursor=pointer]:
+                          - /url: "#cite_note-Republic-54"
+                          - generic: "[aa]"
+                    - cell "UN member state" [ref=e1409]
+                    - cell "None" [ref=e1410]
+                    - cell [ref=e1411]
+                  - row "India – Republic of India UN member state None India is a federation of 28 states and eight union territories.[k]" [ref=e1412]:
+                    - cell "India – Republic of India" [ref=e1413]:
+                      - link "India" [ref=e1418] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/India
+                      - text: – Republic of India
+                    - cell "UN member state" [ref=e1419]
+                    - cell "None" [ref=e1420]
+                    - cell "India is a federation of 28 states and eight union territories.[k]" [ref=e1421]:
+                      - text: India is a federation of
+                      - link "28 states and eight union territories" [ref=e1422] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/States_and_union_territories_of_India
+                      - text: .
+                      - superscript [ref=e1423]:
+                        - link "[k]" [ref=e1424] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - 'row "Indonesia – Republic of Indonesia UN member state None Indonesia has nine autonomous provinces: Aceh, Central Papua, Highland Papua, Jakarta, Papua, South Papua, Southwest Papua, West Papua, and Yogyakarta.[i]" [ref=e1425]':
+                    - cell "Indonesia – Republic of Indonesia" [ref=e1426]:
+                      - link "Indonesia" [ref=e1431] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Indonesia
+                      - text: – Republic of Indonesia
+                    - cell "UN member state" [ref=e1432]
+                    - cell "None" [ref=e1433]
+                    - 'cell "Indonesia has nine autonomous provinces: Aceh, Central Papua, Highland Papua, Jakarta, Papua, South Papua, Southwest Papua, West Papua, and Yogyakarta.[i]" [ref=e1434]':
+                      - text: Indonesia has nine autonomous
+                      - link "provinces" [ref=e1435] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Provinces_of_Indonesia
+                      - text: ":"
+                      - link "Aceh" [ref=e1436] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Aceh
+                      - text: ","
+                      - link "Central Papua" [ref=e1437] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Central_Papua
+                      - text: ","
+                      - link "Highland Papua" [ref=e1438] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Highland_Papua
+                      - text: ","
+                      - link "Jakarta" [ref=e1439] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Jakarta
+                      - text: ","
+                      - link "Papua" [ref=e1440] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Papua_(province)
+                      - text: ","
+                      - link "South Papua" [ref=e1441] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/South_Papua
+                      - text: ","
+                      - link "Southwest Papua" [ref=e1442] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Southwest_Papua
+                      - text: ","
+                      - link "West Papua" [ref=e1443] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/West_Papua_(province)
+                      - text: ", and"
+                      - link "Yogyakarta" [ref=e1444] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Special_Region_of_Yogyakarta
+                      - text: .
+                      - superscript [ref=e1445]:
+                        - link "[i]" [ref=e1446] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Iran – Islamic Republic of Iran UN member state None" [ref=e1447]:
+                    - cell "Iran – Islamic Republic of Iran" [ref=e1448]:
+                      - link "Iran" [ref=e1453] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Iran
+                      - text: – Islamic Republic of Iran
+                    - cell "UN member state" [ref=e1454]
+                    - cell "None" [ref=e1455]
+                    - cell [ref=e1456]
+                  - row "Iraq – Republic of Iraq UN member state None Iraq is a federation[k][28] of 19 governorates, four of which make up the autonomous Kurdistan Region.[i]" [ref=e1457]:
+                    - cell "Iraq – Republic of Iraq" [ref=e1458]:
+                      - link "Iraq" [ref=e1463] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Iraq
+                      - text: – Republic of Iraq
+                    - cell "UN member state" [ref=e1464]
+                    - cell "None" [ref=e1465]
+                    - cell "Iraq is a federation[k][28] of 19 governorates, four of which make up the autonomous Kurdistan Region.[i]" [ref=e1466]:
+                      - text: Iraq is a federation
+                      - superscript [ref=e1467]:
+                        - link "[k]" [ref=e1468] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                      - superscript [ref=e1469]:
+                        - link "[28]" [ref=e1470] [cursor=pointer]:
+                          - /url: "#cite_note-55"
+                          - generic: "[28]"
+                      - text: of
+                      - link "19 governorates" [ref=e1471] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Governorates_of_Iraq
+                      - text: ", four of which make up the autonomous"
+                      - link "Kurdistan Region" [ref=e1472] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kurdistan_Region
+                      - text: .
+                      - superscript [ref=e1473]:
+                        - link "[i]" [ref=e1474] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Ireland[ab] UN member state None Member of the EU.[f]" [ref=e1475]:
+                    - cell "Ireland[ab]" [ref=e1476]:
+                      - link "Ireland" [ref=e1481] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Republic_of_Ireland
+                      - superscript [ref=e1482]:
+                        - link "[ab]" [ref=e1483] [cursor=pointer]:
+                          - /url: "#cite_note-57"
+                          - generic: "[ab]"
+                    - cell "UN member state" [ref=e1484]
+                    - cell "None" [ref=e1485]
+                    - cell "Member of the EU.[f]" [ref=e1486]:
+                      - text: Member of the EU.
+                      - superscript [ref=e1487]:
+                        - link "[f]" [ref=e1488] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Israel – State of Israel UN member state Partially unrecognised. Israel exerts strong control over the territory claimed by Palestine. It has annexed East Jerusalem,[30] an act not recognised by the international community.[31] Israel has varying levels of control over the rest of the West Bank, and although it ended its permanent civilian or military presence in the Gaza Strip, it is still considered to be the occupying power under international law.[32][33][34][35] Israel is not recognised as a state by 23 UN members and the Sahrawi Republic. The Palestine Liberation Organization, recognised by a majority of UN member states as the representative of the Palestinian people, recognised Israel in 1993." [ref=e1489]:
+                    - cell "Israel – State of Israel" [ref=e1490]:
+                      - link "Israel" [ref=e1495] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Israel
+                      - text: – State of Israel
+                    - cell "UN member state" [ref=e1496]
+                    - cell "Partially unrecognised." [ref=e1497]:
+                      - link "Partially unrecognised" [ref=e1498] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_recognition_of_Israel
+                      - text: .
+                    - cell "Israel exerts strong control over the territory claimed by Palestine. It has annexed East Jerusalem,[30] an act not recognised by the international community.[31] Israel has varying levels of control over the rest of the West Bank, and although it ended its permanent civilian or military presence in the Gaza Strip, it is still considered to be the occupying power under international law.[32][33][34][35] Israel is not recognised as a state by 23 UN members and the Sahrawi Republic. The Palestine Liberation Organization, recognised by a majority of UN member states as the representative of the Palestinian people, recognised Israel in 1993." [ref=e1499]:
+                      - text: Israel exerts strong control over the territory claimed by
+                      - link "Palestine" [ref=e1500] [cursor=pointer]:
+                        - /url: "#Palestine"
+                      - text: . It has annexed
+                      - link "East Jerusalem" [ref=e1501] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/East_Jerusalem
+                      - text: ","
+                      - superscript [ref=e1502]:
+                        - link "[30]" [ref=e1503] [cursor=pointer]:
+                          - /url: "#cite_note-58"
+                          - generic: "[30]"
+                      - text: an act not recognised by the international community.
+                      - superscript [ref=e1504]:
+                        - link "[31]" [ref=e1505] [cursor=pointer]:
+                          - /url: "#cite_note-dis-59"
+                          - generic: "[31]"
+                      - text: Israel has
+                      - link "varying levels of control" [ref=e1506] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/West_Bank_areas_in_the_Oslo_II_Accord
+                      - text: over the rest of the
+                      - link "West Bank" [ref=e1507] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/West_Bank
+                      - text: ", and although it ended its"
+                      - link "permanent civilian or military presence" [ref=e1508] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Israeli_disengagement_from_the_Gaza_Strip
+                      - text: in the
+                      - link "Gaza Strip" [ref=e1509] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Gaza_Strip
+                      - text: ", it is still considered to be the occupying power under international law."
+                      - superscript [ref=e1510]:
+                        - link "[32]" [ref=e1511] [cursor=pointer]:
+                          - /url: "#cite_note-60"
+                          - generic: "[32]"
+                      - superscript [ref=e1512]:
+                        - link "[33]" [ref=e1513] [cursor=pointer]:
+                          - /url: "#cite_note-61"
+                          - generic: "[33]"
+                      - superscript [ref=e1514]:
+                        - link "[34]" [ref=e1515] [cursor=pointer]:
+                          - /url: "#cite_note-62"
+                          - generic: "[34]"
+                      - superscript [ref=e1516]:
+                        - link "[35]" [ref=e1517] [cursor=pointer]:
+                          - /url: "#cite_note-occ-63"
+                          - generic: "[35]"
+                      - paragraph [ref=e1518]:
+                        - text: Israel is not recognised as a state by
+                        - link "23 UN members" [ref=e1519] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/International_recognition_of_Israel
+                        - text: and the
+                        - link "Sahrawi Republic" [ref=e1520] [cursor=pointer]:
+                          - /url: "#Sahrawi_Republic"
+                        - text: . The
+                        - link "Palestine Liberation Organization" [ref=e1521] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Palestine_Liberation_Organization
+                        - text: ", recognised by a majority of UN member states as the representative of the Palestinian people,"
+                        - link "recognised Israel in 1993" [ref=e1522] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Israel–Palestine_Liberation_Organization_letters_of_recognition
+                        - text: .
+                  - 'row "Italy – Italian Republic UN member state None Member of the EU.[f] Italy has five autonomous regions: Aosta Valley, Friuli-Venezia Giulia, Sardinia, Sicily and Trentino-Alto Adige/Südtirol.[i]" [ref=e1523]':
+                    - cell "Italy – Italian Republic" [ref=e1524]:
+                      - link "Italy" [ref=e1529] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Italy
+                      - text: – Italian Republic
+                    - cell "UN member state" [ref=e1530]
+                    - cell "None" [ref=e1531]
+                    - 'cell "Member of the EU.[f] Italy has five autonomous regions: Aosta Valley, Friuli-Venezia Giulia, Sardinia, Sicily and Trentino-Alto Adige/Südtirol.[i]" [ref=e1532]':
+                      - text: Member of the EU.
+                      - superscript [ref=e1533]:
+                        - link "[f]" [ref=e1534] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - link "Italy" [ref=e1535] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Italy
+                      - text: "has five autonomous regions:"
+                      - link "Aosta Valley" [ref=e1536] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Aosta_Valley
+                      - text: ","
+                      - link "Friuli-Venezia Giulia" [ref=e1537] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Friuli-Venezia_Giulia
+                      - text: ","
+                      - link "Sardinia" [ref=e1538] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Sardinia
+                      - text: ","
+                      - link "Sicily" [ref=e1539] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Sicily
+                      - text: and
+                      - link "Trentino-Alto Adige/Südtirol" [ref=e1540] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Trentino-Alto_Adige/Südtirol
+                      - text: .
+                      - superscript [ref=e1541]:
+                        - link "[i]" [ref=e1542] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Ivory Coast – Republic of Côte d'Ivoire[ac] UN member state None" [ref=e1543]:
+                    - cell "Ivory Coast – Republic of Côte d'Ivoire[ac]" [ref=e1544]:
+                      - link "Ivory Coast" [ref=e1549] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Ivory_Coast
+                      - text: – Republic of Côte d'Ivoire
+                      - superscript [ref=e1550]:
+                        - link "[ac]" [ref=e1551] [cursor=pointer]:
+                          - /url: "#cite_note-64"
+                          - generic: "[ac]"
+                    - cell "UN member state" [ref=e1552]
+                    - cell "None" [ref=e1553]
+                    - cell [ref=e1554]
+                  - row "J Jamaica UN member state None Jamaica is a Commonwealth realm.[h]" [ref=e1555]:
+                    - rowheader "J" [ref=e1556]:
+                      - link "J" [ref=e1557] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Jamaica" [ref=e1558]:
+                      - link "Jamaica" [ref=e1563] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Jamaica
+                    - cell "UN member state" [ref=e1564]
+                    - cell "None" [ref=e1565]
+                    - cell "Jamaica is a Commonwealth realm.[h]" [ref=e1566]:
+                      - text: Jamaica is a Commonwealth realm.
+                      - superscript [ref=e1567]:
+                        - link "[h]" [ref=e1568] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                  - row "Japan UN member state None" [ref=e1569]:
+                    - cell "Japan" [ref=e1570]:
+                      - link "Japan" [ref=e1575] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Japan
+                    - cell "UN member state" [ref=e1576]
+                    - cell "None" [ref=e1577]
+                    - cell [ref=e1578]
+                  - row "Jordan – Hashemite Kingdom of Jordan UN member state None" [ref=e1579]:
+                    - cell "Jordan – Hashemite Kingdom of Jordan" [ref=e1580]:
+                      - link "Jordan" [ref=e1585] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Jordan
+                      - text: – Hashemite Kingdom of Jordan
+                    - cell "UN member state" [ref=e1586]
+                    - cell "None" [ref=e1587]
+                    - cell [ref=e1588]
+                  - row "K Kazakhstan – Republic of Kazakhstan UN member state None" [ref=e1589]:
+                    - rowheader "K" [ref=e1590]:
+                      - link "K" [ref=e1591] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Kazakhstan – Republic of Kazakhstan" [ref=e1592]:
+                      - link "Kazakhstan" [ref=e1597] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kazakhstan
+                      - text: – Republic of Kazakhstan
+                    - cell "UN member state" [ref=e1598]
+                    - cell "None" [ref=e1599]
+                    - cell [ref=e1600]
+                  - row "Kenya – Republic of Kenya UN member state None" [ref=e1601]:
+                    - cell "Kenya – Republic of Kenya" [ref=e1602]:
+                      - link "Kenya" [ref=e1607] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kenya
+                      - text: – Republic of Kenya
+                    - cell "UN member state" [ref=e1608]
+                    - cell "None" [ref=e1609]
+                    - cell [ref=e1610]
+                  - row "Kiribati – Republic of Kiribati UN member state None" [ref=e1611]:
+                    - cell "Kiribati – Republic of Kiribati" [ref=e1612]:
+                      - link "Kiribati" [ref=e1617] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kiribati
+                      - text: – Republic of Kiribati
+                    - cell "UN member state" [ref=e1618]
+                    - cell "None" [ref=e1619]
+                    - cell [ref=e1620]
+                  - row "Kuwait – State of Kuwait UN member state None" [ref=e1621]:
+                    - cell "Kuwait – State of Kuwait" [ref=e1622]:
+                      - link "Kuwait" [ref=e1627] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kuwait
+                      - text: – State of Kuwait
+                    - cell "UN member state" [ref=e1628]
+                    - cell "None" [ref=e1629]
+                    - cell [ref=e1630]
+                  - row "Kyrgyzstan – Kyrgyz Republic UN member state None" [ref=e1631]:
+                    - cell "Kyrgyzstan – Kyrgyz Republic" [ref=e1632]:
+                      - link "Kyrgyzstan" [ref=e1637] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kyrgyzstan
+                      - text: – Kyrgyz Republic
+                    - cell "UN member state" [ref=e1638]
+                    - cell "None" [ref=e1639]
+                    - cell [ref=e1640]
+                  - row "L Laos – Lao People's Democratic Republic UN member state None" [ref=e1641]:
+                    - rowheader "L" [ref=e1642]:
+                      - link "L" [ref=e1643] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Laos – Lao People's Democratic Republic" [ref=e1644]:
+                      - link "Laos" [ref=e1649] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Laos
+                      - text: – Lao People's Democratic Republic
+                    - cell "UN member state" [ref=e1650]
+                    - cell "None" [ref=e1651]
+                    - cell [ref=e1652]
+                  - row "Latvia – Republic of Latvia UN member state None Member of the EU.[f]" [ref=e1653]:
+                    - cell "Latvia – Republic of Latvia" [ref=e1654]:
+                      - link "Latvia" [ref=e1659] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Latvia
+                      - text: – Republic of Latvia
+                    - cell "UN member state" [ref=e1660]
+                    - cell "None" [ref=e1661]
+                    - cell "Member of the EU.[f]" [ref=e1662]:
+                      - text: Member of the EU.
+                      - superscript [ref=e1663]:
+                        - link "[f]" [ref=e1664] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Lebanon – Lebanese Republic UN member state None" [ref=e1665]:
+                    - cell "Lebanon – Lebanese Republic" [ref=e1666]:
+                      - link "Lebanon" [ref=e1671] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Lebanon
+                      - text: – Lebanese Republic
+                    - cell "UN member state" [ref=e1672]
+                    - cell "None" [ref=e1673]
+                    - cell [ref=e1674]
+                  - row "Lesotho – Kingdom of Lesotho UN member state None" [ref=e1675]:
+                    - cell "Lesotho – Kingdom of Lesotho" [ref=e1676]:
+                      - link "Lesotho" [ref=e1681] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Lesotho
+                      - text: – Kingdom of Lesotho
+                    - cell "UN member state" [ref=e1682]
+                    - cell "None" [ref=e1683]
+                    - cell [ref=e1684]
+                  - row "Liberia – Republic of Liberia UN member state None" [ref=e1685]:
+                    - cell "Liberia – Republic of Liberia" [ref=e1686]:
+                      - link "Liberia" [ref=e1691] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Liberia
+                      - text: – Republic of Liberia
+                    - cell "UN member state" [ref=e1692]
+                    - cell "None" [ref=e1693]
+                    - cell [ref=e1694]
+                  - row "Libya – State of Libya UN member state None" [ref=e1695]:
+                    - cell "Libya – State of Libya" [ref=e1696]:
+                      - link "Libya" [ref=e1701] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Libya
+                      - text: – State of Libya
+                    - cell "UN member state" [ref=e1702]
+                    - cell "None" [ref=e1703]
+                    - cell [ref=e1704]
+                  - row "Liechtenstein – Principality of Liechtenstein UN member state None" [ref=e1705]:
+                    - cell "Liechtenstein – Principality of Liechtenstein" [ref=e1706]:
+                      - link "Liechtenstein" [ref=e1711] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Liechtenstein
+                      - text: – Principality of Liechtenstein
+                    - cell "UN member state" [ref=e1712]
+                    - cell "None" [ref=e1713]
+                    - cell [ref=e1714]
+                  - row "Lithuania – Republic of Lithuania UN member state None Member of the EU.[f]" [ref=e1715]:
+                    - cell "Lithuania – Republic of Lithuania" [ref=e1716]:
+                      - link "Lithuania" [ref=e1721] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Lithuania
+                      - text: – Republic of Lithuania
+                    - cell "UN member state" [ref=e1722]
+                    - cell "None" [ref=e1723]
+                    - cell "Member of the EU.[f]" [ref=e1724]:
+                      - text: Member of the EU.
+                      - superscript [ref=e1725]:
+                        - link "[f]" [ref=e1726] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Luxembourg – Grand Duchy of Luxembourg UN member state None Member of the EU.[f]" [ref=e1727]:
+                    - cell "Luxembourg – Grand Duchy of Luxembourg" [ref=e1728]:
+                      - link "Luxembourg" [ref=e1733] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Luxembourg
+                      - text: – Grand Duchy of Luxembourg
+                    - cell "UN member state" [ref=e1734]
+                    - cell "None" [ref=e1735]
+                    - cell "Member of the EU.[f]" [ref=e1736]:
+                      - text: Member of the EU.
+                      - superscript [ref=e1737]:
+                        - link "[f]" [ref=e1738] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "M Madagascar – Republic of Madagascar UN member state None" [ref=e1739]:
+                    - rowheader "M" [ref=e1740]:
+                      - link "M" [ref=e1741] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Madagascar – Republic of Madagascar" [ref=e1742]:
+                      - link "Madagascar" [ref=e1747] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Madagascar
+                      - text: – Republic of Madagascar
+                    - cell "UN member state" [ref=e1748]
+                    - cell "None" [ref=e1749]
+                    - cell [ref=e1750]
+                  - row "Malawi – Republic of Malawi UN member state None" [ref=e1751]:
+                    - cell "Malawi – Republic of Malawi" [ref=e1752]:
+                      - link "Malawi" [ref=e1757] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Malawi
+                      - text: – Republic of Malawi
+                    - cell "UN member state" [ref=e1758]
+                    - cell "None" [ref=e1759]
+                    - cell [ref=e1760]
+                  - row "Malaysia UN member state None Malaysia is a federation of 13 states and three federal territories.[k]" [ref=e1761]:
+                    - cell "Malaysia" [ref=e1762]:
+                      - link "Malaysia" [ref=e1767] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Malaysia
+                    - cell "UN member state" [ref=e1768]
+                    - cell "None" [ref=e1769]
+                    - cell "Malaysia is a federation of 13 states and three federal territories.[k]" [ref=e1770]:
+                      - text: Malaysia is a federation of
+                      - link "13 states and three federal territories" [ref=e1771] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/States_and_federal_territories_of_Malaysia
+                      - text: .
+                      - superscript [ref=e1772]:
+                        - link "[k]" [ref=e1773] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - row "Maldives – Republic of Maldives UN member state None" [ref=e1774]:
+                    - cell "Maldives – Republic of Maldives" [ref=e1775]:
+                      - link "Maldives" [ref=e1780] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Maldives
+                      - text: – Republic of Maldives
+                    - cell "UN member state" [ref=e1781]
+                    - cell "None" [ref=e1782]
+                    - cell [ref=e1783]
+                  - row "Mali – Republic of Mali UN member state None" [ref=e1784]:
+                    - cell "Mali – Republic of Mali" [ref=e1785]:
+                      - link "Mali" [ref=e1790] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Mali
+                      - text: – Republic of Mali
+                    - cell "UN member state" [ref=e1791]
+                    - cell "None" [ref=e1792]
+                    - cell [ref=e1793]
+                  - row "Malta – Republic of Malta UN member state None Member of the EU.[f]" [ref=e1794]:
+                    - cell "Malta – Republic of Malta" [ref=e1795]:
+                      - link "Malta" [ref=e1800] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Malta
+                      - text: – Republic of Malta
+                    - cell "UN member state" [ref=e1801]
+                    - cell "None" [ref=e1802]
+                    - cell "Member of the EU.[f]" [ref=e1803]:
+                      - text: Member of the EU.
+                      - superscript [ref=e1804]:
+                        - link "[f]" [ref=e1805] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Marshall Islands – Republic of the Marshall Islands UN member state None Under the Compact of Free Association with the United States." [ref=e1806]:
+                    - cell "Marshall Islands – Republic of the Marshall Islands" [ref=e1807]:
+                      - link "Marshall Islands" [ref=e1812] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Marshall_Islands
+                      - text: – Republic of the Marshall Islands
+                    - cell "UN member state" [ref=e1813]
+                    - cell "None" [ref=e1814]
+                    - cell "Under the Compact of Free Association with the United States." [ref=e1815]:
+                      - text: Under the
+                      - link "Compact of Free Association" [ref=e1816] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Compact_of_Free_Association
+                      - text: with the
+                      - link "United States" [ref=e1817] [cursor=pointer]:
+                        - /url: "#United_States"
+                      - text: .
+                  - row "Mauritania – Islamic Republic of Mauritania UN member state None" [ref=e1818]:
+                    - cell "Mauritania – Islamic Republic of Mauritania" [ref=e1819]:
+                      - link "Mauritania" [ref=e1824] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Mauritania
+                      - text: – Islamic Republic of Mauritania
+                    - cell "UN member state" [ref=e1825]
+                    - cell "None" [ref=e1826]
+                    - cell [ref=e1827]
+                  - row "Mauritius – Republic of Mauritius UN member state None Mauritius has an autonomous island, Rodrigues.[i]" [ref=e1828]:
+                    - cell "Mauritius – Republic of Mauritius" [ref=e1829]:
+                      - link "Mauritius" [ref=e1834] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Mauritius
+                      - text: – Republic of Mauritius
+                    - cell "UN member state" [ref=e1835]
+                    - cell "None" [ref=e1836]
+                    - cell "Mauritius has an autonomous island, Rodrigues.[i]" [ref=e1837]:
+                      - text: Mauritius has an autonomous island,
+                      - link "Rodrigues" [ref=e1838] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Rodrigues
+                      - text: .
+                      - superscript [ref=e1839]:
+                        - link "[i]" [ref=e1840] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Mexico – United Mexican States UN member state None Mexico is a federation of 31 states and one autonomous city.[k]" [ref=e1841]:
+                    - cell "Mexico – United Mexican States" [ref=e1842]:
+                      - link "Mexico" [ref=e1847] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Mexico
+                      - text: – United Mexican States
+                    - cell "UN member state" [ref=e1848]
+                    - cell "None" [ref=e1849]
+                    - cell "Mexico is a federation of 31 states and one autonomous city.[k]" [ref=e1850]:
+                      - text: Mexico is a federation of
+                      - link "31 states and one autonomous city" [ref=e1851] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Administrative_divisions_of_Mexico
+                      - text: .
+                      - superscript [ref=e1852]:
+                        - link "[k]" [ref=e1853] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - row "Micronesia, Federated States of UN member state None Under the Compact of Free Association with the United States. The Federated States of Micronesia is a federation of four states." [ref=e1854]:
+                    - cell "Micronesia, Federated States of" [ref=e1855]:
+                      - link "Micronesia, Federated States of" [ref=e1860] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Federated_States_of_Micronesia
+                    - cell "UN member state" [ref=e1861]
+                    - cell "None" [ref=e1862]
+                    - cell "Under the Compact of Free Association with the United States. The Federated States of Micronesia is a federation of four states." [ref=e1863]:
+                      - text: Under the Compact of Free Association with the
+                      - link "United States" [ref=e1864] [cursor=pointer]:
+                        - /url: "#United_States"
+                      - text: . The Federated States of Micronesia is a federation of
+                      - link "four states" [ref=e1865] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Administrative_divisions_of_the_Federated_States_of_Micronesia
+                      - text: .
+                  - row "Moldova – Republic of Moldova UN member state None Moldova has two autonomous territorial units, Gagauzia and the Left Bank of the Dniester. The latter and a city, Bender (Tighina), are under the de facto control of Transnistria." [ref=e1866]:
+                    - cell "Moldova – Republic of Moldova" [ref=e1867]:
+                      - link "Moldova" [ref=e1872] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Moldova
+                      - text: – Republic of Moldova
+                    - cell "UN member state" [ref=e1873]
+                    - cell "None" [ref=e1874]
+                    - cell "Moldova has two autonomous territorial units, Gagauzia and the Left Bank of the Dniester. The latter and a city, Bender (Tighina), are under the de facto control of Transnistria." [ref=e1875]:
+                      - text: Moldova has two
+                      - link "autonomous territorial units" [ref=e1876] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Administrative_divisions_of_Moldova
+                      - text: ","
+                      - link "Gagauzia" [ref=e1877] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Gagauzia
+                      - text: and the
+                      - link "Left Bank of the Dniester" [ref=e1878] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Administrative-Territorial_Units_of_the_Left_Bank_of_the_Dniester
+                      - text: . The latter and a city,
+                      - link "Bender" [ref=e1879] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Bender,_Moldova
+                      - text: (Tighina), are under the de facto control of
+                      - link "Transnistria" [ref=e1880] [cursor=pointer]:
+                        - /url: "#Transnistria"
+                      - text: .
+                  - row "Monaco – Principality of Monaco UN member state None" [ref=e1881]:
+                    - cell "Monaco – Principality of Monaco" [ref=e1882]:
+                      - link "Monaco" [ref=e1887] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Monaco
+                      - text: – Principality of Monaco
+                    - cell "UN member state" [ref=e1888]
+                    - cell "None" [ref=e1889]
+                    - cell [ref=e1890]
+                  - row "Mongolia UN member state None" [ref=e1891]:
+                    - cell "Mongolia" [ref=e1892]:
+                      - link "Mongolia" [ref=e1897] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Mongolia
+                    - cell "UN member state" [ref=e1898]
+                    - cell "None" [ref=e1899]
+                    - cell [ref=e1900]
+                  - row "Montenegro UN member state None" [ref=e1901]:
+                    - cell "Montenegro" [ref=e1902]:
+                      - link "Montenegro" [ref=e1907] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Montenegro
+                    - cell "UN member state" [ref=e1908]
+                    - cell "None" [ref=e1909]
+                    - cell [ref=e1910]
+                  - row "Morocco – Kingdom of Morocco UN member state None A part of the Moroccan-claimed Western Sahara is controlled by the partially-recognised Sahrawi Republic." [ref=e1911]:
+                    - cell "Morocco – Kingdom of Morocco" [ref=e1912]:
+                      - link "Morocco" [ref=e1917] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Morocco
+                      - text: – Kingdom of Morocco
+                    - cell "UN member state" [ref=e1918]
+                    - cell "None" [ref=e1919]
+                    - cell "A part of the Moroccan-claimed Western Sahara is controlled by the partially-recognised Sahrawi Republic." [ref=e1920]:
+                      - link "A part" [ref=e1921] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Free_Zone_(region)
+                      - text: of the Moroccan-claimed
+                      - link "Western Sahara" [ref=e1922] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Western_Sahara
+                      - text: is controlled by the partially-recognised
+                      - link "Sahrawi Republic" [ref=e1923] [cursor=pointer]:
+                        - /url: "#Sahrawi_Republic"
+                      - text: .
+                  - row "Mozambique – Republic of Mozambique UN member state None" [ref=e1924]:
+                    - cell "Mozambique – Republic of Mozambique" [ref=e1925]:
+                      - link "Mozambique" [ref=e1930] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Mozambique
+                      - text: – Republic of Mozambique
+                    - cell "UN member state" [ref=e1931]
+                    - cell "None" [ref=e1932]
+                    - cell [ref=e1933]
+                  - row "Myanmar – Republic of the Union of Myanmar[ad] UN member state None Wa State is a de facto autonomous state within Myanmar. The United Nations has not recognised the de facto ruling government of Myanmar, the State Administration Council.[9]" [ref=e1934]:
+                    - cell "Myanmar – Republic of the Union of Myanmar[ad]" [ref=e1935]:
+                      - link "Myanmar" [ref=e1940] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Myanmar
+                      - text: – Republic of the Union of Myanmar
+                      - superscript [ref=e1941]:
+                        - link "[ad]" [ref=e1942] [cursor=pointer]:
+                          - /url: "#cite_note-65"
+                          - generic: "[ad]"
+                    - cell "UN member state" [ref=e1943]
+                    - cell "None" [ref=e1944]
+                    - cell "Wa State is a de facto autonomous state within Myanmar. The United Nations has not recognised the de facto ruling government of Myanmar, the State Administration Council.[9]" [ref=e1945]:
+                      - link "Wa State" [ref=e1946] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Wa_State
+                      - text: is a de facto autonomous state within Myanmar. The United Nations has not recognised the de facto ruling government of Myanmar, the
+                      - link "State Administration Council" [ref=e1947] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/State_Administration_Council
+                      - text: .
+                      - superscript [ref=e1948]:
+                        - link "[9]" [ref=e1949] [cursor=pointer]:
+                          - /url: "#cite_note-UN_Seats_Denied-16"
+                          - generic: "[9]"
+                  - row "N Namibia – Republic of Namibia UN member state None" [ref=e1950]:
+                    - rowheader "N" [ref=e1951]:
+                      - link "N" [ref=e1952] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Namibia – Republic of Namibia" [ref=e1953]:
+                      - link "Namibia" [ref=e1958] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Namibia
+                      - text: – Republic of Namibia
+                    - cell "UN member state" [ref=e1959]
+                    - cell "None" [ref=e1960]
+                    - cell [ref=e1961]
+                  - row "Nauru – Republic of Naoero[ae] UN member state None" [ref=e1962]:
+                    - cell "Nauru – Republic of Naoero[ae]" [ref=e1963]:
+                      - link "Nauru" [ref=e1968] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Nauru
+                      - text: – Republic of Naoero
+                      - superscript [ref=e1969]:
+                        - link "[ae]" [ref=e1970] [cursor=pointer]:
+                          - /url: "#cite_note-66"
+                          - generic: "[ae]"
+                    - cell "UN member state" [ref=e1971]
+                    - cell "None" [ref=e1972]
+                    - cell [ref=e1973]
+                  - row "Nepal – Federal Democratic Republic of Nepal UN member state None Nepal is a federation composed of seven provinces.[k]" [ref=e1974]:
+                    - cell "Nepal – Federal Democratic Republic of Nepal" [ref=e1975]:
+                      - link "Nepal" [ref=e1980] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Nepal
+                      - text: – Federal Democratic Republic of Nepal
+                    - cell "UN member state" [ref=e1981]
+                    - cell "None" [ref=e1982]
+                    - cell "Nepal is a federation composed of seven provinces.[k]" [ref=e1983]:
+                      - text: Nepal is a federation composed of
+                      - link "seven provinces" [ref=e1984] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Provinces_of_Nepal
+                      - text: .
+                      - superscript [ref=e1985]:
+                        - link "[k]" [ref=e1986] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - 'row "Netherlands – Kingdom of the Netherlands UN member state None Member of the EU.[f] The Kingdom of the Netherlands includes four areas with substantial autonomy: Aruba Curaçao Netherlands Sint Maarten The Metropolitan Netherlands, Aruba, Curaçao and Sint Maarten form the four constituent countries of the Kingdom. Three overseas parts of the Netherlands (Bonaire, Saba and Sint Eustatius) are special municipalities of the metropolitan Netherlands.[af] The Kingdom of the Netherlands as a whole is a member of the EU, but EU law only wholly applies to parts within Europe." [ref=e1987]':
+                    - cell "Netherlands – Kingdom of the Netherlands" [ref=e1988]:
+                      - link "Netherlands" [ref=e1993] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kingdom_of_the_Netherlands
+                      - text: – Kingdom of the Netherlands
+                    - cell "UN member state" [ref=e1994]
+                    - cell "None" [ref=e1995]
+                    - 'cell "Member of the EU.[f] The Kingdom of the Netherlands includes four areas with substantial autonomy: Aruba Curaçao Netherlands Sint Maarten The Metropolitan Netherlands, Aruba, Curaçao and Sint Maarten form the four constituent countries of the Kingdom. Three overseas parts of the Netherlands (Bonaire, Saba and Sint Eustatius) are special municipalities of the metropolitan Netherlands.[af] The Kingdom of the Netherlands as a whole is a member of the EU, but EU law only wholly applies to parts within Europe." [ref=e1996]':
+                      - text: Member of the EU.
+                      - superscript [ref=e1997]:
+                        - link "[f]" [ref=e1998] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - text: The
+                      - link "Kingdom of the Netherlands" [ref=e1999] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kingdom_of_the_Netherlands
+                      - text: "includes four areas with substantial autonomy:"
+                      - list [ref=e2000]:
+                        - listitem [ref=e2001]:
+                          - link "Aruba" [ref=e2005] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Aruba
+                        - listitem [ref=e2006]:
+                          - link "Curaçao" [ref=e2010] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Curaçao
+                        - listitem [ref=e2011]:
+                          - link "Netherlands" [ref=e2015] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Netherlands
+                        - listitem [ref=e2016]:
+                          - link "Sint Maarten" [ref=e2020] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Sint_Maarten
+                      - paragraph [ref=e2021]:
+                        - text: The Metropolitan Netherlands, Aruba, Curaçao and Sint Maarten form the four constituent countries of the Kingdom. Three overseas parts of the Netherlands (
+                        - link "Bonaire" [ref=e2022] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Bonaire
+                        - text: ","
+                        - link "Saba" [ref=e2023] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Saba_(island)
+                        - text: and
+                        - link "Sint Eustatius" [ref=e2024] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Sint_Eustatius
+                        - text: ) are
+                        - link "special municipalities" [ref=e2025] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Caribbean_Netherlands
+                        - text: of the metropolitan Netherlands.
+                        - superscript [ref=e2026]:
+                          - link "[af]" [ref=e2027] [cursor=pointer]:
+                            - /url: "#cite_note-67"
+                            - generic: "[af]"
+                        - text: The Kingdom of the Netherlands as a whole is a member of the EU, but
+                        - link "EU law" [ref=e2028] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Law_of_the_European_Union
+                        - text: only wholly applies to parts within Europe.
+                  - 'row "New Zealand UN member state None New Zealand is a Commonwealth realm,[h] and has one dependent territory and one claimed Antarctic dependent territory: Tokelau Ross Dependency The New Zealand Government acts for the entire Realm of New Zealand in all international contexts, which has responsibilities for (but no rights of control over) two freely associated states: Cook Islands Niue The Cook Islands and Niue have diplomatic relations with 63 and 25 UN members respectively.[36][37] They have full treaty-making capacity in the UN,[38] and are members of some UN specialised agencies." [ref=e2029]':
+                    - cell "New Zealand" [ref=e2030]:
+                      - link "New Zealand" [ref=e2035] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/New_Zealand
+                    - cell "UN member state" [ref=e2036]
+                    - cell "None" [ref=e2037]
+                    - 'cell "New Zealand is a Commonwealth realm,[h] and has one dependent territory and one claimed Antarctic dependent territory: Tokelau Ross Dependency The New Zealand Government acts for the entire Realm of New Zealand in all international contexts, which has responsibilities for (but no rights of control over) two freely associated states: Cook Islands Niue The Cook Islands and Niue have diplomatic relations with 63 and 25 UN members respectively.[36][37] They have full treaty-making capacity in the UN,[38] and are members of some UN specialised agencies." [ref=e2038]':
+                      - text: New Zealand is a Commonwealth realm,
+                      - superscript [ref=e2039]:
+                        - link "[h]" [ref=e2040] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                      - text: and has one dependent territory and one
+                      - link "claimed" [ref=e2041] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Territorial_claims_in_Antarctica
+                      - text: "Antarctic dependent territory:"
+                      - list [ref=e2042]:
+                        - listitem [ref=e2043]:
+                          - link "Tokelau" [ref=e2047] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Tokelau
+                        - listitem [ref=e2048]:
+                          - link "Ross Dependency" [ref=e2051] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Ross_Dependency
+                      - paragraph [ref=e2052]:
+                        - text: The
+                        - link "New Zealand Government" [ref=e2053] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/New_Zealand_Government
+                        - text: acts for the entire
+                        - link "Realm of New Zealand" [ref=e2054] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Realm_of_New_Zealand
+                        - text: in all international contexts, which has responsibilities for (but no rights of control over) two freely
+                        - link "associated states" [ref=e2055] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Associated_state
+                        - text: ":"
+                      - list [ref=e2056]:
+                        - listitem [ref=e2057]:
+                          - link "Cook Islands" [ref=e2061] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Cook_Islands
+                        - listitem [ref=e2062]:
+                          - link "Niue" [ref=e2066] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Niue
+                      - paragraph [ref=e2067]:
+                        - text: The Cook Islands and Niue have diplomatic relations with
+                        - link "63" [ref=e2068] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_the_Cook_Islands
+                        - text: and
+                        - link "25" [ref=e2069] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_Niue
+                        - text: UN members respectively.
+                        - superscript [ref=e2070]:
+                          - link "[36]" [ref=e2071] [cursor=pointer]:
+                            - /url: "#cite_note-68"
+                            - generic: "[36]"
+                        - superscript [ref=e2072]:
+                          - link "[37]" [ref=e2073] [cursor=pointer]:
+                            - /url: "#cite_note-69"
+                            - generic: "[37]"
+                        - text: They have full treaty-making capacity in the UN,
+                        - superscript [ref=e2074]:
+                          - link "[38]" [ref=e2075] [cursor=pointer]:
+                            - /url: "#cite_note-untreaty1-70"
+                            - generic: "[38]"
+                        - text: and are members of some
+                        - link "UN specialised agencies" [ref=e2076] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/List_of_specialized_agencies_of_the_United_Nations
+                        - text: .
+                  - row "Nicaragua – Republic of Nicaragua UN member state None Nicaragua contains two autonomous regions, North Caribbean Coast and South Caribbean Coast.[i]" [ref=e2077]:
+                    - cell "Nicaragua – Republic of Nicaragua" [ref=e2078]:
+                      - link "Nicaragua" [ref=e2083] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Nicaragua
+                      - text: – Republic of Nicaragua
+                    - cell "UN member state" [ref=e2084]
+                    - cell "None" [ref=e2085]
+                    - cell "Nicaragua contains two autonomous regions, North Caribbean Coast and South Caribbean Coast.[i]" [ref=e2086]:
+                      - text: Nicaragua contains two autonomous regions,
+                      - link "North Caribbean Coast" [ref=e2087] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/North_Caribbean_Coast_Autonomous_Region
+                      - text: and
+                      - link "South Caribbean Coast" [ref=e2088] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/South_Caribbean_Coast_Autonomous_Region
+                      - text: .
+                      - superscript [ref=e2089]:
+                        - link "[i]" [ref=e2090] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Niger – Republic of the Niger UN member state None" [ref=e2091]:
+                    - cell "Niger – Republic of the Niger" [ref=e2092]:
+                      - link "Niger" [ref=e2097] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Niger
+                      - text: – Republic of the Niger
+                    - cell "UN member state" [ref=e2098]
+                    - cell "None" [ref=e2099]
+                    - cell [ref=e2100]
+                  - row "Nigeria – Federal Republic of Nigeria UN member state None Nigeria is a federation of 36 states and one federal territory.[k]" [ref=e2101]:
+                    - cell "Nigeria – Federal Republic of Nigeria" [ref=e2102]:
+                      - link "Nigeria" [ref=e2107] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Nigeria
+                      - text: – Federal Republic of Nigeria
+                    - cell "UN member state" [ref=e2108]
+                    - cell "None" [ref=e2109]
+                    - cell "Nigeria is a federation of 36 states and one federal territory.[k]" [ref=e2110]:
+                      - text: Nigeria is a federation of
+                      - link "36 states and one federal territory" [ref=e2111] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/States_of_Nigeria
+                      - text: .
+                      - superscript [ref=e2112]:
+                        - link "[k]" [ref=e2113] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - row "North Korea – Democratic People's Republic of Korea UN member state Claimed by South Korea . North Korea is not recognised by 2 UN members, Japan, and South Korea, which the latter claims to be the sole legitimate government of Korea.[39]" [ref=e2114]:
+                    - cell "North Korea – Democratic People's Republic of Korea" [ref=e2115]:
+                      - link "North Korea" [ref=e2120] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/North_Korea
+                      - text: – Democratic People's Republic of Korea
+                    - cell "UN member state" [ref=e2121]
+                    - cell "Claimed by South Korea ." [ref=e2122]:
+                      - text: Claimed by
+                      - link "South Korea" [ref=e2123] [cursor=pointer]:
+                        - /url: "#South_Korea"
+                      - text: .
+                    - cell "North Korea is not recognised by 2 UN members, Japan, and South Korea, which the latter claims to be the sole legitimate government of Korea.[39]" [ref=e2124]:
+                      - text: North Korea is not recognised by 2 UN members,
+                      - link "Japan" [ref=e2125] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Japan
+                      - text: ", and"
+                      - link "South Korea" [ref=e2126] [cursor=pointer]:
+                        - /url: "#South_Korea"
+                      - text: ", which the latter claims to be the sole legitimate government of"
+                      - link "Korea" [ref=e2127] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Korea
+                      - text: .
+                      - superscript [ref=e2128]:
+                        - link "[39]" [ref=e2129] [cursor=pointer]:
+                          - /url: "#cite_note-71"
+                          - generic: "[39]"
+                  - row "North Macedonia – Republic of North Macedonia[ag] UN member state None" [ref=e2130]:
+                    - cell "North Macedonia – Republic of North Macedonia[ag]" [ref=e2131]:
+                      - link "North Macedonia" [ref=e2136] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/North_Macedonia
+                      - text: – Republic of North Macedonia
+                      - superscript [ref=e2137]:
+                        - link "[ag]" [ref=e2138] [cursor=pointer]:
+                          - /url: "#cite_note-72"
+                          - generic: "[ag]"
+                    - cell "UN member state" [ref=e2139]
+                    - cell "None" [ref=e2140]
+                    - cell [ref=e2141]
+                  - 'row "Norway – Kingdom of Norway UN member state None Norway has two unincorporated areas in Europe: Svalbard is an integral part of Norway, but has a special status due to the Svalbard Treaty. Jan Mayen is an uninhabited island that is an integral part of Norway, although unincorporated. Norway has one dependent territory and two claimed Antarctic dependent territories in the Southern Hemisphere: Bouvet Island Peter I Island Queen Maud Land" [ref=e2142]':
+                    - cell "Norway – Kingdom of Norway" [ref=e2143]:
+                      - link "Norway" [ref=e2148] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Norway
+                      - text: – Kingdom of Norway
+                    - cell "UN member state" [ref=e2149]
+                    - cell "None" [ref=e2150]
+                    - 'cell "Norway has two unincorporated areas in Europe: Svalbard is an integral part of Norway, but has a special status due to the Svalbard Treaty. Jan Mayen is an uninhabited island that is an integral part of Norway, although unincorporated. Norway has one dependent territory and two claimed Antarctic dependent territories in the Southern Hemisphere: Bouvet Island Peter I Island Queen Maud Land" [ref=e2151]':
+                      - text: Norway has two
+                      - link "unincorporated areas" [ref=e2152] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Unincorporated_area
+                      - text: "in Europe:"
+                      - list [ref=e2153]:
+                        - listitem [ref=e2154]:
+                          - link "Svalbard" [ref=e2156] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Svalbard
+                          - text: is an integral part of Norway, but has a special status due to the
+                          - link "Svalbard Treaty" [ref=e2157] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Svalbard_Treaty
+                          - text: .
+                        - listitem [ref=e2158]:
+                          - link "Jan Mayen" [ref=e2160] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Jan_Mayen
+                          - text: is an uninhabited island that is an integral part of Norway, although unincorporated.
+                      - paragraph [ref=e2161]:
+                        - text: Norway has one
+                        - link "dependent territory" [ref=e2162] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Dependencies_of_Norway
+                        - text: and two
+                        - link "claimed" [ref=e2163] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Territorial_claims_in_Antarctica
+                        - text: Antarctic dependent territories in the
+                        - link "Southern Hemisphere" [ref=e2164] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Southern_Hemisphere
+                        - text: ":"
+                      - list [ref=e2165]:
+                        - listitem [ref=e2166]:
+                          - link "Bouvet Island" [ref=e2168] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Bouvet_Island
+                        - listitem [ref=e2169]:
+                          - link "Peter I Island" [ref=e2172] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Peter_I_Island
+                        - listitem [ref=e2173]:
+                          - link "Queen Maud Land" [ref=e2176] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Queen_Maud_Land
+                  - row "O Oman – Sultanate of Oman UN member state None" [ref=e2177]:
+                    - rowheader "O" [ref=e2178]:
+                      - link "O" [ref=e2179] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Oman – Sultanate of Oman" [ref=e2180]:
+                      - link "Oman" [ref=e2185] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Oman
+                      - text: – Sultanate of Oman
+                    - cell "UN member state" [ref=e2186]
+                    - cell "None" [ref=e2187]
+                    - cell [ref=e2188]
+                  - row [ref=e2189]:
+                    - rowheader "P" [ref=e2190]:
+                      - link "P" [ref=e2191] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Pakistan – Islamic Republic of Pakistan" [ref=e2192]:
+                      - link "Pakistan" [ref=e2197] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Pakistan
+                      - text: – Islamic Republic of Pakistan
+                    - cell "UN member state" [ref=e2198]
+                    - cell "None" [ref=e2199]
+                    - cell [ref=e2200]:
+                      - text: Pakistan is a federation of
+                      - link "four provinces and one capital territory" [ref=e2201] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Administrative_units_of_Pakistan
+                      - text: .
+                      - superscript [ref=e2202]:
+                        - link "[k]" [ref=e2203] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                      - text: Pakistan exercises control over certain portions of
+                      - link "Kashmir" [ref=e2204] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kashmir
+                      - text: ", but has not officially annexed any of it,"
+                      - superscript [ref=e2205]:
+                        - link "[40]" [ref=e2206] [cursor=pointer]:
+                          - /url: "#cite_note-73"
+                          - generic: "[40]"
+                      - superscript [ref=e2207]:
+                        - link "[41]" [ref=e2208] [cursor=pointer]:
+                          - /url: "#cite_note-74"
+                          - generic: "[41]"
+                      - text: instead regarding it as a disputed territory.
+                      - superscript [ref=e2209]:
+                        - link "[42]" [ref=e2210] [cursor=pointer]:
+                          - /url: "#cite_note-75"
+                          - generic: "[42]"
+                      - superscript [ref=e2211]:
+                        - link "[43]" [ref=e2212] [cursor=pointer]:
+                          - /url: "#cite_note-76"
+                          - generic: "[43]"
+                      - text: "The portions that it controls are divided into two territories, administered separately from Pakistan proper:"
+                      - list [ref=e2213]:
+                        - listitem [ref=e2214]:
+                          - link "Azad Kashmir" [ref=e2218] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Azad_Kashmir
+                        - listitem [ref=e2219]:
+                          - link "Gilgit-Baltistan" [ref=e2221] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Gilgit-Baltistan
+                      - paragraph [ref=e2222]:
+                        - text: Azad Kashmir describes itself as a "self-governing state under Pakistani control", while Gilgit-Baltistan is described in its governance order as a group of "areas" with self-government.
+                        - superscript [ref=e2223]:
+                          - link "[44]" [ref=e2224] [cursor=pointer]:
+                            - /url: "#cite_note-77"
+                            - generic: "[44]"
+                        - superscript [ref=e2225]:
+                          - link "[45]" [ref=e2226] [cursor=pointer]:
+                            - /url: "#cite_note-gbtribune.files.wordpress.com-78"
+                            - generic: "[45]"
+                        - superscript [ref=e2227]:
+                          - link "[46]" [ref=e2228] [cursor=pointer]:
+                            - /url: "#cite_note-AJ&KHistory-79"
+                            - generic: "[46]"
+                        - text: These territories are not usually regarded as sovereign, as they do not fulfil the criteria set out by the declarative theory of statehood (for example, their current laws do not allow them to engage independently in relations with other states). Several state functions of these territories (such as foreign affairs and defense) are performed by Pakistan.
+                        - superscript [ref=e2229]:
+                          - link "[45]" [ref=e2230] [cursor=pointer]:
+                            - /url: "#cite_note-gbtribune.files.wordpress.com-78"
+                            - generic: "[45]"
+                        - superscript [ref=e2231]:
+                          - link "[47]" [ref=e2232] [cursor=pointer]:
+                            - /url: "#cite_note-80"
+                            - generic: "[47]"
+                        - superscript [ref=e2233]:
+                          - link "[48]" [ref=e2234] [cursor=pointer]:
+                            - /url: "#cite_note-81"
+                            - generic: "[48]"
+                  - row "Palau – Republic of Palau UN member state None Under the Compact of Free Association with the United States." [ref=e2235]:
+                    - cell "Palau – Republic of Palau" [ref=e2236]:
+                      - link "Palau" [ref=e2241] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Palau
+                      - text: – Republic of Palau
+                    - cell "UN member state" [ref=e2242]
+                    - cell "None" [ref=e2243]
+                    - cell "Under the Compact of Free Association with the United States." [ref=e2244]:
+                      - text: Under the Compact of Free Association with the
+                      - link "United States" [ref=e2245] [cursor=pointer]:
+                        - /url: "#United_States"
+                      - text: .
+                  - row "Palestine – State of Palestine UN General Assembly observer state; member of two UN specialised agencies Partially unrecognised. Occupied by Israel. The State of Palestine, declared in 1988, is not recognised as a state by Israel but has received diplomatic recognition from 157 states.[49] The proclaimed state has no agreed territorial borders, or effective control over much of the territory that it proclaimed.[50] The Palestinian Authority is an interim administrative body formed as a result of the Oslo Accords that exercises limited autonomous jurisdiction within Palestine. In foreign relations, Palestine is represented by the Palestine Liberation Organization.[51] The State of Palestine is a member state of UNESCO,[52] UNIDO and other international organisations.[53]" [ref=e2246]:
+                    - cell "Palestine – State of Palestine" [ref=e2247]:
+                      - link "Palestine" [ref=e2252] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Palestine
+                      - text: – State of Palestine
+                    - cell "UN General Assembly observer state; member of two UN specialised agencies" [ref=e2253]:
+                      - link "UN General Assembly observer state" [ref=e2254] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/United_Nations_General_Assembly_observers#Current_non-member_observers
+                      - text: ; member of two
+                      - link "UN specialised agencies" [ref=e2255] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_specialized_agencies_of_the_United_Nations
+                    - cell "Partially unrecognised. Occupied by Israel." [ref=e2256]:
+                      - link "Partially unrecognised" [ref=e2257] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_recognition_of_the_State_of_Palestine
+                      - text: .
+                      - link "Occupied" [ref=e2258] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Israeli-occupied_territories
+                      - text: by
+                      - link "Israel" [ref=e2259] [cursor=pointer]:
+                        - /url: "#Israel"
+                      - text: .
+                    - cell "The State of Palestine, declared in 1988, is not recognised as a state by Israel but has received diplomatic recognition from 157 states.[49] The proclaimed state has no agreed territorial borders, or effective control over much of the territory that it proclaimed.[50] The Palestinian Authority is an interim administrative body formed as a result of the Oslo Accords that exercises limited autonomous jurisdiction within Palestine. In foreign relations, Palestine is represented by the Palestine Liberation Organization.[51] The State of Palestine is a member state of UNESCO,[52] UNIDO and other international organisations.[53]" [ref=e2260]:
+                      - text: The State of Palestine, declared in 1988, is not recognised as a state by Israel but has received diplomatic recognition from
+                      - link "157" [ref=e2261] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_recognition_of_Palestine
+                      - text: states.
+                      - superscript [ref=e2262]:
+                        - link "[49]" [ref=e2263] [cursor=pointer]:
+                          - /url: "#cite_note-82"
+                          - generic: "[49]"
+                      - text: The proclaimed state has no agreed territorial borders, or effective control over much of the territory that it proclaimed.
+                      - superscript [ref=e2264]:
+                        - link "[50]" [ref=e2265] [cursor=pointer]:
+                          - /url: "#cite_note-83"
+                          - generic: "[50]"
+                      - text: The
+                      - link "Palestinian Authority" [ref=e2266] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Palestinian_Authority
+                      - text: is an interim administrative body formed as a result of the
+                      - link "Oslo Accords" [ref=e2267] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Oslo_Accords
+                      - text: that exercises limited autonomous jurisdiction within
+                      - link "Palestine" [ref=e2268] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Palestine
+                      - text: . In foreign relations, Palestine is represented by the
+                      - link "Palestine Liberation Organization" [ref=e2269] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Palestine_Liberation_Organization
+                      - text: .
+                      - superscript [ref=e2270]:
+                        - link "[51]" [ref=e2271] [cursor=pointer]:
+                          - /url: "#cite_note-unnms-84"
+                          - generic: "[51]"
+                      - text: The State of Palestine is a member state of
+                      - link "UNESCO" [ref=e2272] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/UNESCO
+                      - text: ","
+                      - superscript [ref=e2273]:
+                        - link "[52]" [ref=e2274] [cursor=pointer]:
+                          - /url: "#cite_note-85"
+                          - generic: "[52]"
+                      - link "UNIDO" [ref=e2275] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/United_Nations_Industrial_Development_Organization
+                      - text: and other international organisations.
+                      - superscript [ref=e2276]:
+                        - link "[53]" [ref=e2277] [cursor=pointer]:
+                          - /url: "#cite_note-86"
+                          - generic: "[53]"
+                  - row "Panama – Republic of Panama UN member state None" [ref=e2278]:
+                    - cell "Panama – Republic of Panama" [ref=e2279]:
+                      - link "Panama" [ref=e2284] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Panama
+                      - text: – Republic of Panama
+                    - cell "UN member state" [ref=e2285]
+                    - cell "None" [ref=e2286]
+                    - cell [ref=e2287]
+                  - row "Papua New Guinea – Independent State of Papua New Guinea UN member state None Papua New Guinea is a Commonwealth realm[h] with one autonomous region, Bougainville.[i]" [ref=e2288]:
+                    - cell "Papua New Guinea – Independent State of Papua New Guinea" [ref=e2289]:
+                      - link "Papua New Guinea" [ref=e2294] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Papua_New_Guinea
+                      - text: – Independent State of Papua New Guinea
+                    - cell "UN member state" [ref=e2295]
+                    - cell "None" [ref=e2296]
+                    - cell "Papua New Guinea is a Commonwealth realm[h] with one autonomous region, Bougainville.[i]" [ref=e2297]:
+                      - text: Papua New Guinea is a Commonwealth realm
+                      - superscript [ref=e2298]:
+                        - link "[h]" [ref=e2299] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                      - text: with one autonomous region,
+                      - link "Bougainville" [ref=e2300] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Autonomous_Region_of_Bougainville
+                      - text: .
+                      - superscript [ref=e2301]:
+                        - link "[i]" [ref=e2302] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Paraguay – Republic of Paraguay UN member state None" [ref=e2303]:
+                    - cell "Paraguay – Republic of Paraguay" [ref=e2304]:
+                      - link "Paraguay" [ref=e2309] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Paraguay
+                      - text: – Republic of Paraguay
+                    - cell "UN member state" [ref=e2310]
+                    - cell "None" [ref=e2311]
+                    - cell [ref=e2312]
+                  - row "Peru – Republic of Peru UN member state None" [ref=e2313]:
+                    - cell "Peru – Republic of Peru" [ref=e2314]:
+                      - link "Peru" [ref=e2319] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Peru
+                      - text: – Republic of Peru
+                    - cell "UN member state" [ref=e2320]
+                    - cell "None" [ref=e2321]
+                    - cell [ref=e2322]
+                  - row "Philippines – Republic of the Philippines UN member state None The Philippines contains one autonomous region, Bangsamoro.[i]" [ref=e2323]:
+                    - cell "Philippines – Republic of the Philippines" [ref=e2324]:
+                      - link "Philippines" [ref=e2329] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Philippines
+                      - text: – Republic of the Philippines
+                    - cell "UN member state" [ref=e2330]
+                    - cell "None" [ref=e2331]
+                    - cell "The Philippines contains one autonomous region, Bangsamoro.[i]" [ref=e2332]:
+                      - text: The Philippines contains one autonomous region,
+                      - link "Bangsamoro" [ref=e2333] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Bangsamoro
+                      - text: .
+                      - superscript [ref=e2334]:
+                        - link "[i]" [ref=e2335] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Poland – Republic of Poland UN member state None Member of the EU.[f]" [ref=e2336]:
+                    - cell "Poland – Republic of Poland" [ref=e2337]:
+                      - link "Poland" [ref=e2342] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Poland
+                      - text: – Republic of Poland
+                    - cell "UN member state" [ref=e2343]
+                    - cell "None" [ref=e2344]
+                    - cell "Member of the EU.[f]" [ref=e2345]:
+                      - text: Member of the EU.
+                      - superscript [ref=e2346]:
+                        - link "[f]" [ref=e2347] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Portugal – Portuguese Republic UN member state None Member of the EU.[f] Portugal contains two autonomous regions, the Azores and Madeira.[i]" [ref=e2348]:
+                    - cell "Portugal – Portuguese Republic" [ref=e2349]:
+                      - link "Portugal" [ref=e2354] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Portugal
+                      - text: – Portuguese Republic
+                    - cell "UN member state" [ref=e2355]
+                    - cell "None" [ref=e2356]
+                    - cell "Member of the EU.[f] Portugal contains two autonomous regions, the Azores and Madeira.[i]" [ref=e2357]:
+                      - text: Member of the EU.
+                      - superscript [ref=e2358]:
+                        - link "[f]" [ref=e2359] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - text: Portugal contains two autonomous regions,
+                      - link "the Azores" [ref=e2360] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Azores
+                      - text: and
+                      - link "Madeira" [ref=e2361] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Madeira
+                      - text: .
+                      - superscript [ref=e2362]:
+                        - link "[i]" [ref=e2363] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Q Qatar – State of Qatar UN member state None" [ref=e2364]:
+                    - rowheader "Q" [ref=e2365]:
+                      - link "Q" [ref=e2366] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Qatar – State of Qatar" [ref=e2367]:
+                      - link "Qatar" [ref=e2372] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Qatar
+                      - text: – State of Qatar
+                    - cell "UN member state" [ref=e2373]
+                    - cell "None" [ref=e2374]
+                    - cell [ref=e2375]
+                  - row "R Romania UN member state None Member of the EU.[f]" [ref=e2376]:
+                    - rowheader "R" [ref=e2377]:
+                      - link "R" [ref=e2378] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Romania" [ref=e2379]:
+                      - link "Romania" [ref=e2384] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Romania
+                    - cell "UN member state" [ref=e2385]
+                    - cell "None" [ref=e2386]
+                    - cell "Member of the EU.[f]" [ref=e2387]:
+                      - text: Member of the EU.
+                      - superscript [ref=e2388]:
+                        - link "[f]" [ref=e2389] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Russia – Russian Federation UN member state None Russia is a federation of 83 internationally recognised federal subjects (republics, oblasts, krais, autonomous okrugs, federal cities, and an autonomous oblast).[k] Several of the federal subjects are ethnic republics.[i]" [ref=e2390]:
+                    - cell "Russia – Russian Federation" [ref=e2391]:
+                      - link "Russia" [ref=e2396] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Russia
+                      - text: – Russian Federation
+                    - cell "UN member state" [ref=e2397]
+                    - cell "None" [ref=e2398]
+                    - cell "Russia is a federation of 83 internationally recognised federal subjects (republics, oblasts, krais, autonomous okrugs, federal cities, and an autonomous oblast).[k] Several of the federal subjects are ethnic republics.[i]" [ref=e2399]:
+                      - text: Russia is a federation of 83 internationally recognised
+                      - link "federal subjects" [ref=e2400] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Federal_subjects_of_Russia
+                      - text: (republics, oblasts, krais, autonomous okrugs, federal cities, and an autonomous oblast).
+                      - superscript [ref=e2401]:
+                        - link "[k]" [ref=e2402] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                      - text: Several of the federal subjects are ethnic republics.
+                      - superscript [ref=e2403]:
+                        - link "[i]" [ref=e2404] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Rwanda – Republic of Rwanda UN member state None" [ref=e2405]:
+                    - cell "Rwanda – Republic of Rwanda" [ref=e2406]:
+                      - link "Rwanda" [ref=e2411] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Rwanda
+                      - text: – Republic of Rwanda
+                    - cell "UN member state" [ref=e2412]
+                    - cell "None" [ref=e2413]
+                    - cell [ref=e2414]
+                  - row "S Saint Kitts and Nevis – Federation of Saint Kitts and Nevis[ah] UN member state None Saint Kitts and Nevis is a Commonwealth realm[h] and is a federation[k] of two islands, Saint Kitts and Nevis." [ref=e2415]:
+                    - rowheader "S" [ref=e2416]:
+                      - link "S" [ref=e2417] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Saint Kitts and Nevis – Federation of Saint Kitts and Nevis[ah]" [ref=e2418]:
+                      - link "Saint Kitts and Nevis" [ref=e2423] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Saint_Kitts_and_Nevis
+                      - text: – Federation of Saint Kitts and Nevis
+                      - superscript [ref=e2424]:
+                        - link "[ah]" [ref=e2425] [cursor=pointer]:
+                          - /url: "#cite_note-87"
+                          - generic: "[ah]"
+                    - cell "UN member state" [ref=e2426]
+                    - cell "None" [ref=e2427]
+                    - cell "Saint Kitts and Nevis is a Commonwealth realm[h] and is a federation[k] of two islands, Saint Kitts and Nevis." [ref=e2428]:
+                      - text: Saint Kitts and Nevis is a Commonwealth realm
+                      - superscript [ref=e2429]:
+                        - link "[h]" [ref=e2430] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                      - text: and is a federation
+                      - superscript [ref=e2431]:
+                        - link "[k]" [ref=e2432] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                      - text: of two islands,
+                      - link "Saint Kitts" [ref=e2433] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Saint_Kitts
+                      - text: and
+                      - link "Nevis" [ref=e2434] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Nevis
+                      - text: .
+                  - row "Saint Lucia UN member state None Saint Lucia is a Commonwealth realm.[h]" [ref=e2435]:
+                    - cell "Saint Lucia" [ref=e2436]:
+                      - link "Saint Lucia" [ref=e2441] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Saint_Lucia
+                    - cell "UN member state" [ref=e2442]
+                    - cell "None" [ref=e2443]
+                    - cell "Saint Lucia is a Commonwealth realm.[h]" [ref=e2444]:
+                      - text: Saint Lucia is a Commonwealth realm.
+                      - superscript [ref=e2445]:
+                        - link "[h]" [ref=e2446] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                  - row "Saint Vincent and the Grenadines UN member state None Saint Vincent and the Grenadines is a Commonwealth realm.[h]" [ref=e2447]:
+                    - cell "Saint Vincent and the Grenadines" [ref=e2448]:
+                      - link "Saint Vincent and the Grenadines" [ref=e2453] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines
+                    - cell "UN member state" [ref=e2454]
+                    - cell "None" [ref=e2455]
+                    - cell "Saint Vincent and the Grenadines is a Commonwealth realm.[h]" [ref=e2456]:
+                      - text: Saint Vincent and the Grenadines is a Commonwealth realm.
+                      - superscript [ref=e2457]:
+                        - link "[h]" [ref=e2458] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                  - row "Samoa – Independent State of Samoa UN member state None" [ref=e2459]:
+                    - cell "Samoa – Independent State of Samoa" [ref=e2460]:
+                      - link "Samoa" [ref=e2465] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Samoa
+                      - text: – Independent State of Samoa
+                    - cell "UN member state" [ref=e2466]
+                    - cell "None" [ref=e2467]
+                    - cell [ref=e2468]
+                  - row "San Marino – Republic of San Marino UN member state None" [ref=e2469]:
+                    - cell "San Marino – Republic of San Marino" [ref=e2470]:
+                      - link "San Marino" [ref=e2475] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/San_Marino
+                      - text: – Republic of San Marino
+                    - cell "UN member state" [ref=e2476]
+                    - cell "None" [ref=e2477]
+                    - cell [ref=e2478]
+                  - row "São Tomé and Príncipe – Democratic Republic of Sao Tome and Principe UN member state None São Tomé and Príncipe contains one autonomous province, Príncipe.[i]" [ref=e2479]:
+                    - cell "São Tomé and Príncipe – Democratic Republic of Sao Tome and Principe" [ref=e2480]:
+                      - link "São Tomé and Príncipe" [ref=e2485] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/São_Tomé_and_Príncipe
+                      - text: – Democratic Republic of Sao Tome and Principe
+                    - cell "UN member state" [ref=e2486]
+                    - cell "None" [ref=e2487]
+                    - cell "São Tomé and Príncipe contains one autonomous province, Príncipe.[i]" [ref=e2488]:
+                      - text: São Tomé and Príncipe contains one autonomous province,
+                      - link "Príncipe" [ref=e2489] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Príncipe
+                      - text: .
+                      - superscript [ref=e2490]:
+                        - link "[i]" [ref=e2491] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Saudi Arabia – Kingdom of Saudi Arabia UN member state None" [ref=e2492]:
+                    - cell "Saudi Arabia – Kingdom of Saudi Arabia" [ref=e2493]:
+                      - link "Saudi Arabia" [ref=e2498] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Saudi_Arabia
+                      - text: – Kingdom of Saudi Arabia
+                    - cell "UN member state" [ref=e2499]
+                    - cell "None" [ref=e2500]
+                    - cell [ref=e2501]
+                  - row "Senegal – Republic of Senegal UN member state None" [ref=e2502]:
+                    - cell "Senegal – Republic of Senegal" [ref=e2503]:
+                      - link "Senegal" [ref=e2508] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Senegal
+                      - text: – Republic of Senegal
+                    - cell "UN member state" [ref=e2509]
+                    - cell "None" [ref=e2510]
+                    - cell [ref=e2511]
+                  - row "Serbia – Republic of Serbia UN member state None Serbia contains two autonomous provinces, Vojvodina and Kosovo and Metohija.[i] The latter is under the de facto control of Kosovo." [ref=e2512]:
+                    - cell "Serbia – Republic of Serbia" [ref=e2513]:
+                      - link "Serbia" [ref=e2518] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Serbia
+                      - text: – Republic of Serbia
+                    - cell "UN member state" [ref=e2519]
+                    - cell "None" [ref=e2520]
+                    - cell "Serbia contains two autonomous provinces, Vojvodina and Kosovo and Metohija.[i] The latter is under the de facto control of Kosovo." [ref=e2521]:
+                      - text: Serbia contains two autonomous provinces,
+                      - link "Vojvodina" [ref=e2522] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Vojvodina
+                      - text: and
+                      - link "Kosovo and Metohija" [ref=e2523] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Autonomous_Province_of_Kosovo_and_Metohija
+                      - text: .
+                      - superscript [ref=e2524]:
+                        - link "[i]" [ref=e2525] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                      - text: The latter is under the de facto control of
+                      - link "Kosovo" [ref=e2526] [cursor=pointer]:
+                        - /url: "#Kosovo"
+                      - text: .
+                  - row "Seychelles – Republic of Seychelles UN member state None" [ref=e2527]:
+                    - cell "Seychelles – Republic of Seychelles" [ref=e2528]:
+                      - link "Seychelles" [ref=e2533] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Seychelles
+                      - text: – Republic of Seychelles
+                    - cell "UN member state" [ref=e2534]
+                    - cell "None" [ref=e2535]
+                    - cell [ref=e2536]
+                  - row "Sierra Leone – Republic of Sierra Leone UN member state None" [ref=e2537]:
+                    - cell "Sierra Leone – Republic of Sierra Leone" [ref=e2538]:
+                      - link "Sierra Leone" [ref=e2543] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Sierra_Leone
+                      - text: – Republic of Sierra Leone
+                    - cell "UN member state" [ref=e2544]
+                    - cell "None" [ref=e2545]
+                    - cell [ref=e2546]
+                  - row "Singapore – Republic of Singapore UN member state None" [ref=e2547]:
+                    - cell "Singapore – Republic of Singapore" [ref=e2548]:
+                      - link "Singapore" [ref=e2553] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Singapore
+                      - text: – Republic of Singapore
+                    - cell "UN member state" [ref=e2554]
+                    - cell "None" [ref=e2555]
+                    - cell [ref=e2556]
+                  - row "Slovakia – Slovak Republic UN member state None Member of the EU.[f]" [ref=e2557]:
+                    - cell "Slovakia – Slovak Republic" [ref=e2558]:
+                      - link "Slovakia" [ref=e2563] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Slovakia
+                      - text: – Slovak Republic
+                    - cell "UN member state" [ref=e2564]
+                    - cell "None" [ref=e2565]
+                    - cell "Member of the EU.[f]" [ref=e2566]:
+                      - text: Member of the EU.
+                      - superscript [ref=e2567]:
+                        - link "[f]" [ref=e2568] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Slovenia – Republic of Slovenia UN member state None Member of the EU.[f]" [ref=e2569]:
+                    - cell "Slovenia – Republic of Slovenia" [ref=e2570]:
+                      - link "Slovenia" [ref=e2575] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Slovenia
+                      - text: – Republic of Slovenia
+                    - cell "UN member state" [ref=e2576]
+                    - cell "None" [ref=e2577]
+                    - cell "Member of the EU.[f]" [ref=e2578]:
+                      - text: Member of the EU.
+                      - superscript [ref=e2579]:
+                        - link "[f]" [ref=e2580] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Solomon Islands UN member state None Solomon Islands is a Commonwealth realm.[h]" [ref=e2581]:
+                    - cell "Solomon Islands" [ref=e2582]:
+                      - link "Solomon Islands" [ref=e2587] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Solomon_Islands
+                    - cell "UN member state" [ref=e2588]
+                    - cell "None" [ref=e2589]
+                    - cell "Solomon Islands is a Commonwealth realm.[h]" [ref=e2590]:
+                      - text: Solomon Islands is a Commonwealth realm.
+                      - superscript [ref=e2591]:
+                        - link "[h]" [ref=e2592] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                  - row "Somalia – Federal Republic of Somalia UN member state None Somalia is a federation of seven states.[k] Two, Galmudug and Puntland, have self-declared autonomy, while one, Somaliland, is de facto independent." [ref=e2593]:
+                    - cell "Somalia – Federal Republic of Somalia" [ref=e2594]:
+                      - link "Somalia" [ref=e2599] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Somalia
+                      - text: – Federal Republic of Somalia
+                    - cell "UN member state" [ref=e2600]
+                    - cell "None" [ref=e2601]
+                    - cell "Somalia is a federation of seven states.[k] Two, Galmudug and Puntland, have self-declared autonomy, while one, Somaliland, is de facto independent." [ref=e2602]:
+                      - text: Somalia is a federation of
+                      - link "seven states" [ref=e2603] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Administrative_divisions_of_Somalia
+                      - text: .
+                      - superscript [ref=e2604]:
+                        - link "[k]" [ref=e2605] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                      - text: Two,
+                      - link "Galmudug" [ref=e2606] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Galmudug
+                      - text: and
+                      - link "Puntland" [ref=e2607] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Puntland
+                      - text: ", have self-declared autonomy, while one,"
+                      - link "Somaliland" [ref=e2608] [cursor=pointer]:
+                        - /url: "#Somaliland"
+                      - text: ", is de facto independent."
+                  - row "South Africa – Republic of South Africa UN member state None" [ref=e2609]:
+                    - cell "South Africa – Republic of South Africa" [ref=e2610]:
+                      - link "South Africa" [ref=e2615] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/South_Africa
+                      - text: – Republic of South Africa
+                    - cell "UN member state" [ref=e2616]
+                    - cell "None" [ref=e2617]
+                    - cell [ref=e2618]
+                  - row "South Korea – Republic of Korea UN member state None[ai] South Korea has one autonomous region, Jeju Province.[i][55]" [ref=e2619]:
+                    - cell "South Korea – Republic of Korea" [ref=e2620]:
+                      - link "South Korea" [ref=e2625] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/South_Korea
+                      - text: – Republic of Korea
+                    - cell "UN member state" [ref=e2626]
+                    - cell "None[ai]" [ref=e2627]:
+                      - text: None
+                      - superscript [ref=e2628]:
+                        - link "[ai]" [ref=e2629] [cursor=pointer]:
+                          - /url: "#cite_note-89"
+                          - generic: "[ai]"
+                    - cell "South Korea has one autonomous region, Jeju Province.[i][55]" [ref=e2630]:
+                      - text: South Korea has one autonomous region,
+                      - link "Jeju Province" [ref=e2631] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Jeju_Province
+                      - text: .
+                      - superscript [ref=e2632]:
+                        - link "[i]" [ref=e2633] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                      - superscript [ref=e2634]:
+                        - link "[55]" [ref=e2635] [cursor=pointer]:
+                          - /url: "#cite_note-90"
+                          - generic: "[55]"
+                  - row "South Sudan – Republic of South Sudan UN member state None South Sudan is a federation of 10 states and three administrative areas.[k] The Abyei Area is a zone with \"special administrative status\" established by the Comprehensive Peace Agreement in 2005. It is de jure a condominium of South Sudan and Sudan, but de facto administered by two competing administrations and the United Nations.[56][57]" [ref=e2636]:
+                    - cell "South Sudan – Republic of South Sudan" [ref=e2637]:
+                      - link "South Sudan" [ref=e2642] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/South_Sudan
+                      - text: – Republic of South Sudan
+                    - cell "UN member state" [ref=e2643]
+                    - cell "None" [ref=e2644]
+                    - cell "South Sudan is a federation of 10 states and three administrative areas.[k] The Abyei Area is a zone with \"special administrative status\" established by the Comprehensive Peace Agreement in 2005. It is de jure a condominium of South Sudan and Sudan, but de facto administered by two competing administrations and the United Nations.[56][57]" [ref=e2645]:
+                      - text: South Sudan is a federation of
+                      - link "10 states and three administrative areas" [ref=e2646] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/States_of_South_Sudan
+                      - text: .
+                      - superscript [ref=e2647]:
+                        - link "[k]" [ref=e2648] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                      - paragraph [ref=e2649]:
+                        - text: The
+                        - link "Abyei Area" [ref=e2650] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Abyei
+                        - text: is a zone with "special administrative status" established by the
+                        - link "Comprehensive Peace Agreement" [ref=e2651] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Comprehensive_Peace_Agreement
+                        - text: in 2005. It is de jure a condominium of South Sudan and
+                        - link "Sudan" [ref=e2652] [cursor=pointer]:
+                          - /url: "#Sudan"
+                        - text: ", but de facto administered by two competing administrations and the United Nations."
+                        - superscript [ref=e2653]:
+                          - link "[56]" [ref=e2654] [cursor=pointer]:
+                            - /url: "#cite_note-UNISFA2017-91"
+                            - generic: "[56]"
+                        - superscript [ref=e2655]:
+                          - link "[57]" [ref=e2656] [cursor=pointer]:
+                            - /url: "#cite_note-AbyeiName-92"
+                            - generic: "[57]"
+                  - row "Spain – Kingdom of Spain UN member state None Member of the EU.[f] Spain is divided into 17 autonomous communities and two autonomous cities.[i][aj]" [ref=e2657]:
+                    - cell "Spain – Kingdom of Spain" [ref=e2658]:
+                      - link "Spain" [ref=e2663] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Spain
+                      - text: – Kingdom of Spain
+                    - cell "UN member state" [ref=e2664]
+                    - cell "None" [ref=e2665]
+                    - cell "Member of the EU.[f] Spain is divided into 17 autonomous communities and two autonomous cities.[i][aj]" [ref=e2666]:
+                      - text: Member of the EU.
+                      - superscript [ref=e2667]:
+                        - link "[f]" [ref=e2668] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - text: Spain is divided into
+                      - link "17 autonomous communities and two autonomous cities" [ref=e2669] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Autonomous_communities_of_Spain
+                      - text: .
+                      - superscript [ref=e2670]:
+                        - link "[i]" [ref=e2671] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                      - superscript [ref=e2672]:
+                        - link "[aj]" [ref=e2673] [cursor=pointer]:
+                          - /url: "#cite_note-Plazas-93"
+                          - generic: "[aj]"
+                  - row "Sri Lanka – Democratic Socialist Republic of Sri Lanka[ak] UN member state None" [ref=e2674]:
+                    - cell "Sri Lanka – Democratic Socialist Republic of Sri Lanka[ak]" [ref=e2675]:
+                      - link "Sri Lanka" [ref=e2680] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Sri_Lanka
+                      - text: – Democratic Socialist Republic of Sri Lanka
+                      - superscript [ref=e2681]:
+                        - link "[ak]" [ref=e2682] [cursor=pointer]:
+                          - /url: "#cite_note-94"
+                          - generic: "[ak]"
+                    - cell "UN member state" [ref=e2683]
+                    - cell "None" [ref=e2684]
+                    - cell [ref=e2685]
+                  - row "Sudan – Republic of the Sudan UN member state None Sudan is a federation of 18 states.[k] The Abyei Area is a zone with \"special administrative status\" established by the Comprehensive Peace Agreement in 2005. It is de jure a condominium of South Sudan and Sudan, but de facto administered by two competing administrations and the United Nations.[56][57]" [ref=e2686]:
+                    - cell "Sudan – Republic of the Sudan" [ref=e2687]:
+                      - link "Sudan" [ref=e2692] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Sudan
+                      - text: – Republic of the Sudan
+                    - cell "UN member state" [ref=e2693]
+                    - cell "None" [ref=e2694]
+                    - cell "Sudan is a federation of 18 states.[k] The Abyei Area is a zone with \"special administrative status\" established by the Comprehensive Peace Agreement in 2005. It is de jure a condominium of South Sudan and Sudan, but de facto administered by two competing administrations and the United Nations.[56][57]" [ref=e2695]:
+                      - text: Sudan is a federation of
+                      - link "18 states" [ref=e2696] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/States_of_Sudan
+                      - text: .
+                      - superscript [ref=e2697]:
+                        - link "[k]" [ref=e2698] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                      - paragraph [ref=e2699]:
+                        - text: The
+                        - link "Abyei Area" [ref=e2700] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Abyei
+                        - text: is a zone with "special administrative status" established by the
+                        - link "Comprehensive Peace Agreement" [ref=e2701] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Comprehensive_Peace_Agreement
+                        - text: in 2005. It is de jure a condominium of
+                        - link "South Sudan" [ref=e2702] [cursor=pointer]:
+                          - /url: "#South_Sudan"
+                        - text: and Sudan, but de facto administered by two competing administrations and the United Nations.
+                        - superscript [ref=e2703]:
+                          - link "[56]" [ref=e2704] [cursor=pointer]:
+                            - /url: "#cite_note-UNISFA2017-91"
+                            - generic: "[56]"
+                        - superscript [ref=e2705]:
+                          - link "[57]" [ref=e2706] [cursor=pointer]:
+                            - /url: "#cite_note-AbyeiName-92"
+                            - generic: "[57]"
+                  - row "Suriname – Republic of Suriname UN member state None" [ref=e2707]:
+                    - cell "Suriname – Republic of Suriname" [ref=e2708]:
+                      - link "Suriname" [ref=e2713] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Suriname
+                      - text: – Republic of Suriname
+                    - cell "UN member state" [ref=e2714]
+                    - cell "None" [ref=e2715]
+                    - cell [ref=e2716]
+                  - row "Sweden – Kingdom of Sweden UN member state None Member of the EU.[f]" [ref=e2717]:
+                    - cell "Sweden – Kingdom of Sweden" [ref=e2718]:
+                      - link "Sweden" [ref=e2723] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Sweden
+                      - text: – Kingdom of Sweden
+                    - cell "UN member state" [ref=e2724]
+                    - cell "None" [ref=e2725]
+                    - cell "Member of the EU.[f]" [ref=e2726]:
+                      - text: Member of the EU.
+                      - superscript [ref=e2727]:
+                        - link "[f]" [ref=e2728] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                  - row "Switzerland – Swiss Confederation UN member state None Switzerland is a federation of 26 cantons.[k]" [ref=e2729]:
+                    - cell "Switzerland – Swiss Confederation" [ref=e2730]:
+                      - link "Switzerland" [ref=e2735] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Switzerland
+                      - text: – Swiss Confederation
+                    - cell "UN member state" [ref=e2736]
+                    - cell "None" [ref=e2737]
+                    - cell "Switzerland is a federation of 26 cantons.[k]" [ref=e2738]:
+                      - text: Switzerland is a federation of
+                      - link "26 cantons" [ref=e2739] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Cantons_of_Switzerland
+                      - text: .
+                      - superscript [ref=e2740]:
+                        - link "[k]" [ref=e2741] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - row "Syria – Syrian Arab Republic UN member state None Syria has one self-declared autonomous region, the Administrative Council of Jabal Bashan." [ref=e2742]:
+                    - cell "Syria – Syrian Arab Republic" [ref=e2743]:
+                      - link "Syria" [ref=e2748] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Syria
+                      - text: – Syrian Arab Republic
+                    - cell "UN member state" [ref=e2749]
+                    - cell "None" [ref=e2750]
+                    - cell "Syria has one self-declared autonomous region, the Administrative Council of Jabal Bashan." [ref=e2751]:
+                      - text: Syria has one self-declared autonomous region, the
+                      - link "Administrative Council of Jabal Bashan" [ref=e2752] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Administrative_Council_of_Jabal_Bashan
+                      - text: .
+                  - row "T Tajikistan – Republic of Tajikistan UN member state None Tajikistan contains one autonomous region, Gorno-Badakhshan.[i]" [ref=e2753]:
+                    - rowheader "T" [ref=e2754]:
+                      - link "T" [ref=e2755] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Tajikistan – Republic of Tajikistan" [ref=e2756]:
+                      - link "Tajikistan" [ref=e2761] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Tajikistan
+                      - text: – Republic of Tajikistan
+                    - cell "UN member state" [ref=e2762]
+                    - cell "None" [ref=e2763]
+                    - cell "Tajikistan contains one autonomous region, Gorno-Badakhshan.[i]" [ref=e2764]:
+                      - text: Tajikistan contains one autonomous region,
+                      - link "Gorno-Badakhshan" [ref=e2765] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Gorno-Badakhshan
+                      - text: .
+                      - superscript [ref=e2766]:
+                        - link "[i]" [ref=e2767] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Tanzania – United Republic of Tanzania UN member state None Tanzania contains one autonomous region, Zanzibar.[i]" [ref=e2768]:
+                    - cell "Tanzania – United Republic of Tanzania" [ref=e2769]:
+                      - link "Tanzania" [ref=e2774] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Tanzania
+                      - text: – United Republic of Tanzania
+                    - cell "UN member state" [ref=e2775]
+                    - cell "None" [ref=e2776]
+                    - cell "Tanzania contains one autonomous region, Zanzibar.[i]" [ref=e2777]:
+                      - text: Tanzania contains one autonomous region,
+                      - link "Zanzibar" [ref=e2778] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Zanzibar
+                      - text: .
+                      - superscript [ref=e2779]:
+                        - link "[i]" [ref=e2780] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Thailand – Kingdom of Thailand UN member state None" [ref=e2781]:
+                    - cell "Thailand – Kingdom of Thailand" [ref=e2782]:
+                      - link "Thailand" [ref=e2787] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Thailand
+                      - text: – Kingdom of Thailand
+                    - cell "UN member state" [ref=e2788]
+                    - cell "None" [ref=e2789]
+                    - cell [ref=e2790]
+                  - row "Timor-Leste – Democratic Republic of Timor-Leste[al] UN member state None" [ref=e2791]:
+                    - cell "Timor-Leste – Democratic Republic of Timor-Leste[al]" [ref=e2792]:
+                      - link "Timor-Leste" [ref=e2797] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Timor-Leste
+                      - text: – Democratic Republic of Timor-Leste
+                      - superscript [ref=e2798]:
+                        - link "[al]" [ref=e2799] [cursor=pointer]:
+                          - /url: "#cite_note-95"
+                          - generic: "[al]"
+                    - cell "UN member state" [ref=e2800]
+                    - cell "None" [ref=e2801]
+                    - cell [ref=e2802]
+                  - row "Togo – Togolese Republic UN member state None" [ref=e2803]:
+                    - cell "Togo – Togolese Republic" [ref=e2804]:
+                      - link "Togo" [ref=e2809] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Togo
+                      - text: – Togolese Republic
+                    - cell "UN member state" [ref=e2810]
+                    - cell "None" [ref=e2811]
+                    - cell [ref=e2812]
+                  - row "Tonga – Kingdom of Tonga UN member state None" [ref=e2813]:
+                    - cell "Tonga – Kingdom of Tonga" [ref=e2814]:
+                      - link "Tonga" [ref=e2819] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Tonga
+                      - text: – Kingdom of Tonga
+                    - cell "UN member state" [ref=e2820]
+                    - cell "None" [ref=e2821]
+                    - cell [ref=e2822]
+                  - row "Trinidad and Tobago – Republic of Trinidad and Tobago UN member state None Trinidad and Tobago contains one autonomous region, Tobago.[i]" [ref=e2823]:
+                    - cell "Trinidad and Tobago – Republic of Trinidad and Tobago" [ref=e2824]:
+                      - link "Trinidad and Tobago" [ref=e2829] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Trinidad_and_Tobago
+                      - text: – Republic of Trinidad and Tobago
+                    - cell "UN member state" [ref=e2830]
+                    - cell "None" [ref=e2831]
+                    - cell "Trinidad and Tobago contains one autonomous region, Tobago.[i]" [ref=e2832]:
+                      - text: Trinidad and Tobago contains one autonomous region,
+                      - link "Tobago" [ref=e2833] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Tobago
+                      - text: .
+                      - superscript [ref=e2834]:
+                        - link "[i]" [ref=e2835] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "Tunisia – Republic of Tunisia UN member state None" [ref=e2836]:
+                    - cell "Tunisia – Republic of Tunisia" [ref=e2837]:
+                      - link "Tunisia" [ref=e2842] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Tunisia
+                      - text: – Republic of Tunisia
+                    - cell "UN member state" [ref=e2843]
+                    - cell "None" [ref=e2844]
+                    - cell [ref=e2845]
+                  - row "Turkey – Republic of Türkiye[am] UN member state None" [ref=e2846]:
+                    - cell "Turkey – Republic of Türkiye[am]" [ref=e2847]:
+                      - link "Turkey" [ref=e2852] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Turkey
+                      - text: – Republic of Türkiye
+                      - superscript [ref=e2853]:
+                        - link "[am]" [ref=e2854] [cursor=pointer]:
+                          - /url: "#cite_note-96"
+                          - generic: "[am]"
+                    - cell "UN member state" [ref=e2855]
+                    - cell "None" [ref=e2856]
+                    - cell [ref=e2857]
+                  - row "Turkmenistan UN member state None" [ref=e2858]:
+                    - cell "Turkmenistan" [ref=e2859]:
+                      - link "Turkmenistan" [ref=e2864] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Turkmenistan
+                    - cell "UN member state" [ref=e2865]
+                    - cell "None" [ref=e2866]
+                    - cell [ref=e2867]
+                  - row "Tuvalu UN member state None Tuvalu is a Commonwealth realm.[h]" [ref=e2868]:
+                    - cell "Tuvalu" [ref=e2869]:
+                      - link "Tuvalu" [ref=e2874] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Tuvalu
+                    - cell "UN member state" [ref=e2875]
+                    - cell "None" [ref=e2876]
+                    - cell "Tuvalu is a Commonwealth realm.[h]" [ref=e2877]:
+                      - text: Tuvalu is a Commonwealth realm.
+                      - superscript [ref=e2878]:
+                        - link "[h]" [ref=e2879] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                  - row "U Uganda – Republic of Uganda UN member state None" [ref=e2880]:
+                    - rowheader "U" [ref=e2881]:
+                      - link "U" [ref=e2882] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Uganda – Republic of Uganda" [ref=e2883]:
+                      - link "Uganda" [ref=e2888] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Uganda
+                      - text: – Republic of Uganda
+                    - cell "UN member state" [ref=e2889]
+                    - cell "None" [ref=e2890]
+                    - cell [ref=e2891]
+                  - row "Ukraine UN member state None Ukraine contains one autonomous region, the Autonomous Republic of Crimea,[i] which is under the control of Russia. Nine other areas of Ukraine are under full or partial Russian control, including Dnipropetrovsk, Donetsk, Kharkiv, Kherson, Luhansk, Mykolaiv, Sumy, Zaporizhzhia oblasts and Sevastopol." [ref=e2892]:
+                    - cell "Ukraine" [ref=e2893]:
+                      - link "Ukraine" [ref=e2898] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Ukraine
+                    - cell "UN member state" [ref=e2899]
+                    - cell "None" [ref=e2900]
+                    - cell "Ukraine contains one autonomous region, the Autonomous Republic of Crimea,[i] which is under the control of Russia. Nine other areas of Ukraine are under full or partial Russian control, including Dnipropetrovsk, Donetsk, Kharkiv, Kherson, Luhansk, Mykolaiv, Sumy, Zaporizhzhia oblasts and Sevastopol." [ref=e2901]:
+                      - text: Ukraine contains one autonomous region, the
+                      - link "Autonomous Republic of Crimea" [ref=e2902] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Autonomous_Republic_of_Crimea
+                      - text: ","
+                      - superscript [ref=e2903]:
+                        - link "[i]" [ref=e2904] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                      - text: which is under the control of
+                      - link "Russia" [ref=e2905] [cursor=pointer]:
+                        - /url: "#Russia"
+                      - text: . Nine other areas of Ukraine are under full or partial Russian control, including
+                      - link "Dnipropetrovsk" [ref=e2906] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Dnipropetrovsk_Oblast
+                      - text: ","
+                      - link "Donetsk" [ref=e2907] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Donetsk_Oblast
+                      - text: ","
+                      - link "Kharkiv" [ref=e2908] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kharkiv_Oblast
+                      - text: ","
+                      - link "Kherson" [ref=e2909] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kherson_Oblast
+                      - text: ","
+                      - link "Luhansk" [ref=e2910] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Luhansk_Oblast
+                      - text: ","
+                      - link "Mykolaiv" [ref=e2911] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Mykolaiv_Oblast
+                      - text: ","
+                      - link "Sumy" [ref=e2912] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Sumy_Oblast
+                      - text: ","
+                      - link "Zaporizhzhia" [ref=e2913] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Zaporizhzhia_Oblast
+                      - text: oblasts and
+                      - link "Sevastopol" [ref=e2914] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Sevastopol
+                      - text: .
+                  - row "United Arab Emirates UN member state None The United Arab Emirates is a federation of seven emirates.[k]" [ref=e2915]:
+                    - cell "United Arab Emirates" [ref=e2916]:
+                      - link "United Arab Emirates" [ref=e2921] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/United_Arab_Emirates
+                    - cell "UN member state" [ref=e2922]
+                    - cell "None" [ref=e2923]
+                    - cell "The United Arab Emirates is a federation of seven emirates.[k]" [ref=e2924]:
+                      - text: The United Arab Emirates is a federation of
+                      - link "seven emirates" [ref=e2925] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Emirates_of_the_United_Arab_Emirates
+                      - text: .
+                      - superscript [ref=e2926]:
+                        - link "[k]" [ref=e2927] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - 'row "United Kingdom – United Kingdom of Great Britain and Northern Ireland UN member state None The United Kingdom is a Commonwealth realm[h] consisting of four constituent countries: England, Northern Ireland, Scotland, and Wales. The United Kingdom has the following 13 overseas territories and one claimed Antarctic dependent territory: Akrotiri and Dhekelia[an] Anguilla Bermuda British Indian Ocean Territory British Virgin Islands Cayman Islands Falkland Islands Gibraltar Montserrat Pitcairn Islands Saint Helena, Ascension and Tristan da Cunha[ao] South Georgia and the South Sandwich Islands Turks and Caicos Islands British Antarctic Territory The British monarch also has direct sovereignty over three self-governing Crown Dependencies: Guernsey Isle of Man Jersey" [ref=e2928]':
+                    - cell "United Kingdom – United Kingdom of Great Britain and Northern Ireland" [ref=e2929]:
+                      - link "United Kingdom" [ref=e2934] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/United_Kingdom
+                      - text: – United Kingdom of Great Britain and Northern Ireland
+                    - cell "UN member state" [ref=e2935]
+                    - cell "None" [ref=e2936]
+                    - 'cell "The United Kingdom is a Commonwealth realm[h] consisting of four constituent countries: England, Northern Ireland, Scotland, and Wales. The United Kingdom has the following 13 overseas territories and one claimed Antarctic dependent territory: Akrotiri and Dhekelia[an] Anguilla Bermuda British Indian Ocean Territory British Virgin Islands Cayman Islands Falkland Islands Gibraltar Montserrat Pitcairn Islands Saint Helena, Ascension and Tristan da Cunha[ao] South Georgia and the South Sandwich Islands Turks and Caicos Islands British Antarctic Territory The British monarch also has direct sovereignty over three self-governing Crown Dependencies: Guernsey Isle of Man Jersey" [ref=e2937]':
+                      - text: The United Kingdom is a Commonwealth realm
+                      - superscript [ref=e2938]:
+                        - link "[h]" [ref=e2939] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                      - text: consisting of
+                      - link "four constituent countries" [ref=e2940] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Countries_of_the_United_Kingdom
+                      - text: ":"
+                      - link "England" [ref=e2941] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/England
+                      - text: ","
+                      - link "Northern Ireland" [ref=e2942] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Northern_Ireland
+                      - text: ","
+                      - link "Scotland" [ref=e2943] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Scotland
+                      - text: ", and"
+                      - link "Wales" [ref=e2944] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Wales
+                      - text: . The United Kingdom has the following 13
+                      - link "overseas territories" [ref=e2945] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/British_Overseas_Territories
+                      - text: and one
+                      - link "claimed" [ref=e2946] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Territorial_claims_in_Antarctica
+                      - text: "Antarctic dependent territory:"
+                      - list [ref=e2947]:
+                        - listitem [ref=e2948]:
+                          - link "Akrotiri and Dhekelia" [ref=e2950] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Akrotiri_and_Dhekelia
+                          - superscript [ref=e2951]:
+                            - link "[an]" [ref=e2952] [cursor=pointer]:
+                              - /url: "#cite_note-97"
+                              - generic: "[an]"
+                        - listitem [ref=e2953]:
+                          - link "Anguilla" [ref=e2957] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Anguilla
+                        - listitem [ref=e2958]:
+                          - link "Bermuda" [ref=e2962] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Bermuda
+                        - listitem [ref=e2963]:
+                          - link "British Indian Ocean Territory" [ref=e2967] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/British_Indian_Ocean_Territory
+                        - listitem [ref=e2968]:
+                          - link "British Virgin Islands" [ref=e2972] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/British_Virgin_Islands
+                        - listitem [ref=e2973]:
+                          - link "Cayman Islands" [ref=e2977] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Cayman_Islands
+                        - listitem [ref=e2978]:
+                          - link "Falkland Islands" [ref=e2982] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Falkland_Islands
+                        - listitem [ref=e2983]:
+                          - link "Gibraltar" [ref=e2987] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Gibraltar
+                        - listitem [ref=e2988]:
+                          - link "Montserrat" [ref=e2992] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Montserrat
+                        - listitem [ref=e2993]:
+                          - link "Pitcairn Islands" [ref=e2997] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Pitcairn_Islands
+                        - listitem [ref=e2998]:
+                          - link "Saint Helena, Ascension and Tristan da Cunha" [ref=e3000] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Saint_Helena,_Ascension_and_Tristan_da_Cunha
+                          - superscript [ref=e3001]:
+                            - link "[ao]" [ref=e3002] [cursor=pointer]:
+                              - /url: "#cite_note-98"
+                              - generic: "[ao]"
+                        - listitem [ref=e3003]:
+                          - link "South Georgia and the South Sandwich Islands" [ref=e3007] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/South_Georgia_and_the_South_Sandwich_Islands
+                        - listitem [ref=e3008]:
+                          - link "Turks and Caicos Islands" [ref=e3012] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Turks_and_Caicos_Islands
+                        - listitem [ref=e3013]:
+                          - link "British Antarctic Territory" [ref=e3018] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/British_Antarctic_Territory
+                      - paragraph [ref=e3019]:
+                        - text: The
+                        - link "British monarch" [ref=e3020] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/The_Crown
+                        - text: also has direct sovereignty over three self-governing
+                        - link "Crown Dependencies" [ref=e3021] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Crown_Dependencies
+                        - text: ":"
+                      - list [ref=e3022]:
+                        - listitem [ref=e3023]:
+                          - link "Guernsey" [ref=e3027] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Bailiwick_of_Guernsey
+                        - listitem [ref=e3028]:
+                          - link "Isle of Man" [ref=e3032] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Isle_of_Man
+                        - listitem [ref=e3033]:
+                          - link "Jersey" [ref=e3037] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Jersey
+                  - 'row "United States – United States of America UN member state None The United States is a federation of 50 states, one federal district, and one incorporated territory (Palmyra Atoll).[k] Additionally, the federal government of the United States has sovereignty over 13 unincorporated territories. Of these unincorporated territories, five are inhabited possessions: American Samoa Guam Northern Mariana Islands Puerto Rico U.S. Virgin Islands The United States also has sovereignty over eight uninhabited territories: Baker Island Howland Island Jarvis Island Johnston Atoll Kingman Reef Midway Atoll Navassa Island Wake Island The United States disputes sovereignty over two territories: Bajo Nuevo Bank Serranilla Bank The United States is under a Compact of Free Association with the following entities: Marshall Islands Federated States of Micronesia Palau" [ref=e3038]':
+                    - cell "United States – United States of America" [ref=e3039]:
+                      - link "United States" [ref=e3044] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/United_States
+                      - text: – United States of America
+                    - cell "UN member state" [ref=e3045]
+                    - cell "None" [ref=e3046]
+                    - 'cell "The United States is a federation of 50 states, one federal district, and one incorporated territory (Palmyra Atoll).[k] Additionally, the federal government of the United States has sovereignty over 13 unincorporated territories. Of these unincorporated territories, five are inhabited possessions: American Samoa Guam Northern Mariana Islands Puerto Rico U.S. Virgin Islands The United States also has sovereignty over eight uninhabited territories: Baker Island Howland Island Jarvis Island Johnston Atoll Kingman Reef Midway Atoll Navassa Island Wake Island The United States disputes sovereignty over two territories: Bajo Nuevo Bank Serranilla Bank The United States is under a Compact of Free Association with the following entities: Marshall Islands Federated States of Micronesia Palau" [ref=e3047]':
+                      - text: The United States is a federation of
+                      - link "50 states, one federal district, and one incorporated territory" [ref=e3048] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States
+                      - text: (
+                      - link "Palmyra Atoll" [ref=e3049] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Palmyra_Atoll
+                      - text: ).
+                      - superscript [ref=e3050]:
+                        - link "[k]" [ref=e3051] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                      - paragraph [ref=e3052]:
+                        - text: Additionally, the
+                        - link "federal government of the United States" [ref=e3053] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Federal_government_of_the_United_States
+                        - text: has sovereignty over 13
+                        - link "unincorporated territories" [ref=e3054] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Territories_of_the_United_States#Incorporated_vs._unincorporated_territories
+                        - text: ". Of these unincorporated territories, five are inhabited possessions:"
+                      - list [ref=e3055]:
+                        - listitem [ref=e3056]:
+                          - link "American Samoa" [ref=e3060] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/American_Samoa
+                        - listitem [ref=e3061]:
+                          - link "Guam" [ref=e3065] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Guam
+                        - listitem [ref=e3066]:
+                          - link "Northern Mariana Islands" [ref=e3070] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Northern_Mariana_Islands
+                        - listitem [ref=e3071]:
+                          - link "Puerto Rico" [ref=e3075] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Puerto_Rico
+                        - listitem [ref=e3076]:
+                          - link "U.S. Virgin Islands" [ref=e3080] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/United_States_Virgin_Islands
+                      - paragraph [ref=e3081]: "The United States also has sovereignty over eight uninhabited territories:"
+                      - list [ref=e3082]:
+                        - listitem [ref=e3083]:
+                          - link "Baker Island" [ref=e3084] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Baker_Island
+                        - listitem [ref=e3085]:
+                          - link "Howland Island" [ref=e3086] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Howland_Island
+                        - listitem [ref=e3087]:
+                          - link "Jarvis Island" [ref=e3088] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Jarvis_Island
+                        - listitem [ref=e3089]:
+                          - link "Johnston Atoll" [ref=e3090] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Johnston_Atoll
+                        - listitem [ref=e3091]:
+                          - link "Kingman Reef" [ref=e3092] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Kingman_Reef
+                        - listitem [ref=e3093]:
+                          - link "Midway Atoll" [ref=e3094] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Midway_Atoll
+                        - listitem [ref=e3095]:
+                          - link "Navassa Island" [ref=e3096] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Navassa_Island
+                        - listitem [ref=e3097]:
+                          - link "Wake Island" [ref=e3098] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Wake_Island
+                      - paragraph [ref=e3099]: "The United States disputes sovereignty over two territories:"
+                      - list [ref=e3100]:
+                        - listitem [ref=e3101]:
+                          - link "Bajo Nuevo Bank" [ref=e3103] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Bajo_Nuevo_Bank
+                        - listitem [ref=e3104]:
+                          - link "Serranilla Bank" [ref=e3106] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Serranilla_Bank
+                      - paragraph [ref=e3107]: "The United States is under a Compact of Free Association with the following entities:"
+                      - list [ref=e3108]:
+                        - listitem [ref=e3109]:
+                          - link "Marshall Islands" [ref=e3113] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Marshall_Islands
+                        - listitem [ref=e3114]:
+                          - link "Federated States of Micronesia" [ref=e3118] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Federated_States_of_Micronesia
+                        - listitem [ref=e3119]:
+                          - link "Palau" [ref=e3123] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Palau
+                  - row "Uruguay – Oriental Republic of Uruguay UN member state None" [ref=e3124]:
+                    - cell "Uruguay – Oriental Republic of Uruguay" [ref=e3125]:
+                      - link "Uruguay" [ref=e3130] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Uruguay
+                      - text: – Oriental Republic of Uruguay
+                    - cell "UN member state" [ref=e3131]
+                    - cell "None" [ref=e3132]
+                    - cell [ref=e3133]
+                  - row "Uzbekistan – Republic of Uzbekistan UN member state None Uzbekistan contains one autonomous region, Karakalpakstan.[i]" [ref=e3134]:
+                    - cell "Uzbekistan – Republic of Uzbekistan" [ref=e3135]:
+                      - link "Uzbekistan" [ref=e3140] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Uzbekistan
+                      - text: – Republic of Uzbekistan
+                    - cell "UN member state" [ref=e3141]
+                    - cell "None" [ref=e3142]
+                    - cell "Uzbekistan contains one autonomous region, Karakalpakstan.[i]" [ref=e3143]:
+                      - text: Uzbekistan contains one autonomous region,
+                      - link "Karakalpakstan" [ref=e3144] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Karakalpakstan
+                      - text: .
+                      - superscript [ref=e3145]:
+                        - link "[i]" [ref=e3146] [cursor=pointer]:
+                          - /url: "#cite_note-autonomous-20"
+                          - generic: "[i]"
+                  - row "V Vanuatu – Republic of Vanuatu UN member state None" [ref=e3147]:
+                    - rowheader "V" [ref=e3148]:
+                      - link "V" [ref=e3149] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Vanuatu – Republic of Vanuatu" [ref=e3150]:
+                      - link "Vanuatu" [ref=e3155] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Vanuatu
+                      - text: – Republic of Vanuatu
+                    - cell "UN member state" [ref=e3156]
+                    - cell "None" [ref=e3157]
+                    - cell [ref=e3158]
+                  - row "Vatican City – Vatican City State UN General Assembly observer state under the designation of \"Holy See\"; member of three UN specialised agencies None Administered by the Holy See, a sovereign entity with diplomatic relations to 183 states (including 180 UN member states, the Cook Islands, the Republic of China (Taiwan), and Palestine).[58] In addition, the European Union and the Sovereign Military Order of Malta maintain diplomatic relations with the Holy See. The Holy See is a member of three UN specialised agencies (ITU, UPU, and WIPO) and the IAEA, as well as being a permanent observer of the UN (in the category of \"Non-member State\")[51] and multiple other UN System organisations. The Vatican City is governed by officials appointed by the Pope, who is the Bishop of the Diocese of Rome and ex officio sovereign of Vatican City." [ref=e3159]:
+                    - cell "Vatican City – Vatican City State" [ref=e3160]:
+                      - link "Vatican City" [ref=e3165] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Vatican_City
+                      - text: – Vatican City State
+                    - cell "UN General Assembly observer state under the designation of \"Holy See\"; member of three UN specialised agencies" [ref=e3166]:
+                      - link "UN General Assembly observer state" [ref=e3167] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/United_Nations_General_Assembly_observers#Current_non-member_observers
+                      - text: under the designation of "
+                      - link "Holy See" [ref=e3168] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Holy_See
+                      - text: "\"; member of three"
+                      - link "UN specialised agencies" [ref=e3169] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_specialized_agencies_of_the_United_Nations
+                    - cell "None" [ref=e3170]
+                    - cell "Administered by the Holy See, a sovereign entity with diplomatic relations to 183 states (including 180 UN member states, the Cook Islands, the Republic of China (Taiwan), and Palestine).[58] In addition, the European Union and the Sovereign Military Order of Malta maintain diplomatic relations with the Holy See. The Holy See is a member of three UN specialised agencies (ITU, UPU, and WIPO) and the IAEA, as well as being a permanent observer of the UN (in the category of \"Non-member State\")[51] and multiple other UN System organisations. The Vatican City is governed by officials appointed by the Pope, who is the Bishop of the Diocese of Rome and ex officio sovereign of Vatican City." [ref=e3171]:
+                      - text: Administered by the
+                      - link "Holy See" [ref=e3172] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Holy_See
+                      - text: ", a sovereign entity with diplomatic relations to"
+                      - link "183 states" [ref=e3173] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_recognition_of_the_Holy_See
+                      - text: (including 180 UN member states, the
+                      - link "Cook Islands" [ref=e3174] [cursor=pointer]:
+                        - /url: "#Cook_Islands"
+                      - text: ", the"
+                      - link "Republic of China (Taiwan)" [ref=e3175] [cursor=pointer]:
+                        - /url: "#Taiwan"
+                      - text: ", and"
+                      - link "Palestine" [ref=e3176] [cursor=pointer]:
+                        - /url: "#Palestine"
+                      - text: ).
+                      - superscript [ref=e3177]:
+                        - link "[58]" [ref=e3178] [cursor=pointer]:
+                          - /url: "#cite_note-99"
+                          - generic: "[58]"
+                      - text: In addition, the
+                      - link "European Union" [ref=e3179] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/European_Union
+                      - text: and the
+                      - link "Sovereign Military Order of Malta" [ref=e3180] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Sovereign_Military_Order_of_Malta
+                      - text: maintain diplomatic relations with the Holy See. The Holy See is a member of three
+                      - link "UN specialised agencies" [ref=e3181] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_specialized_agencies_of_the_United_Nations
+                      - text: (
+                      - link "ITU" [ref=e3182] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_Telecommunication_Union
+                      - text: ","
+                      - link "UPU" [ref=e3183] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Universal_Postal_Union
+                      - text: ", and"
+                      - link "WIPO" [ref=e3184] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/World_Intellectual_Property_Organization
+                      - text: ) and the
+                      - link "IAEA" [ref=e3185] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_Atomic_Energy_Agency
+                      - text: ", as well as being a permanent observer of the UN (in the category of \"Non-member State\")"
+                      - superscript [ref=e3186]:
+                        - link "[51]" [ref=e3187] [cursor=pointer]:
+                          - /url: "#cite_note-unnms-84"
+                          - generic: "[51]"
+                      - text: and
+                      - link "multiple other UN System organisations" [ref=e3188] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_the_Holy_See#Participation_in_international_organizations
+                      - text: . The Vatican City is governed by officials appointed by the
+                      - link "Pope" [ref=e3189] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Pope
+                      - text: ", who is the Bishop of the Diocese of Rome and"
+                      - link "ex officio" [ref=e3191] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Ex_officio_member
+                      - text: sovereign of Vatican City.
+                  - 'row "Venezuela – Bolivarian Republic of Venezuela UN member state None Venezuela is a federation of 23 states, one capital district, and the federal dependencies. See: Administrative divisions of Venezuela.[k]" [ref=e3192]':
+                    - cell "Venezuela – Bolivarian Republic of Venezuela" [ref=e3193]:
+                      - link "Venezuela" [ref=e3198] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Venezuela
+                      - text: – Bolivarian Republic of Venezuela
+                    - cell "UN member state" [ref=e3199]
+                    - cell "None" [ref=e3200]
+                    - 'cell "Venezuela is a federation of 23 states, one capital district, and the federal dependencies. See: Administrative divisions of Venezuela.[k]" [ref=e3201]':
+                      - text: Venezuela is a federation of
+                      - link "23 states" [ref=e3202] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/States_of_Venezuela
+                      - text: ","
+                      - link "one capital district" [ref=e3203] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Capital_District_(Venezuela)
+                      - text: ", and the"
+                      - link "federal dependencies" [ref=e3204] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Federal_Dependencies_of_Venezuela
+                      - text: ". See:"
+                      - link "Administrative divisions of Venezuela" [ref=e3205] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Administrative_divisions_of_Venezuela
+                      - text: .
+                      - superscript [ref=e3206]:
+                        - link "[k]" [ref=e3207] [cursor=pointer]:
+                          - /url: "#cite_note-federal-22"
+                          - generic: "[k]"
+                  - row "Vietnam – Socialist Republic of Viet Nam UN member state None" [ref=e3208]:
+                    - cell "Vietnam – Socialist Republic of Viet Nam" [ref=e3209]:
+                      - link "Vietnam" [ref=e3214] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Vietnam
+                      - text: – Socialist Republic of Viet Nam
+                    - cell "UN member state" [ref=e3215]
+                    - cell "None" [ref=e3216]
+                    - cell [ref=e3217]
+                  - row "Y Yemen – Republic of Yemen UN member state None" [ref=e3218]:
+                    - rowheader "Y" [ref=e3219]:
+                      - link "Y" [ref=e3220] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Yemen – Republic of Yemen" [ref=e3221]:
+                      - link "Yemen" [ref=e3226] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Yemen
+                      - text: – Republic of Yemen
+                    - cell "UN member state" [ref=e3227]
+                    - cell "None" [ref=e3228]
+                    - cell [ref=e3229]
+                  - row "Z Zambia – Republic of Zambia UN member state None" [ref=e3230]:
+                    - rowheader "Z" [ref=e3231]:
+                      - link "Z" [ref=e3232] [cursor=pointer]:
+                        - /url: "#toc"
+                    - cell "Zambia – Republic of Zambia" [ref=e3233]:
+                      - link "Zambia" [ref=e3238] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Zambia
+                      - text: – Republic of Zambia
+                    - cell "UN member state" [ref=e3239]
+                    - cell "None" [ref=e3240]
+                    - cell [ref=e3241]
+                  - row "Zimbabwe – Republic of Zimbabwe UN member state None" [ref=e3242]:
+                    - cell "Zimbabwe – Republic of Zimbabwe" [ref=e3243]:
+                      - link "Zimbabwe" [ref=e3248] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Zimbabwe
+                      - text: – Republic of Zimbabwe
+                    - cell "UN member state" [ref=e3249]
+                    - cell "None" [ref=e3250]
+                    - cell [ref=e3251]
+                - rowgroup
+            - region "Other states" [ref=e3252]:
+              - heading "Other states" [level=3] [ref=e3254]
+              - generic [ref=e3255]:
+                - table [ref=e3256]:
+                  - rowgroup [ref=e3257]:
+                    - row "Membership within the UN System Member state of a UN Specialised Agency No membership" [ref=e3258]:
+                      - cell "Membership within the UN System Member state of a UN Specialised Agency No membership" [ref=e3259]:
+                        - generic [ref=e3260]: Membership within the UN System
+                        - generic [ref=e3261]: Member state of a UN Specialised Agency
+                        - generic [ref=e3263]: No membership
+                - table [ref=e3265]:
+                  - rowgroup [ref=e3266]:
+                    - row "Sovereignty dispute Undisputed sovereignty Disputed sovereignty" [ref=e3267]:
+                      - cell "Sovereignty dispute Undisputed sovereignty Disputed sovereignty" [ref=e3268]:
+                        - generic [ref=e3269]: Sovereignty dispute
+                        - generic [ref=e3270]: Undisputed sovereignty
+                        - generic [ref=e3272]: Disputed sovereignty
+                - paragraph
+              - table [ref=e3274]:
+                - rowgroup [ref=e3275]:
+                  - row "Short name and/or formal name[c] Membership within the UN System[d] Sovereignty dispute[e] Further information on status and recognition of sovereignty[g]" [ref=e3276]:
+                    - columnheader "Short name and/or formal name[c]" [ref=e3277] [cursor=pointer]:
+                      - text: Short name and/or
+                      - text: formal name
+                      - superscript [ref=e3278]:
+                        - link "[c]" [ref=e3279]:
+                          - /url: "#cite_note-bold-8"
+                          - generic: "[c]"
+                    - columnheader "Membership within the UN System[d]" [ref=e3280] [cursor=pointer]:
+                      - text: Membership within the
+                      - link "UN System" [ref=e3281]:
+                        - /url: https://en.wikipedia.org/wiki/United_Nations_System
+                      - superscript [ref=e3282]:
+                        - link "[d]" [ref=e3283]:
+                          - /url: "#cite_note-membership-9"
+                          - generic: "[d]"
+                    - columnheader "Sovereignty dispute[e]" [ref=e3284] [cursor=pointer]:
+                      - text: Sovereignty dispute
+                      - superscript [ref=e3285]:
+                        - link "[e]" [ref=e3286]:
+                          - /url: "#cite_note-sd-10"
+                          - generic: "[e]"
+                    - columnheader "Further information on status and recognition of sovereignty[g]" [ref=e3287]:
+                      - text: Further information on status and recognition of sovereignty
+                      - superscript [ref=e3288]:
+                        - link "[g]" [ref=e3289] [cursor=pointer]:
+                          - /url: "#cite_note-fi-12"
+                          - generic: "[g]"
+                - rowgroup [ref=e3290]:
+                  - row "Abkhazia – Republic of Abkhazia No membership Claimed by Georgia. Occupied by Russia. Recognised by Russia, Nicaragua, Syria, Venezuela, South Ossetia, and Transnistria.[59] Claimed in whole by Georgia as the Autonomous Republic of Abkhazia." [ref=e3291]:
+                    - cell "Abkhazia – Republic of Abkhazia" [ref=e3292]:
+                      - link "Abkhazia" [ref=e3297] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Abkhazia
+                      - text: – Republic of Abkhazia
+                    - cell "No membership" [ref=e3298]
+                    - cell "Claimed by Georgia. Occupied by Russia." [ref=e3299]:
+                      - text: Claimed by
+                      - link "Georgia" [ref=e3300] [cursor=pointer]:
+                        - /url: "#Georgia"
+                      - text: .
+                      - link "Occupied" [ref=e3301] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Russian-occupied_territories_in_Georgia
+                      - text: by
+                      - link "Russia" [ref=e3302] [cursor=pointer]:
+                        - /url: "#Russia"
+                      - text: .
+                    - cell "Recognised by Russia, Nicaragua, Syria, Venezuela, South Ossetia, and Transnistria.[59] Claimed in whole by Georgia as the Autonomous Republic of Abkhazia." [ref=e3303]:
+                      - link "Recognised by" [ref=e3304] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_recognition_of_Abkhazia_and_South_Ossetia
+                      - text: Russia, Nicaragua, Syria, Venezuela, South Ossetia, and Transnistria.
+                      - superscript [ref=e3305]:
+                        - link "[59]" [ref=e3306] [cursor=pointer]:
+                          - /url: "#cite_note-ASOTREC-100"
+                          - generic: "[59]"
+                      - text: Claimed in whole by
+                      - link "Georgia" [ref=e3307] [cursor=pointer]:
+                        - /url: "#Georgia"
+                      - text: as the
+                      - link "Autonomous Republic of Abkhazia" [ref=e3308] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Government_of_the_Autonomous_Republic_of_Abkhazia
+                      - text: .
+                  - row "Cook Islands Member of eight UN specialised agencies None (See political status) A state in free association with New Zealand and part of its realm,[h] the Cook Islands maintains diplomatic relations with at least 65 UN member states and 3 other states and is recognised as a sovereign state by a number of them. The Cook Islands is a member of multiple UN agencies with full treaty-making capacity.[38] It shares a head of state with New Zealand as well as having shared citizenship." [ref=e3309]:
+                    - cell "Cook Islands" [ref=e3310]:
+                      - link "Cook Islands" [ref=e3315] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Cook_Islands
+                    - cell "Member of eight UN specialised agencies" [ref=e3316]:
+                      - text: Member of eight
+                      - link "UN specialised agencies" [ref=e3317] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_specialized_agencies_of_the_United_Nations
+                    - cell "None (See political status)" [ref=e3318]:
+                      - text: None
+                      - generic [ref=e3319]:
+                        - text: (See
+                        - link "political status" [ref=e3320] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Political_status_of_the_Cook_Islands_and_Niue
+                        - text: )
+                    - cell "A state in free association with New Zealand and part of its realm,[h] the Cook Islands maintains diplomatic relations with at least 65 UN member states and 3 other states and is recognised as a sovereign state by a number of them. The Cook Islands is a member of multiple UN agencies with full treaty-making capacity.[38] It shares a head of state with New Zealand as well as having shared citizenship." [ref=e3321]:
+                      - text: A state in
+                      - link "free association" [ref=e3322] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Associated_state
+                      - text: with
+                      - link "New Zealand" [ref=e3323] [cursor=pointer]:
+                        - /url: "#New_Zealand"
+                      - text: and part of
+                      - link "its realm" [ref=e3324] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Realm_of_New_Zealand
+                      - text: ","
+                      - superscript [ref=e3325]:
+                        - link "[h]" [ref=e3326] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                      - text: the Cook Islands maintains
+                      - link "diplomatic relations with at least 65 UN member states and 3 other states" [ref=e3327] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_the_Cook_Islands
+                      - text: and is recognised as a sovereign state by a number of them. The Cook Islands is a member of
+                      - link "multiple UN agencies" [ref=e3328] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_specialized_agencies_of_the_United_Nations
+                      - text: with full treaty-making capacity.
+                      - superscript [ref=e3329]:
+                        - link "[38]" [ref=e3330] [cursor=pointer]:
+                          - /url: "#cite_note-untreaty1-70"
+                          - generic: "[38]"
+                      - text: It shares a
+                      - link "head of state" [ref=e3331] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Monarchy_of_New_Zealand
+                      - text: with New Zealand as well as having
+                      - link "shared citizenship" [ref=e3332] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/New_Zealand_nationality_law
+                      - text: .
+                  - row [ref=e3333]:
+                    - cell "Kosovo – Republic of Kosovo" [ref=e3334]:
+                      - link "Kosovo" [ref=e3339] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kosovo
+                      - text: – Republic of Kosovo
+                    - cell "Member of two UN specialised agencies" [ref=e3340]:
+                      - text: Member of two
+                      - link "UN specialised agencies" [ref=e3341] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_specialized_agencies_of_the_United_Nations
+                    - cell "Claimed by Serbia" [ref=e3342]:
+                      - text: Claimed by
+                      - link "Serbia" [ref=e3343] [cursor=pointer]:
+                        - /url: "#Serbia"
+                    - cell "Pursuant to United Nations Security Council Resolution 1244, Kosovo was placed under the administration of the United Nations Interim Administration Mission in Kosovo in 1999.[60] Kosovo declared independence in 2008, and it has received diplomatic recognition from 118 UN member states, the Cook Islands, Niue, and the Republic of China (Taiwan), while 8 of those states have recognised Kosovo only to later withdraw their recognition.[61] Serbia continues to maintain its sovereignty claim over Kosovo. Other UN member states and non UN member states continue to recognise Serbian sovereignty or have taken no position on the question. Kosovo is a member of the International Monetary Fund and the World Bank Group. The Republic of Kosovo has de facto control over most of the territory, with limited control in North Kosovo." [ref=e3344]:
+                      - text: Pursuant to
+                      - link "United Nations Security Council Resolution 1244" [ref=e3345] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/United_Nations_Security_Council_Resolution_1244
+                      - text: ", Kosovo was placed under the administration of the"
+                      - link "United Nations Interim Administration Mission in Kosovo" [ref=e3346] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/United_Nations_Interim_Administration_Mission_in_Kosovo
+                      - text: in 1999.
+                      - superscript [ref=e3347]:
+                        - link "[60]" [ref=e3348] [cursor=pointer]:
+                          - /url: "#cite_note-101"
+                          - generic: "[60]"
+                      - text: Kosovo
+                      - link "declared independence in 2008" [ref=e3349] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/2008_Kosovo_declaration_of_independence
+                      - text: ", and it has"
+                      - link "received diplomatic recognition from 118 UN member states" [ref=e3350] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_recognition_of_Kosovo
+                      - text: ", the"
+                      - link "Cook Islands" [ref=e3351] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Cook_Islands
+                      - text: ","
+                      - link "Niue" [ref=e3352] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Niue
+                      - text: ", and the"
+                      - link "Republic of China (Taiwan)" [ref=e3353] [cursor=pointer]:
+                        - /url: "#Taiwan"
+                      - text: ", while 8 of those states have recognised Kosovo only to later withdraw their recognition."
+                      - superscript [ref=e3354]:
+                        - link "[61]" [ref=e3355] [cursor=pointer]:
+                          - /url: "#cite_note-102"
+                          - generic: "[61]"
+                      - text: Serbia continues to maintain its sovereignty claim over Kosovo. Other UN member states and non UN member states continue to recognise Serbian sovereignty or have taken no position on the question. Kosovo is a member of the
+                      - link "International Monetary Fund" [ref=e3356] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_Monetary_Fund
+                      - text: and the
+                      - link "World Bank Group" [ref=e3357] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/World_Bank_Group
+                      - text: . The Republic of Kosovo has de facto control over most of the territory, with limited control in
+                      - link "North Kosovo" [ref=e3358] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/North_Kosovo
+                      - text: .
+                  - row "Niue Member of five UN specialised agencies None (See political status) A state in free association with New Zealand and part of its realm,[h] Niue maintains diplomatic relations with at least 28 UN member states and 2 other states and is recognised as a sovereign state by a number of them. Niue is a member of multiple UN agencies with full treaty-making capacity.[38] It shares a head of state with New Zealand as well as having shared citizenship." [ref=e3359]:
+                    - cell "Niue" [ref=e3360]:
+                      - link "Niue" [ref=e3365] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Niue
+                    - cell "Member of five UN specialised agencies" [ref=e3366]:
+                      - text: Member of five
+                      - link "UN specialised agencies" [ref=e3367] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_specialized_agencies_of_the_United_Nations
+                    - cell "None (See political status)" [ref=e3368]:
+                      - text: None
+                      - generic [ref=e3369]:
+                        - text: (See
+                        - link "political status" [ref=e3370] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Political_status_of_the_Cook_Islands_and_Niue
+                        - text: )
+                    - cell "A state in free association with New Zealand and part of its realm,[h] Niue maintains diplomatic relations with at least 28 UN member states and 2 other states and is recognised as a sovereign state by a number of them. Niue is a member of multiple UN agencies with full treaty-making capacity.[38] It shares a head of state with New Zealand as well as having shared citizenship." [ref=e3371]:
+                      - text: A state in
+                      - link "free association" [ref=e3372] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Associated_state
+                      - text: with
+                      - link "New Zealand" [ref=e3373] [cursor=pointer]:
+                        - /url: "#New_Zealand"
+                      - text: and part of
+                      - link "its realm" [ref=e3374] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Realm_of_New_Zealand
+                      - text: ","
+                      - superscript [ref=e3375]:
+                        - link "[h]" [ref=e3376] [cursor=pointer]:
+                          - /url: "#cite_note-realm-18"
+                          - generic: "[h]"
+                      - text: Niue maintains
+                      - link "diplomatic relations with at least 28 UN member states and 2 other states" [ref=e3377] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_Niue
+                      - text: and is recognised as a sovereign state by a number of them. Niue is a member of
+                      - link "multiple UN agencies" [ref=e3378] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_specialized_agencies_of_the_United_Nations
+                      - text: with full treaty-making capacity.
+                      - superscript [ref=e3379]:
+                        - link "[38]" [ref=e3380] [cursor=pointer]:
+                          - /url: "#cite_note-untreaty1-70"
+                          - generic: "[38]"
+                      - text: It shares a
+                      - link "head of state" [ref=e3381] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Monarchy_of_New_Zealand
+                      - text: with New Zealand as well as having
+                      - link "shared citizenship" [ref=e3382] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/New_Zealand_nationality_law
+                      - text: .
+                  - row "Northern Cyprus – Turkish Republic of Northern Cyprus No membership Claimed by Cyprus. Occupied by Turkey. Recognised only by Turkey. Under the name \"Turkish Cypriot State\", it is an observer state of the Organisation of Islamic Cooperation and the Economic Cooperation Organization. Northern Cyprus is claimed in whole by the Republic of Cyprus.[62]" [ref=e3383]:
+                    - cell "Northern Cyprus – Turkish Republic of Northern Cyprus" [ref=e3384]:
+                      - link "Northern Cyprus" [ref=e3389] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Northern_Cyprus
+                      - text: – Turkish Republic of Northern Cyprus
+                    - cell "No membership" [ref=e3390]
+                    - cell "Claimed by Cyprus. Occupied by Turkey." [ref=e3391]:
+                      - text: Claimed by
+                      - link "Cyprus" [ref=e3392] [cursor=pointer]:
+                        - /url: "#Cyprus"
+                      - text: .
+                      - link "Occupied" [ref=e3393] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Cyprus_problem
+                      - text: by
+                      - link "Turkey" [ref=e3394] [cursor=pointer]:
+                        - /url: "#Turkey"
+                      - text: .
+                    - cell "Recognised only by Turkey. Under the name \"Turkish Cypriot State\", it is an observer state of the Organisation of Islamic Cooperation and the Economic Cooperation Organization. Northern Cyprus is claimed in whole by the Republic of Cyprus.[62]" [ref=e3395]:
+                      - link "Recognised only by" [ref=e3396] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_Northern_Cyprus
+                      - link "Turkey" [ref=e3397] [cursor=pointer]:
+                        - /url: "#Turkey"
+                      - text: . Under the name "
+                      - link "Turkish Cypriot State" [ref=e3398] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Turkish_Cypriot_State
+                      - text: "\", it is an observer state of the"
+                      - link "Organisation of Islamic Cooperation" [ref=e3399] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Organisation_of_Islamic_Cooperation
+                      - text: and the
+                      - link "Economic Cooperation Organization" [ref=e3400] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Economic_Cooperation_Organization
+                      - text: . Northern Cyprus is claimed in whole by the
+                      - link "Republic of Cyprus" [ref=e3401] [cursor=pointer]:
+                        - /url: "#Cyprus"
+                      - text: .
+                      - superscript [ref=e3402]:
+                        - link "[62]" [ref=e3403] [cursor=pointer]:
+                          - /url: "#cite_note-103"
+                          - generic: "[62]"
+                  - row "Sahrawi Arab Democratic Republic No membership Claimed and occupied by Morocco. The Polisario Front, which administers the Sahrawi Arab Democratic Republic, is recognised by the UN as the legitimate representative of the people of Western Sahara.[63][64] Recognised at some stage by 84 UN member states, 38 of which have since withdrawn or frozen their recognition. It is a founding member of the African Union, an international organisation with permanent observer status at the UN General Assembly. The territories under its control, the so-called Free Zone, are claimed in whole by Morocco. In turn, the Sahrawi Arab Democratic Republic claims the Moroccan-occupied part of Western Sahara to the west of the Moroccan sand wall. Its government resides in exile in the Sahrawi refugee camps of Tindouf, Algeria." [ref=e3404]:
+                    - cell "Sahrawi Arab Democratic Republic" [ref=e3405]:
+                      - link "Sahrawi Arab Democratic Republic" [ref=e3410] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Sahrawi_Arab_Democratic_Republic
+                    - cell "No membership" [ref=e3411]
+                    - cell "Claimed and occupied by Morocco." [ref=e3412]:
+                      - text: Claimed and
+                      - link "occupied" [ref=e3413] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Moroccan-occupied_Western_Sahara
+                      - text: by
+                      - link "Morocco" [ref=e3414] [cursor=pointer]:
+                        - /url: "#Morocco"
+                      - text: .
+                    - cell "The Polisario Front, which administers the Sahrawi Arab Democratic Republic, is recognised by the UN as the legitimate representative of the people of Western Sahara.[63][64] Recognised at some stage by 84 UN member states, 38 of which have since withdrawn or frozen their recognition. It is a founding member of the African Union, an international organisation with permanent observer status at the UN General Assembly. The territories under its control, the so-called Free Zone, are claimed in whole by Morocco. In turn, the Sahrawi Arab Democratic Republic claims the Moroccan-occupied part of Western Sahara to the west of the Moroccan sand wall. Its government resides in exile in the Sahrawi refugee camps of Tindouf, Algeria." [ref=e3415]:
+                      - text: The
+                      - link "Polisario Front" [ref=e3416] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Polisario_Front
+                      - text: ", which administers the Sahrawi Arab Democratic Republic, is recognised by the UN as the"
+                      - link "legitimate representative" [ref=e3417] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_active_national_liberation_movements_recognized_by_intergovernmental_organizations
+                      - text: of the people of
+                      - link "Western Sahara" [ref=e3418] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Western_Sahara
+                      - text: .
+                      - superscript [ref=e3419]:
+                        - link "[63]" [ref=e3420] [cursor=pointer]:
+                          - /url: "#cite_note-104"
+                          - generic: "[63]"
+                      - superscript [ref=e3421]:
+                        - link "[64]" [ref=e3422] [cursor=pointer]:
+                          - /url: "#cite_note-105"
+                          - generic: "[64]"
+                      - text: Recognised at some stage by
+                      - link "84 UN member states" [ref=e3423] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_recognition_of_the_Sahrawi_Arab_Democratic_Republic
+                      - text: ", 38 of which have since withdrawn or frozen their recognition. It is a founding member of the"
+                      - link "African Union" [ref=e3424] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/African_Union
+                      - text: ", an international organisation with"
+                      - link "permanent observer status" [ref=e3425] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/United_Nations_General_Assembly_observers
+                      - text: at the UN General Assembly.
+                      - paragraph [ref=e3426]:
+                        - text: The territories under its control, the so-called
+                        - link "Free Zone" [ref=e3427] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Free_Zone_(region)
+                        - text: ", are claimed in whole by"
+                        - link "Morocco" [ref=e3428] [cursor=pointer]:
+                          - /url: "#Morocco"
+                        - text: . In turn, the Sahrawi Arab Democratic Republic claims the
+                        - link "Moroccan-occupied part of Western Sahara" [ref=e3429] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Moroccan-occupied_Western_Sahara
+                        - text: to the west of the
+                        - link "Moroccan sand wall" [ref=e3430] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Moroccan_Western_Sahara_Wall
+                        - text: . Its government resides in exile in the
+                        - link "Sahrawi refugee camps" [ref=e3431] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Sahrawi_refugee_camps
+                        - text: of
+                        - link "Tindouf" [ref=e3432] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Tindouf
+                        - text: ", Algeria."
+                  - row "Somaliland – Republic of Somaliland No membership Claimed by Somalia A de facto independent state[65][66][67] recognised by Israel.[68] Claimed in whole by the Somalia.[69]" [ref=e3433]:
+                    - cell "Somaliland – Republic of Somaliland" [ref=e3434]:
+                      - link "Somaliland" [ref=e3439] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Somaliland
+                      - text: – Republic of Somaliland
+                    - cell "No membership" [ref=e3440]
+                    - cell "Claimed by Somalia" [ref=e3441]:
+                      - text: Claimed by
+                      - link "Somalia" [ref=e3442] [cursor=pointer]:
+                        - /url: "#Somalia"
+                    - cell "A de facto independent state[65][66][67] recognised by Israel.[68] Claimed in whole by the Somalia.[69]" [ref=e3443]:
+                      - text: A de facto independent state
+                      - superscript [ref=e3444]:
+                        - link "[65]" [ref=e3445] [cursor=pointer]:
+                          - /url: "#cite_note-montevideo-106"
+                          - generic: "[65]"
+                      - superscript [ref=e3446]:
+                        - link "[66]" [ref=e3447] [cursor=pointer]:
+                          - /url: "#cite_note-FailureofStates-107"
+                          - generic: "[66]"
+                      - superscript [ref=e3448]:
+                        - link "[67]" [ref=e3449] [cursor=pointer]:
+                          - /url: "#cite_note-StrangeCase-108"
+                          - generic: "[67]"
+                      - link "recognised by" [ref=e3450] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_Somaliland
+                      - text: Israel.
+                      - superscript [ref=e3451]:
+                        - link "[68]" [ref=e3452] [cursor=pointer]:
+                          - /url: "#cite_note-SomalilandIsraelRecognition-109"
+                          - generic: "[68]"
+                      - text: Claimed in whole by the
+                      - link "Somalia" [ref=e3453] [cursor=pointer]:
+                        - /url: "#Somalia"
+                      - text: .
+                      - superscript [ref=e3454]:
+                        - link "[69]" [ref=e3455] [cursor=pointer]:
+                          - /url: "#cite_note-Somalilandprofile-110"
+                          - generic: "[69]"
+                  - row "South Ossetia – Republic of South Ossetia–the State of Alania No membership Claimed by Georgia. Occupied by Russia. A de facto independent state,[70] recognised by Russia, Nicaragua, Syria, Venezuela, Abkhazia, and Transnistria. Claimed in whole by Georgia.[71]" [ref=e3456]:
+                    - cell "South Ossetia – Republic of South Ossetia–the State of Alania" [ref=e3457]:
+                      - link "South Ossetia" [ref=e3462] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/South_Ossetia
+                      - text: – Republic of South Ossetia–the State of Alania
+                    - cell "No membership" [ref=e3463]
+                    - cell "Claimed by Georgia. Occupied by Russia." [ref=e3464]:
+                      - text: Claimed by
+                      - link "Georgia" [ref=e3465] [cursor=pointer]:
+                        - /url: "#Georgia"
+                      - text: .
+                      - link "Occupied" [ref=e3466] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Russian-occupied_territories_in_Georgia
+                      - text: by
+                      - link "Russia" [ref=e3467] [cursor=pointer]:
+                        - /url: "#Russia"
+                      - text: .
+                    - cell "A de facto independent state,[70] recognised by Russia, Nicaragua, Syria, Venezuela, Abkhazia, and Transnistria. Claimed in whole by Georgia.[71]" [ref=e3468]:
+                      - text: A de facto independent state,
+                      - superscript [ref=e3469]:
+                        - link "[70]" [ref=e3470] [cursor=pointer]:
+                          - /url: "#cite_note-111"
+                          - generic: "[70]"
+                      - link "recognised by" [ref=e3471] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_recognition_of_Abkhazia_and_South_Ossetia
+                      - text: Russia, Nicaragua, Syria, Venezuela, Abkhazia, and Transnistria. Claimed in whole by
+                      - link "Georgia" [ref=e3472] [cursor=pointer]:
+                        - /url: "#Georgia"
+                      - text: .
+                      - superscript [ref=e3473]:
+                        - link "[71]" [ref=e3474] [cursor=pointer]:
+                          - /url: "#cite_note-cnnAbSO-112"
+                          - generic: "[71]"
+                  - row [ref=e3475]:
+                    - cell "Taiwan – Republic of China[p]" [ref=e3476]:
+                      - link "Taiwan" [ref=e3481] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Taiwan
+                      - text: – Republic of China
+                      - superscript [ref=e3482]:
+                        - link "[p]" [ref=e3483] [cursor=pointer]:
+                          - /url: "#cite_note-ChinaTaiwan-33"
+                          - generic: "[p]"
+                    - cell "UN member state until 1971, now no membership" [ref=e3484]
+                    - cell "Partially unrecognised. Claimed by the People's Republic of China ." [ref=e3485]:
+                      - link "Partially unrecognised" [ref=e3486] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_Taiwan
+                      - text: . Claimed by the
+                      - link "People's Republic of China" [ref=e3487] [cursor=pointer]:
+                        - /url: "#China"
+                      - text: .
+                    - cell [ref=e3488]:
+                      - text: A state competing (nominally) for recognition with the
+                      - link "People's Republic of China" [ref=e3489] [cursor=pointer]:
+                        - /url: "#China"
+                      - text: (PRC) as the government of China since 1949. The Republic of China (ROC) controls the islands of
+                      - link "Taiwan" [ref=e3490] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Geography_of_Taiwan
+                      - text: ","
+                      - link "Penghu" [ref=e3491] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Penghu
+                      - text: ","
+                      - link "Kinmen" [ref=e3492] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Kinmen
+                      - text: ", the"
+                      - link "Matsu Islands" [ref=e3493] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Matsu_Islands
+                      - text: ", and"
+                      - link "Pratas Island" [ref=e3494] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Pratas_Island
+                      - text: ", as well as"
+                      - link "Taiping Island" [ref=e3495] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Taiping_Island
+                      - text: and
+                      - link "Zhongzhou Reef" [ref=e3496] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Zhongzhou_Reef
+                      - text: of the
+                      - link "Spratly Islands" [ref=e3497] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Spratly_Islands
+                      - text: ", and has not renounced claims over its annexed territories on the"
+                      - link "mainland" [ref=e3498] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Mainland_China
+                      - text: .
+                      - superscript [ref=e3499]:
+                        - link "[72]" [ref=e3500] [cursor=pointer]:
+                          - /url: "#cite_note-113"
+                          - generic: "[72]"
+                      - text: The ROC is recognised by
+                      - link "11" [ref=e3501] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/International_recognition_of_the_Republic_of_China
+                      - text: UN member states and
+                      - link "Vatican City" [ref=e3502] [cursor=pointer]:
+                        - /url: "#Vatican_City"
+                      - text: ", none of which recognise the PRC."
+                      - paragraph [ref=e3503]:
+                        - text: In addition to these relations, the ROC also maintains unofficial relations
+                        - superscript [ref=e3504]:
+                          - link "[73]" [ref=e3505] [cursor=pointer]:
+                            - /url: "#cite_note-114"
+                            - generic: "[73]"
+                        - text: with 58 UN member states, one
+                        - link "self-declared state" [ref=e3506] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/List_of_states_with_limited_recognition
+                        - text: (
+                        - link "Somaliland" [ref=e3507] [cursor=pointer]:
+                          - /url: "#Somaliland"
+                        - text: ), three territories (
+                        - link "Guam" [ref=e3508] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Guam
+                        - text: ","
+                        - link "Hong Kong" [ref=e3509] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Hong_Kong
+                        - text: ", and"
+                        - link "Macau" [ref=e3510] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Macau
+                        - text: ), and the
+                        - link "European Union" [ref=e3511] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/European_Union
+                        - text: via its
+                        - link "representative offices and consulates" [ref=e3512] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Taipei_Economic_and_Cultural_Representative_Office
+                        - text: under the
+                        - link "One China" [ref=e3513] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/One_China
+                        - text: principle. Taiwan has the 31st-largest diplomatic network in the world with 110 offices.
+                        - superscript [ref=e3514]:
+                          - link "[74]" [ref=e3515] [cursor=pointer]:
+                            - /url: "#cite_note-115"
+                            - generic: "[74]"
+                      - paragraph [ref=e3516]:
+                        - text: The territory of the ROC is claimed in whole by the PRC.
+                        - superscript [ref=e3517]:
+                          - link "[q]" [ref=e3518] [cursor=pointer]:
+                            - /url: "#cite_note-TAI2-34"
+                            - generic: "[q]"
+                        - text: The ROC
+                        - link "participates in international organisations" [ref=e3519] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_Taiwan#International_organizations
+                        - text: under a variety of pseudonyms, most commonly "
+                        - link "Chinese Taipei" [ref=e3520] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/Chinese_Taipei
+                        - text: "\". In the"
+                        - link "WTO" [ref=e3521] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/World_Trade_Organization
+                        - text: ", the ROC has full membership under the designation of \"Separate Customs Territory of Taiwan, Penghu, Kinmen and Matsu\". The ROC was a founding member of the UN and enjoyed membership from 1945 to 1971, with veto power in the"
+                        - link "UN Security Council" [ref=e3522] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/United_Nations_Security_Council
+                        - text: ". See:"
+                        - link "China and the United Nations" [ref=e3523] [cursor=pointer]:
+                          - /url: https://en.wikipedia.org/wiki/China_and_the_United_Nations
+                        - text: .
+                  - row "Transnistria – Pridnestrovian Moldavian Republic[ap] No membership Claimed by Moldova. Occupied by Russia. A de facto independent state,[65] recognised only by Abkhazia and South Ossetia.[59] Claimed in whole by Moldova.[75]" [ref=e3524]:
+                    - cell "Transnistria – Pridnestrovian Moldavian Republic[ap]" [ref=e3525]:
+                      - link "Transnistria" [ref=e3530] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Transnistria
+                      - text: – Pridnestrovian Moldavian Republic
+                      - superscript [ref=e3531]:
+                        - link "[ap]" [ref=e3532] [cursor=pointer]:
+                          - /url: "#cite_note-116"
+                          - generic: "[ap]"
+                    - cell "No membership" [ref=e3533]
+                    - cell "Claimed by Moldova. Occupied by Russia." [ref=e3534]:
+                      - text: Claimed by
+                      - link "Moldova" [ref=e3535] [cursor=pointer]:
+                        - /url: "#Moldova"
+                      - text: .
+                      - link "Occupied" [ref=e3536] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Operational_Group_of_Russian_Forces#History
+                      - text: by
+                      - link "Russia" [ref=e3537] [cursor=pointer]:
+                        - /url: "#Russia"
+                      - text: .
+                    - cell "A de facto independent state,[65] recognised only by Abkhazia and South Ossetia.[59] Claimed in whole by Moldova.[75]" [ref=e3538]:
+                      - text: A de facto independent state,
+                      - superscript [ref=e3539]:
+                        - link "[65]" [ref=e3540] [cursor=pointer]:
+                          - /url: "#cite_note-montevideo-106"
+                          - generic: "[65]"
+                      - link "recognised only by" [ref=e3541] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_Transnistria
+                      - link "Abkhazia" [ref=e3542] [cursor=pointer]:
+                        - /url: "#Abkhazia"
+                      - text: and
+                      - link "South Ossetia" [ref=e3543] [cursor=pointer]:
+                        - /url: "#South_Ossetia"
+                      - text: .
+                      - superscript [ref=e3544]:
+                        - link "[59]" [ref=e3545] [cursor=pointer]:
+                          - /url: "#cite_note-ASOTREC-100"
+                          - generic: "[59]"
+                      - text: Claimed in whole by
+                      - link "Moldova" [ref=e3546] [cursor=pointer]:
+                        - /url: "#Moldova"
+                      - text: .
+                      - superscript [ref=e3547]:
+                        - link "[75]" [ref=e3548] [cursor=pointer]:
+                          - /url: "#cite_note-117"
+                          - generic: "[75]"
+                - rowgroup
+          - region "See also" [ref=e3549]:
+            - heading "See also" [level=2] [ref=e3551]
+            - list [ref=e3553]:
+              - listitem [ref=e3554]:
+                - link "Armorial of sovereign states" [ref=e3555] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Armorial_of_sovereign_states
+              - listitem [ref=e3556]:
+                - link "Associated state" [ref=e3557] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Associated_state
+              - listitem [ref=e3558]:
+                - link "Condominium" [ref=e3559] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Condominium_(international_law)
+              - listitem [ref=e3560]:
+                - link "Dependent territory" [ref=e3561] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Dependent_territory
+              - listitem [ref=e3562]:
+                - link "Independence referendum" [ref=e3563] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Independence_referendum
+              - listitem [ref=e3564]:
+                - link "ISO 3166-1" [ref=e3565] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/ISO_3166-1
+              - listitem [ref=e3566]:
+                - link "List of active separatist movements" [ref=e3567] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_active_separatist_movements
+              - listitem [ref=e3568]:
+                - link "List of adjectival and demonymic forms for countries and nations" [ref=e3569] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_adjectival_and_demonymic_forms_for_countries_and_nations
+              - listitem [ref=e3570]:
+                - link "List of administrative divisions by country" [ref=e3571] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country
+              - listitem [ref=e3572]:
+                - link "List of countries and dependencies and their capitals in native languages" [ref=e3573] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_and_their_capitals_in_native_languages
+              - listitem [ref=e3574]:
+                - link "List of countries and dependencies by area" [ref=e3575] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_area
+              - listitem [ref=e3576]:
+                - link "List of countries and dependencies by population" [ref=e3577] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population
+              - listitem [ref=e3578]:
+                - link "List of countries and territories by the United Nations geoscheme" [ref=e3579] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_countries_and_territories_by_the_United_Nations_geoscheme
+              - listitem [ref=e3580]:
+                - link "List of country-name etymologies" [ref=e3581] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_country-name_etymologies
+              - listitem [ref=e3582]:
+                - link "List of governments in exile" [ref=e3583] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_governments_in_exile
+              - listitem [ref=e3584]:
+                - link "List of international rankings" [ref=e3585] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_international_rankings
+              - listitem [ref=e3586]:
+                - link "List of ISO 3166 country codes" [ref=e3587] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
+              - listitem [ref=e3588]:
+                - link "List of micronations" [ref=e3589] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_micronations
+              - listitem [ref=e3590]:
+                - link "List of national capitals" [ref=e3591] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_national_capitals
+              - listitem [ref=e3592]:
+                - link "List of national flags of sovereign states" [ref=e3593] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_national_flags_of_sovereign_states
+              - listitem [ref=e3594]:
+                - link "List of proposed state mergers" [ref=e3595] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_proposed_state_mergers
+              - listitem [ref=e3596]:
+                - link "List of rebel groups that control territory" [ref=e3597] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_rebel_groups_that_control_territory
+              - listitem [ref=e3598]:
+                - link "List of states with limited recognition" [ref=e3599] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_states_with_limited_recognition
+              - listitem [ref=e3600]:
+                - link "List of territorial disputes" [ref=e3601] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_territorial_disputes
+              - listitem [ref=e3602]:
+                - link "List of territories governed by the United Nations" [ref=e3603] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/List_of_territories_governed_by_the_United_Nations
+              - listitem [ref=e3604]:
+                - link "Lists of political entities by century" [ref=e3605] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Lists_of_political_entities_by_century
+              - listitem [ref=e3606]:
+                - link "Lists of state leaders by century" [ref=e3607] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Lists_of_state_leaders_by_century
+              - listitem [ref=e3608]:
+                - link "Member states of the United Nations" [ref=e3609] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Member_states_of_the_United_Nations
+              - listitem [ref=e3610]:
+                - link "Sovereign state" [ref=e3611] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Sovereign_state
+                - list [ref=e3612]:
+                  - listitem [ref=e3613]:
+                    - link "List of former sovereign states" [ref=e3614] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/List_of_former_sovereign_states
+                  - listitem [ref=e3615]:
+                    - link "List of sovereign states and dependent territories by continent" [ref=e3616] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/List_of_sovereign_states_and_dependent_territories_by_continent
+                  - listitem [ref=e3617]:
+                    - link "List of sovereign states by date of formation" [ref=e3618] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/List_of_sovereign_states_by_date_of_formation
+              - listitem [ref=e3619]:
+                - link "Template:Clickable world map" [ref=e3620] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Template:Clickable_world_map
+              - listitem [ref=e3621]:
+                - link "Terra nullius" [ref=e3622] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Terra_nullius
+              - listitem [ref=e3623]:
+                - link "United Nations list of non-self-governing territories" [ref=e3624] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/United_Nations_list_of_non-self-governing_territories
+          - region "Notes" [ref=e3625]:
+            - heading "Notes" [level=2] [ref=e3627]
+            - list [ref=e3629]:
+              - listitem [ref=e3630]:
+                - link "Jump up" [ref=e3632] [cursor=pointer]:
+                  - /url: "#cite_ref-6"
+                  - text: ^
+                - text: The following bullets are grouped according to the availability of sources for the two criteria ((a) or (b)). This arrangement is not intended to reflect the relative importance of the two theories. Additional details are discussed in the state's individual entries.
+              - listitem [ref=e3633]:
+                - link "Jump up" [ref=e3635] [cursor=pointer]:
+                  - /url: "#cite_ref-micros_7-0"
+                  - text: ^
+                - generic [ref=e3636]:
+                  - text: The
+                  - link "Sovereign Military Order of Malta" [ref=e3637] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Sovereign_Military_Order_of_Malta
+                  - text: is not included, as despite being a sovereign entity it lacks territory and does not claim statehood. Entities considered to be
+                  - link "micronations" [ref=e3638] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Micronation
+                  - text: are not included. It is often up to debate whether a micronation truly controls its claimed territory. The
+                  - link "Joseon Cybernation" [ref=e3639] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Joseon_Cybernation
+                  - text: ", a self-proclaimed digital nation which claims no territory is also not included, though it was given recognition by UN member state Antigua and Barbuda in 2023. International law does not have a mechanism for recognising states \"in cyberspace\". Also omitted from this list are all"
+                  - link "uncontacted peoples" [ref=e3640] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Uncontacted_peoples
+                  - text: ", either who live in"
+                  - link "societies that cannot be defined as states" [ref=e3641] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Stateless_society
+                  - text: or whose statuses as such are not definitively known.
+              - listitem [ref=e3642]:
+                - generic [ref=e3643]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e3644] [cursor=pointer]:
+                    - /url: "#cite_ref-bold_8-0"
+                    - generic [ref=e3645]: "Jump up to:"
+                  - link [ref=e3646] [cursor=pointer]:
+                    - /url: "#cite_ref-bold_8-1"
+                - generic [ref=e3647]: Common name in bold.
+              - listitem [ref=e3648]:
+                - generic [ref=e3649]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e3650] [cursor=pointer]:
+                    - /url: "#cite_ref-membership_9-0"
+                    - generic [ref=e3651]: "Jump up to:"
+                  - link [ref=e3652] [cursor=pointer]:
+                    - /url: "#cite_ref-membership_9-1"
+                - generic [ref=e3653]:
+                  - text: This column indicates whether or not a state is a member of the
+                  - link "United Nations" [ref=e3654] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/United_Nations
+                  - text: .
+                  - superscript [ref=e3655]:
+                    - link "[1]" [ref=e3656] [cursor=pointer]:
+                      - /url: "#cite_note-unms-1"
+                      - generic: "[1]"
+                  - text: It also indicates which non-member states participate in the
+                  - link "United Nations System" [ref=e3657] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/United_Nations_System
+                  - text: through membership in the
+                  - link "International Atomic Energy Agency" [ref=e3658] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/International_Atomic_Energy_Agency
+                  - text: or one of the
+                  - link "specialised agencies of the United Nations" [ref=e3659] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/List_of_specialized_agencies_of_the_United_Nations
+                  - text: . All United Nations members belong to at least one specialised agency and are parties to the statute of the
+                  - link "International Court of Justice" [ref=e3660] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/International_Court_of_Justice
+                  - text: .
+              - listitem [ref=e3661]:
+                - generic [ref=e3662]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e3663] [cursor=pointer]:
+                    - /url: "#cite_ref-sd_10-0"
+                    - generic [ref=e3664]: "Jump up to:"
+                  - link [ref=e3665] [cursor=pointer]:
+                    - /url: "#cite_ref-sd_10-1"
+                - text: This column indicates whether or not a state is the subject of a major sovereignty dispute. Only states whose entire sovereignty is disputed by another state are listed.
+              - listitem [ref=e3666]:
+                - generic [ref=e3667]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e3668] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-0"
+                    - generic [ref=e3669]: "Jump up to:"
+                  - link [ref=e3670] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-1"
+                  - link [ref=e3671] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-2"
+                  - link [ref=e3672] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-3"
+                  - link [ref=e3673] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-4"
+                  - link [ref=e3674] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-5"
+                  - link [ref=e3675] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-6"
+                  - link [ref=e3676] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-7"
+                  - link [ref=e3677] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-8"
+                  - link [ref=e3678] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-9"
+                  - link [ref=e3679] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-10"
+                  - link [ref=e3680] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-11"
+                  - link [ref=e3681] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-12"
+                  - link [ref=e3682] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-13"
+                  - link [ref=e3683] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-14"
+                  - link [ref=e3684] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-15"
+                  - link [ref=e3685] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-16"
+                  - link [ref=e3686] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-17"
+                  - link [ref=e3687] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-18"
+                  - link [ref=e3688] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-19"
+                  - link [ref=e3689] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-20"
+                  - link [ref=e3690] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-21"
+                  - link [ref=e3691] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-22"
+                  - link [ref=e3692] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-23"
+                  - link [ref=e3693] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-24"
+                  - link [ref=e3694] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-25"
+                  - link [ref=e3695] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-26"
+                  - link [ref=e3696] [cursor=pointer]:
+                    - /url: "#cite_ref-EU_11-27"
+                - generic [ref=e3697]:
+                  - text: The member states of the
+                  - link "European Union" [ref=e3698] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/European_Union
+                  - text: have transferred part of their sovereignty in the form of legislative, executive, and judicial powers to the institutions of the EU, which is an example of
+                  - link "supranational union" [ref=e3699] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Supranational_union
+                  - text: . The EU has 27 member states.
+                  - superscript [ref=e3700]:
+                    - link "[13]" [ref=e3701] [cursor=pointer]:
+                      - /url: "#cite_note-25"
+                      - generic: "[13]"
+              - listitem [ref=e3702]:
+                - generic [ref=e3703]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e3704] [cursor=pointer]:
+                    - /url: "#cite_ref-fi_12-0"
+                    - generic [ref=e3705]: "Jump up to:"
+                  - link [ref=e3706] [cursor=pointer]:
+                    - /url: "#cite_ref-fi_12-1"
+                - generic [ref=e3707]:
+                  - text: "Information is included on:"
+                  - list [ref=e3708]:
+                    - listitem [ref=e3709]:
+                      - text: The extent to which a state's sovereignty is recognised internationally. More information can be found at
+                      - link "List of states with limited recognition" [ref=e3710] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_states_with_limited_recognition
+                      - text: ","
+                    - listitem [ref=e3711]:
+                      - text: Membership in the
+                      - link "European Union" [ref=e3712] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/European_Union
+                      - text: ","
+                      - superscript [ref=e3713]:
+                        - link "[f]" [ref=e3714] [cursor=pointer]:
+                          - /url: "#cite_note-EU-11"
+                          - generic: "[f]"
+                      - text: where applicable,
+                    - listitem [ref=e3715]:
+                      - text: Any
+                      - link "dependencies" [ref=e3716] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Dependent_territory
+                      - text: ", if applicable, which are generally not part of the territory of the sovereign state,"
+                    - listitem [ref=e3717]:
+                      - link "federal structure" [ref=e3718] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Federation
+                      - text: of the state, where applicable. More information can be found at
+                      - link "Federated state" [ref=e3719] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Federated_state
+                      - text: ","
+                    - listitem [ref=e3720]:
+                      - text: Any
+                      - link "autonomous areas" [ref=e3721] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_autonomous_areas_by_country
+                      - text: inside the territory of the sovereign state,
+                    - listitem [ref=e3722]: Any situations where one person is the Head of State of more than one state,
+                    - listitem [ref=e3723]:
+                      - text: Any
+                      - link "governments-in-exile" [ref=e3724] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Government-in-exile
+                      - text: recognised by at least one state.
+              - listitem [ref=e3725]:
+                - generic [ref=e3726]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e3727] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-0"
+                    - generic [ref=e3728]: "Jump up to:"
+                  - link [ref=e3729] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-1"
+                  - link [ref=e3730] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-2"
+                  - link [ref=e3731] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-3"
+                  - link [ref=e3732] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-4"
+                  - link [ref=e3733] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-5"
+                  - link [ref=e3734] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-6"
+                  - link [ref=e3735] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-7"
+                  - link [ref=e3736] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-8"
+                  - link [ref=e3737] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-9"
+                  - link [ref=e3738] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-10"
+                  - link [ref=e3739] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-11"
+                  - link [ref=e3740] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-12"
+                  - link [ref=e3741] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-13"
+                  - link [ref=e3742] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-14"
+                  - link [ref=e3743] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-15"
+                  - link [ref=e3744] [cursor=pointer]:
+                    - /url: "#cite_ref-realm_18-16"
+                - generic [ref=e3745]:
+                  - text: Commonwealth realm refers to any member state of the
+                  - link "Commonwealth of Nations" [ref=e3746] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Commonwealth_of_Nations
+                  - text: whose head of state is King
+                  - link "Charles III" [ref=e3747] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Charles_III
+                  - text: . Each realm is separate, independent, and a sovereign state; see
+                  - link "Commonwealth realm interrelationship" [ref=e3748] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Commonwealth_realm#Interrelationship
+                  - text: .
+              - listitem [ref=e3749]:
+                - generic [ref=e3750]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e3751] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-0"
+                    - generic [ref=e3752]: "Jump up to:"
+                  - link [ref=e3753] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-1"
+                  - link [ref=e3754] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-2"
+                  - link [ref=e3755] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-3"
+                  - link [ref=e3756] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-4"
+                  - link [ref=e3757] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-5"
+                  - link [ref=e3758] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-6"
+                  - link [ref=e3759] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-7"
+                  - link [ref=e3760] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-8"
+                  - link [ref=e3761] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-9"
+                  - link [ref=e3762] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-10"
+                  - link [ref=e3763] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-11"
+                  - link [ref=e3764] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-12"
+                  - link [ref=e3765] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-13"
+                  - link [ref=e3766] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-14"
+                  - link [ref=e3767] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-15"
+                  - link [ref=e3768] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-16"
+                  - link [ref=e3769] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-17"
+                  - link [ref=e3770] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-18"
+                  - link [ref=e3771] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-19"
+                  - link [ref=e3772] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-20"
+                  - link [ref=e3773] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-21"
+                  - link [ref=e3774] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-22"
+                  - link [ref=e3775] [cursor=pointer]:
+                    - /url: "#cite_ref-autonomous_20-23"
+                - generic [ref=e3776]:
+                  - text: For more information on divisions with a high degree of autonomy, see
+                  - link "List of autonomous areas by country" [ref=e3777] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/List_of_autonomous_areas_by_country
+                  - text: .
+              - listitem [ref=e3778]:
+                - link "Jump up" [ref=e3780] [cursor=pointer]:
+                  - /url: "#cite_ref-21"
+                  - text: ^
+                - generic [ref=e3781]:
+                  - text: The
+                  - link "Argentine Constitution" [ref=e3782] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Constitution_of_Argentina
+                  - text: "(Art. 35) recognises the following denominations for Argentina: \"United Provinces of the Río de la Plata\", \"Argentine Republic\" and \"Argentine Confederation\"; furthermore, it establishes the usage of \"Argentine Nation\" for purposes of legislation."
+              - listitem [ref=e3783]:
+                - generic [ref=e3784]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e3785] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-0"
+                    - generic [ref=e3786]: "Jump up to:"
+                  - link [ref=e3787] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-1"
+                  - link [ref=e3788] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-2"
+                  - link [ref=e3789] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-3"
+                  - link [ref=e3790] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-4"
+                  - link [ref=e3791] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-5"
+                  - link [ref=e3792] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-6"
+                  - link [ref=e3793] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-7"
+                  - link [ref=e3794] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-8"
+                  - link [ref=e3795] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-9"
+                  - link [ref=e3796] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-10"
+                  - link [ref=e3797] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-11"
+                  - link [ref=e3798] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-12"
+                  - link [ref=e3799] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-13"
+                  - link [ref=e3800] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-14"
+                  - link [ref=e3801] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-15"
+                  - link [ref=e3802] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-16"
+                  - link [ref=e3803] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-17"
+                  - link [ref=e3804] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-18"
+                  - link [ref=e3805] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-19"
+                  - link [ref=e3806] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-20"
+                  - link [ref=e3807] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-21"
+                  - link [ref=e3808] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-22"
+                  - link [ref=e3809] [cursor=pointer]:
+                    - /url: "#cite_ref-federal_22-23"
+                - generic [ref=e3810]:
+                  - text: More information on more or less
+                  - link "federal" [ref=e3811] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Federation
+                  - text: structures can be found at
+                  - link "Federal governments" [ref=e3812] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Federation#Federal_governments
+                  - text: .
+              - listitem [ref=e3813]:
+                - link "Jump up" [ref=e3815] [cursor=pointer]:
+                  - /url: "#cite_ref-ArgentineAntarctica_24-0"
+                  - text: ^
+                - generic [ref=e3816]:
+                  - text: Argentina's
+                  - link "claimed" [ref=e3817] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Territorial_claims_in_Antarctica
+                  - text: Antarctic territory of
+                  - link "Argentine Antarctica" [ref=e3819] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Argentine_Antarctica
+                  - text: (Antártida Argentina) is one of five constituent
+                  - link "departments" [ref=e3820] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Departments_of_Argentina
+                  - text: of the province
+                  - link "Tierra del Fuego" [ref=e3821] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Tierra_del_Fuego_Province,_Argentina
+                  - text: .
+                  - superscript [ref=e3822]:
+                    - link "[12]" [ref=e3823] [cursor=pointer]:
+                      - /url: "#cite_note-23"
+                      - generic: "[12]"
+              - listitem [ref=e3824]:
+                - link "Jump up" [ref=e3826] [cursor=pointer]:
+                  - /url: "#cite_ref-29"
+                  - text: ^
+                - generic [ref=e3827]:
+                  - text: "The legal name for Canada is the sole word; an officially sanctioned, though disused, name is the \"Dominion of Canada\" (which includes its legal title); see:"
+                  - link "Use of Dominion" [ref=e3828] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Name_of_Canada#Use_of_Dominion
+                  - text: ","
+                  - link "Dominion#Canada" [ref=e3829] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Dominion#Canada
+                  - text: .
+              - listitem [ref=e3830]:
+                - link "Jump up" [ref=e3832] [cursor=pointer]:
+                  - /url: "#cite_ref-31"
+                  - text: ^
+                - generic [ref=e3833]:
+                  - text: The government of Cape Verde declared "Cabo Verde" to be the official English name of the country in 2013.
+                  - superscript [ref=e3834]:
+                    - link "[17]" [ref=e3835] [cursor=pointer]:
+                      - /url: "#cite_note-30"
+                      - generic: "[17]"
+              - listitem [ref=e3836]:
+                - link "Jump up" [ref=e3838] [cursor=pointer]:
+                  - /url: "#cite_ref-ChileanAntarctic_32-0"
+                  - text: ^
+                - generic [ref=e3839]:
+                  - text: Chile's
+                  - link "claimed" [ref=e3840] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Territorial_claims_in_Antarctica
+                  - text: Antarctic territory of the
+                  - link "Chilean Antarctic" [ref=e3842] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Chilean_Antarctic_Territory
+                  - text: (Antártica Chilena) is a
+                  - link "commune" [ref=e3843] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Communes_of_Chile
+                  - text: of the
+                  - link "Antártica Chilena Province" [ref=e3844] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Antártica_Chilena_Province
+                  - text: of the
+                  - link "Magallanes Region" [ref=e3845] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Magallanes_Region
+                  - text: .
+              - listitem [ref=e3846]:
+                - generic [ref=e3847]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e3848] [cursor=pointer]:
+                    - /url: "#cite_ref-ChinaTaiwan_33-0"
+                    - generic [ref=e3849]: "Jump up to:"
+                  - link [ref=e3850] [cursor=pointer]:
+                    - /url: "#cite_ref-ChinaTaiwan_33-1"
+                - generic [ref=e3851]:
+                  - text: The
+                  - link "People's Republic of China" [ref=e3852] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/China
+                  - text: (PRC) is commonly referred to as "China", while the
+                  - link "Republic of China" [ref=e3853] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Taiwan
+                  - text: (ROC) is commonly referred to as "Taiwan". The ROC is also occasionally known diplomatically as
+                  - link "Chinese Taipei" [ref=e3854] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Chinese_Taipei
+                  - text: ", or by other"
+                  - link "alternative names" [ref=e3855] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Chinese_Taipei#Other_alternative_references_to_Taiwan
+                  - text: .
+              - listitem [ref=e3856]:
+                - generic [ref=e3857]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e3858] [cursor=pointer]:
+                    - /url: "#cite_ref-TAI2_34-0"
+                    - generic [ref=e3859]: "Jump up to:"
+                  - link [ref=e3860] [cursor=pointer]:
+                    - /url: "#cite_ref-TAI2_34-1"
+                - generic [ref=e3861]:
+                  - text: In 1949, the Republic of China government led by the
+                  - link "Kuomintang" [ref=e3862] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Kuomintang
+                  - text: (KMT) lost the
+                  - link "Chinese Civil War" [ref=e3863] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Chinese_Civil_War
+                  - text: to the
+                  - link "Chinese Communist Party" [ref=e3864] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Chinese_Communist_Party
+                  - text: (CCP) and set up a provisional capital in
+                  - link "Taipei" [ref=e3865] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Taipei
+                  - text: . The CCP established the PRC. As such, the
+                  - link "political status of the ROC and legal status of Taiwan" [ref=e3866] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Political_status_of_Taiwan
+                  - text: (alongside the
+                  - link "territories" [ref=e3867] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Taiwan_Area
+                  - text: under ROC jurisdiction) are in dispute. In 1971, the United Nations gave the
+                  - link "China seat" [ref=e3868] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/China_and_the_United_Nations
+                  - text: to the PRC. In the view of the United Nations, no member of the organisation withdrew as a consequence of this, but the ROC representatives declared that they were withdrawing. Most states recognise the PRC to be the
+                  - link "sole legitimate representative" [ref=e3869] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/One_China
+                  - text: of all China, and the UN classifies Taiwan as "
+                  - link "Taiwan, Province of China" [ref=e3870] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Taiwan_Province,_People's_Republic_of_China
+                  - text: "\". The ROC has de facto relations with most sovereign states. A significant political movement within Taiwan advocates"
+                  - link "Taiwan independence" [ref=e3871] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Taiwan_independence_movement
+                  - text: .
+              - listitem [ref=e3872]:
+                - link "Jump up" [ref=e3874] [cursor=pointer]:
+                  - /url: "#cite_ref-35"
+                  - text: ^
+                - generic [ref=e3875]:
+                  - text: See also
+                  - link "Dates of establishment of diplomatic relations with the People's Republic of China" [ref=e3876] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Dates_of_establishment_of_diplomatic_relations_with_the_People's_Republic_of_China
+                  - text: and
+                  - link "Foreign relations of China" [ref=e3877] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_China
+                  - text: .
+              - listitem [ref=e3878]:
+                - link "Jump up" [ref=e3880] [cursor=pointer]:
+                  - /url: "#cite_ref-36"
+                  - text: ^
+                - generic [ref=e3881]:
+                  - text: Also known as "Congo-Kinshasa". Formerly referred to as "
+                  - link "Zaire" [ref=e3882] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Zaire
+                  - text: "\", its official name from 1971 to 1997."
+              - listitem [ref=e3883]:
+                - link "Jump up" [ref=e3885] [cursor=pointer]:
+                  - /url: "#cite_ref-37"
+                  - text: ^
+                - text: Also known as "Congo-Brazzaville" or the "Congo Republic".
+              - listitem [ref=e3886]:
+                - link "Jump up" [ref=e3888] [cursor=pointer]:
+                  - /url: "#cite_ref-39"
+                  - text: ^
+                - generic [ref=e3889]:
+                  - text: "\"Czechia\" is the official short name in English adopted by the Czech government. This variant remains relatively uncommon, but has been adopted by several companies and organisations including the United Nations. See:"
+                  - link "Name of the Czech Republic" [ref=e3890] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Name_of_the_Czech_Republic
+                  - text: .
+              - listitem [ref=e3891]:
+                - link "Jump up" [ref=e3893] [cursor=pointer]:
+                  - /url: "#cite_ref-40"
+                  - text: ^
+                - text: The designation "Denmark" can refer either to Metropolitan Denmark or to the entire Danish Realm (e.g. in international organisations).
+              - listitem [ref=e3894]:
+                - link "Jump up" [ref=e3896] [cursor=pointer]:
+                  - /url: "#cite_ref-43"
+                  - text: ^
+                - text: Formerly referred to as the Kingdom of Swaziland, its official name until 2018.
+              - listitem [ref=e3897]:
+                - link "Jump up" [ref=e3899] [cursor=pointer]:
+                  - /url: "#cite_ref-46"
+                  - text: ^
+                - generic [ref=e3900]:
+                  - link "Åland" [ref=e3901] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Åland
+                  - text: was demilitarised by the
+                  - link "Treaty of Paris" [ref=e3902] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Treaty_of_Paris_(1856)
+                  - text: in 1856, which was later affirmed by the
+                  - link "League of Nations" [ref=e3903] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/League_of_Nations
+                  - text: in 1921, and in a somewhat different context reaffirmed in the treaty on
+                  - link "Finland's admission to the European Union in 1995" [ref=e3904] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/1995_enlargement_of_the_European_Union
+                  - text: .
+              - listitem [ref=e3905]:
+                - link "Jump up" [ref=e3907] [cursor=pointer]:
+                  - /url: "#cite_ref-Adélie_47-0"
+                  - text: ^
+                - generic [ref=e3908]:
+                  - text: France's
+                  - link "claimed" [ref=e3909] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Territorial_claims_in_Antarctica
+                  - text: Antarctic territory of
+                  - link "Adélie Land" [ref=e3911] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Adélie_Land
+                  - text: (Terre Adélie) is one of five constituent districts of the French Southern and Antarctic Lands.
+              - listitem [ref=e3912]:
+                - link "Jump up" [ref=e3914] [cursor=pointer]:
+                  - /url: "#cite_ref-50"
+                  - text: ^
+                - text: Also known as Guinea-Conakry.
+              - listitem [ref=e3915]:
+                - link "Jump up" [ref=e3917] [cursor=pointer]:
+                  - /url: "#cite_ref-Republic_54-0"
+                  - text: ^
+                - generic [ref=e3918]:
+                  - text: While sometimes referred to as the "Republic of Iceland"
+                  - superscript [ref=e3919]:
+                    - link "[25]" [ref=e3920] [cursor=pointer]:
+                      - /url: "#cite_note-51"
+                      - generic: "[25]"
+                  - superscript [ref=e3921]:
+                    - link "[26]" [ref=e3922] [cursor=pointer]:
+                      - /url: "#cite_note-52"
+                      - generic: "[26]"
+                  - text: and sometimes its counterpart Lýðveldið Ísland in Icelandic, the official name of the country is simply "Iceland".
+                  - superscript [ref=e3923]:
+                    - link "[27]" [ref=e3924] [cursor=pointer]:
+                      - /url: "#cite_note-53"
+                      - generic: "[27]"
+                  - text: One example of the former is the name of the
+                  - link "Constitution of Iceland" [ref=e3925] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Constitution_of_Iceland
+                  - text: ", which in Icelandic is Stjórnarskrá lýðveldisins Íslands and is translated to \"the Constitution of the republic of Iceland\". However, in this usage, \"republic\" is not capitalised."
+              - listitem [ref=e3926]:
+                - link "Jump up" [ref=e3928] [cursor=pointer]:
+                  - /url: "#cite_ref-57"
+                  - text: ^
+                - generic [ref=e3929]:
+                  - text: "\"Ireland\" is the official name of the country in English. The \"Republic of Ireland\" (the official description in English) and \"Éire\" (the official name in Irish) have sometimes been used unofficially to distinguish the state from the larger"
+                  - link "island of Ireland" [ref=e3930] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Ireland
+                  - text: ", however, this is officially deprecated."
+                  - superscript [ref=e3931]:
+                    - link "[29]" [ref=e3932] [cursor=pointer]:
+                      - /url: "#cite_note-56"
+                      - generic: "[29]"
+                  - text: See
+                  - link "names of the Irish state" [ref=e3933] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Names_of_the_Irish_state
+                  - text: .
+              - listitem [ref=e3934]:
+                - link "Jump up" [ref=e3936] [cursor=pointer]:
+                  - /url: "#cite_ref-64"
+                  - text: ^
+                - text: The Government of Ivory Coast uses "Côte d'Ivoire" as the official English name of the country.
+              - listitem [ref=e3937]:
+                - link "Jump up" [ref=e3939] [cursor=pointer]:
+                  - /url: "#cite_ref-65"
+                  - text: ^
+                - generic [ref=e3940]:
+                  - text: "The country's official name of Myanmar, adopted in 1989, has been mixed and controversial, with the former name \"Burma\" still being used in many cases. See:"
+                  - link "Names of Myanmar" [ref=e3941] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Names_of_Myanmar
+                  - text: .
+              - listitem [ref=e3942]:
+                - link "Jump up" [ref=e3944] [cursor=pointer]:
+                  - /url: "#cite_ref-66"
+                  - text: ^
+                - text: Formerly the "Republic of Nauru". In 2026, the United Nations recognised "Naoero" as the official English name of the country after a request made by the Nauruan government.
+              - listitem [ref=e3945]:
+                - link "Jump up" [ref=e3947] [cursor=pointer]:
+                  - /url: "#cite_ref-67"
+                  - text: ^
+                - generic [ref=e3948]:
+                  - text: The designation "the Netherlands" can refer either to the Metropolitan
+                  - link "Netherlands" [ref=e3949] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Netherlands
+                  - text: or to the entire
+                  - link "Kingdom" [ref=e3950] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Kingdom_of_the_Netherlands
+                  - text: (e.g. in international organisations).
+              - listitem [ref=e3951]:
+                - link "Jump up" [ref=e3953] [cursor=pointer]:
+                  - /url: "#cite_ref-72"
+                  - text: ^
+                - generic [ref=e3954]:
+                  - text: Formerly known constitutionally as the "Republic of Macedonia" from 1991 to 2019 and under the international designation of "the former Yugoslav Republic of Macedonia" (FYROM) from 1993 to 2019 due to the
+                  - link "Macedonia naming dispute" [ref=e3955] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Macedonia_naming_dispute
+                  - text: with
+                  - link "Greece" [ref=e3956] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Greece
+                  - text: . Following the
+                  - link "Prespa Agreement" [ref=e3957] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Prespa_Agreement
+                  - text: going into effect in February 2019, the country was renamed "North Macedonia".
+              - listitem [ref=e3958]:
+                - link "Jump up" [ref=e3960] [cursor=pointer]:
+                  - /url: "#cite_ref-87"
+                  - text: ^
+                - text: "\"Federation of Saint Christopher and Nevis\" is sometimes also used as the official name."
+              - listitem [ref=e3961]:
+                - link "Jump up" [ref=e3963] [cursor=pointer]:
+                  - /url: "#cite_ref-89"
+                  - text: ^
+                - generic [ref=e3964]:
+                  - text: North Korea abandoned its 78-year-long claim over South Korea in May 2026.
+                  - superscript [ref=e3965]:
+                    - link "[54]" [ref=e3966] [cursor=pointer]:
+                      - /url: "#cite_note-88"
+                      - generic: "[54]"
+              - listitem [ref=e3967]:
+                - link "Jump up" [ref=e3969] [cursor=pointer]:
+                  - /url: "#cite_ref-Plazas_93-0"
+                  - text: ^
+                - generic [ref=e3970]:
+                  - text: Spain holds several small overseas territories scattered along the Mediterranean coast bordering
+                  - link "Morocco" [ref=e3971] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Morocco
+                  - text: ", known as the"
+                  - link "plazas de soberanía" [ref=e3972] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Plazas_de_soberanía
+                  - text: .
+              - listitem [ref=e3973]:
+                - link "Jump up" [ref=e3975] [cursor=pointer]:
+                  - /url: "#cite_ref-94"
+                  - text: ^
+                - generic [ref=e3976]:
+                  - text: Formerly known as the "
+                  - link "Dominion of Ceylon" [ref=e3977] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Dominion_of_Ceylon
+                  - text: "\" until 1972."
+              - listitem [ref=e3978]:
+                - link "Jump up" [ref=e3980] [cursor=pointer]:
+                  - /url: "#cite_ref-95"
+                  - text: ^
+                - text: Formerly also known as "East Timor".
+              - listitem [ref=e3981]:
+                - link "Jump up" [ref=e3983] [cursor=pointer]:
+                  - /url: "#cite_ref-96"
+                  - text: ^
+                - text: Formerly the "Republic of Turkey". In 2022, the United Nations recognised "Türkiye" as the official English name of the country after a request made by the Turkish government.
+              - listitem [ref=e3984]:
+                - link "Jump up" [ref=e3986] [cursor=pointer]:
+                  - /url: "#cite_ref-97"
+                  - text: ^
+                - generic [ref=e3987]:
+                  - text: There is no official flag for Akrotiri and Dhekelia; it is represented by the
+                  - link "flag of the United Kingdom" [ref=e3988] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Flag_of_the_United_Kingdom
+                  - text: ", the"
+                  - link "Union Jack" [ref=e3989] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Union_Jack
+                  - text: . See
+                  - link "Flag of Akrotiri and Dhekelia" [ref=e3990] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Flag_of_Akrotiri_and_Dhekelia
+              - listitem [ref=e3991]:
+                - link "Jump up" [ref=e3993] [cursor=pointer]:
+                  - /url: "#cite_ref-98"
+                  - text: ^
+                - generic [ref=e3994]:
+                  - text: There is no official flag for Saint Helena, Ascension and Tristan da Cunha; it is represented by the
+                  - link "flag of the United Kingdom" [ref=e3995] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Flag_of_the_United_Kingdom
+                  - text: ", the"
+                  - link "Union Jack" [ref=e3996] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Union_Jack
+                  - text: . However, the 3 islands that comprise it do have flags. See
+                  - link "Flag of Saint Helena, Ascension and Tristan da Cunha" [ref=e3997] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Flag_of_Saint_Helena,_Ascension_and_Tristan_da_Cunha
+              - listitem [ref=e3998]:
+                - link "Jump up" [ref=e4000] [cursor=pointer]:
+                  - /url: "#cite_ref-116"
+                  - text: ^
+                - text: Also known as "Pridnestrovie".
+          - region "References" [ref=e4001]:
+            - heading "References" [level=2] [ref=e4003]
+            - list [ref=e4005]:
+              - listitem [ref=e4006]:
+                - generic [ref=e4007]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e4008] [cursor=pointer]:
+                    - /url: "#cite_ref-unms_1-0"
+                    - generic [ref=e4009]: "Jump up to:"
+                  - link [ref=e4010] [cursor=pointer]:
+                    - /url: "#cite_ref-unms_1-1"
+                - generic [ref=e4011]:
+                  - generic [ref=e4012]:
+                    - link "\"Member States | United Nations\"" [ref=e4013] [cursor=pointer]:
+                      - /url: https://www.un.org/en/about-us/member-states
+                    - text: . United Nations.
+                    - link "Archived" [ref=e4014] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20230301201032/https://www.un.org/en/about-us/member-states
+                    - text: from the original on 1 March 2023
+                    - generic [ref=e4015]: . Retrieved 7 March 2023
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Member+States+%7C+United+Nations&rft.pub=United+Nations&rft_id=https%3A%2F%2Fwww.un.org%2Fen%2Fabout-us%2Fmember-states&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4016]:
+                - link "Jump up" [ref=e4018] [cursor=pointer]:
+                  - /url: "#cite_ref-2"
+                  - text: ^
+                - generic [ref=e4019]:
+                  - generic [ref=e4020]:
+                    - text: Hersch Lauterpacht (2012).
+                    - link "Recognition in International Law" [ref=e4021] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=EWgEv1Qq2TwC&pg=PA419
+                    - text: .
+                    - link "Cambridge University Press" [ref=e4022] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Cambridge_University_Press
+                    - text: . p. xxxv.
+                    - link "ISBN" [ref=e4023] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "9781107609433" [ref=e4024] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/9781107609433
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Recognition+in+International+Law&rft.pages=xxxv&rft.pub=Cambridge+University+Press&rft.date=2012&rft.isbn=9781107609433&rft.au=Hersch+Lauterpacht&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DEWgEv1Qq2TwC%26pg%3DPA419&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4025]:
+                - link "Jump up" [ref=e4027] [cursor=pointer]:
+                  - /url: "#cite_ref-3"
+                  - text: ^
+                - generic [ref=e4028]:
+                  - generic [ref=e4029]:
+                    - text: "Nicholson, Rowan (19 September 2019). \"States: The effectiveness and recognition norms\"."
+                    - link "Statehood and the State-Like in International Law" [ref=e4030] [cursor=pointer]:
+                      - /url: https://academic.oup.com/book/35117/chapter-abstract/299222991?redirectedFrom=fulltext
+                    - text: ". Oxford: Oxford Academic. pp. 92–145"
+                    - generic [ref=e4031]: . Retrieved 19 September 2026
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=States%3A+The+effectiveness+and+recognition+norms&rft.btitle=Statehood+and+the+State-Like+in+International+Law&rft.place=Oxford&rft.pages=92-145&rft.pub=Oxford+Academic&rft.date=2019-09-19&rft.aulast=Nicholson&rft.aufirst=Rowan&rft_id=https%3A%2F%2Facademic.oup.com%2Fbook%2F35117%2Fchapter-abstract%2F299222991%3FredirectedFrom%3Dfulltext&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4032]:
+                - link "Jump up" [ref=e4034] [cursor=pointer]:
+                  - /url: "#cite_ref-Hahn_4-0"
+                  - text: ^
+                - generic [ref=e4035]:
+                  - generic [ref=e4036]:
+                    - text: "Hahn, Gordon (2002). Russia's Revolution from Above, 1985–2000: Reform, Transition, and Revolution in the Fall of the Soviet Communist Regime. New Brunswick: Transaction Publishers. p. 527."
+                    - link "ISBN" [ref=e4037] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0765800497" [ref=e4038] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0765800497
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Russia%27s+Revolution+from+Above%2C+1985%E2%80%932000%3A+Reform%2C+Transition%2C+and+Revolution+in+the+Fall+of+the+Soviet+Communist+Regime&rft.place=New+Brunswick&rft.pages=527&rft.pub=Transaction+Publishers&rft.date=2002&rft.isbn=978-0765800497&rft.aulast=Hahn&rft.aufirst=Gordon&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4039]:
+                - link "Jump up" [ref=e4041] [cursor=pointer]:
+                  - /url: "#cite_ref-Griffiths_5-0"
+                  - text: ^
+                - generic [ref=e4042]:
+                  - generic [ref=e4043]:
+                    - text: "Griffiths, Ryan (2016). Age of Secession: The International and Domestic Determinants of State Birth. Cambridge: Cambridge University Press. pp. 85, 213–242."
+                    - link "ISBN" [ref=e4044] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1107161627" [ref=e4045] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1107161627
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Age+of+Secession%3A+The+International+and+Domestic+Determinants+of+State+Birth&rft.place=Cambridge&rft.pages=85%2C+213-242&rft.pub=Cambridge+University+Press&rft.date=2016&rft.isbn=978-1107161627&rft.aulast=Griffiths&rft.aufirst=Ryan&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4046]:
+                - link "Jump up" [ref=e4048] [cursor=pointer]:
+                  - /url: "#cite_ref-13"
+                  - text: ^
+                - generic [ref=e4049]:
+                  - generic [ref=e4050]:
+                    - text: Trevelyan, Mark (3 July 2025).
+                    - link "\"Russia becomes first country to recognise Taliban government of Afghanistan\"" [ref=e4051] [cursor=pointer]:
+                      - /url: https://www.reuters.com/world/asia-pacific/russia-becomes-first-country-recognise-taliban-government-afghanistan-2025-07-03/
+                    - text: . Reuters
+                    - generic [ref=e4052]: . Retrieved 5 July 2025
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Reuters&rft.atitle=Russia+becomes+first+country+to+recognise+Taliban+government+of+Afghanistan&rft.date=2025-07-03&rft.aulast=Trevelyan&rft.aufirst=Mark&rft_id=https%3A%2F%2Fwww.reuters.com%2Fworld%2Fasia-pacific%2Frussia-becomes-first-country-recognise-taliban-government-afghanistan-2025-07-03%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4053]:
+                - link "Jump up" [ref=e4055] [cursor=pointer]:
+                  - /url: "#cite_ref-TOLOnews_14-0"
+                  - text: ^
+                - generic [ref=e4056]:
+                  - generic [ref=e4057]:
+                    - text: Taieb, Rajab (22 February 2022).
+                    - link "\"Ghani Removed From UN Heads of State List\"" [ref=e4058] [cursor=pointer]:
+                      - /url: https://tolonews.com/index.php/afghanistan-176824
+                    - text: .
+                    - link "TOLOnews" [ref=e4060] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/TOLOnews
+                    - generic [ref=e4061]: . Retrieved 27 April 2026
+                    - text: .
+                    - generic [ref=e4062]:
+                      - text: "'"
+                      - link "[Haneef] Atmar" [ref=e4064] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Haneef_Atmar
+                      - text: "'s letter and his attempt to introduce a new acting head of mission led the UN departments, including legal and political sections, to assess the letter. Then, it was decided that the former government was not official after its collapse on August 15 and that the letter was not considered. This also led to the removal of their names from the UN system,' Faiq said."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=TOLOnews&rft.atitle=Ghani+Removed+From+UN+Heads+of+State+List&rft.date=2022-02-22&rft.aulast=Taieb&rft.aufirst=Rajab&rft_id=https%3A%2F%2Ftolonews.com%2Findex.php%2Fafghanistan-176824&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4065]:
+                - link "Jump up" [ref=e4067] [cursor=pointer]:
+                  - /url: "#cite_ref-akhund2_15-0"
+                  - text: ^
+                - generic [ref=e4068]:
+                  - generic [ref=e4069]:
+                    - link "\"Taliban announce new government for Afghanistan\"" [ref=e4070] [cursor=pointer]:
+                      - /url: https://www.bbc.com/news/world-asia-58479750
+                    - text: . BBC News. 7 September 2021.
+                    - link "Archived" [ref=e4071] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210907212403/https://www.bbc.com/news/world-asia-58479750
+                    - text: from the original on 7 September 2021
+                    - generic [ref=e4072]: . Retrieved 10 October 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=BBC+News&rft.atitle=Taliban+announce+new+government+for+Afghanistan&rft.date=2021-09-07&rft_id=https%3A%2F%2Fwww.bbc.com%2Fnews%2Fworld-asia-58479750&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4073]:
+                - generic [ref=e4074]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e4075] [cursor=pointer]:
+                    - /url: "#cite_ref-UN_Seats_Denied_16-0"
+                    - generic [ref=e4076]: "Jump up to:"
+                  - link [ref=e4077] [cursor=pointer]:
+                    - /url: "#cite_ref-UN_Seats_Denied_16-1"
+                - generic [ref=e4078]:
+                  - generic [ref=e4079]:
+                    - link "\"U.N. Seats Denied, for Now, to Afghanistan's Taliban and Myanmar's Junta\"" [ref=e4080] [cursor=pointer]:
+                      - /url: https://www.nytimes.com/2021/12/01/world/americas/united-nations-taliban-myanmar.html
+                    - text: .
+                    - link "The New York Times" [ref=e4082] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/The_New_York_Times
+                    - text: . 1 December 2021.
+                    - link "Archived" [ref=e4083] [cursor=pointer]:
+                      - /url: https://ghostarchive.org/archive/20211228/https://www.nytimes.com/2021/12/01/world/americas/united-nations-taliban-myanmar.html
+                    - text: from the original on 28 December 2021
+                    - generic [ref=e4084]: . Retrieved 10 January 2022
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+New+York+Times&rft.atitle=U.N.+Seats+Denied%2C+for+Now%2C+to+Afghanistan%27s+Taliban+and+Myanmar%27s+Junta&rft.date=2021-12-01&rft_id=https%3A%2F%2Fwww.nytimes.com%2F2021%2F12%2F01%2Fworld%2Famericas%2Funited-nations-taliban-myanmar.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4085]:
+                - link "Jump up" [ref=e4087] [cursor=pointer]:
+                  - /url: "#cite_ref-17"
+                  - text: ^
+                - generic [ref=e4088]:
+                  - generic [ref=e4089]:
+                    - link "\"Andorra country profile\"" [ref=e4090] [cursor=pointer]:
+                      - /url: https://www.bbc.co.uk/news/world-europe-17028050
+                    - text: . BBC News.
+                    - link "Archived" [ref=e4091] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20090215064605/http://news.bbc.co.uk/1/hi/world/europe/country_profiles/992562.stm#leaders
+                    - text: from the original on 15 February 2009
+                    - generic [ref=e4092]: . Retrieved 8 November 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=BBC+News&rft.atitle=Andorra+country+profile&rft_id=https%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Fworld-europe-17028050&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4093]:
+                - link "Jump up" [ref=e4095] [cursor=pointer]:
+                  - /url: "#cite_ref-19"
+                  - text: ^
+                - generic [ref=e4096]:
+                  - generic [ref=e4097]:
+                    - text: Government of Antigua and Barbuda.
+                    - 'link "\"Chapter 44: The Barbuda Local Government Act\"" [ref=e4098] [cursor=pointer]':
+                      - /url: https://web.archive.org/web/20110706071022/http://www.laws.gov.ag/acts/chapters/cap-44.pdf
+                    - text: (PDF). Laws of Antigua and Barbuda. Archived from
+                    - link "the original" [ref=e4099] [cursor=pointer]:
+                      - /url: http://www.laws.gov.ag/acts/chapters/cap-44.pdf
+                    - text: (PDF) on 6 July 2011
+                    - generic [ref=e4100]: . Retrieved 10 November 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Laws+of+Antigua+and+Barbuda&rft.atitle=Chapter+44%3A+The+Barbuda+Local+Government+Act&rft.au=Government+of+Antigua+and+Barbuda&rft_id=http%3A%2F%2Fwww.laws.gov.ag%2Facts%2Fchapters%2Fcap-44.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4101]:
+                - link "Jump up" [ref=e4103] [cursor=pointer]:
+                  - /url: "#cite_ref-23"
+                  - text: ^
+                - generic [ref=e4104]:
+                  - generic [ref=e4105]:
+                    - link "\"Tierra del Fuego and Antarctica\"" [ref=e4106] [cursor=pointer]:
+                      - /url: https://www.patagonia-argentina.com/en/tierradelfuego/
+                    - text: . Patagonia-Argentina.
+                    - link "Archived" [ref=e4107] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20230329190125/https://www.patagonia-argentina.com/en/tierradelfuego/
+                    - text: from the original on 29 March 2023
+                    - generic [ref=e4108]: . Retrieved 12 September 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Patagonia-Argentina&rft.atitle=Tierra+del+Fuego+and+Antarctica&rft_id=https%3A%2F%2Fwww.patagonia-argentina.com%2Fen%2Ftierradelfuego%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4109]:
+                - link "Jump up" [ref=e4111] [cursor=pointer]:
+                  - /url: "#cite_ref-25"
+                  - text: ^
+                - generic [ref=e4112]:
+                  - generic [ref=e4113]:
+                    - link "\"Country profiles\"" [ref=e4114] [cursor=pointer]:
+                      - /url: https://european-union.europa.eu/principles-countries-history/country-profiles_en
+                    - text: . The European Union.
+                    - link "Archived" [ref=e4115] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20230426190108/https://european-union.europa.eu/principles-countries-history/country-profiles_en
+                    - text: from the original on 26 April 2023
+                    - generic [ref=e4116]: . Retrieved 11 June 2023
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=The+European+Union&rft.atitle=Country+profiles&rft_id=https%3A%2F%2Feuropean-union.europa.eu%2Fprinciples-countries-history%2Fcountry-profiles_en&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4117]:
+                - link "Jump up" [ref=e4119] [cursor=pointer]:
+                  - /url: "#cite_ref-26"
+                  - text: ^
+                - generic [ref=e4120]:
+                  - generic [ref=e4121]:
+                    - link "\"Bahamas, The | The Commonwealth\"" [ref=e4122] [cursor=pointer]:
+                      - /url: http://thecommonwealth.org/our-member-countries/bahamas
+                    - text: . thecommonwealth.org. 15 August 2013.
+                    - link "Archived" [ref=e4123] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20180309082734/http://www.thecommonwealth.org/our-member-countries/bahamas
+                    - text: from the original on 9 March 2018
+                    - generic [ref=e4124]: . Retrieved 12 March 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=thecommonwealth.org&rft.atitle=Bahamas%2C+The+%7C+The+Commonwealth&rft.date=2013-08-15&rft_id=http%3A%2F%2Fthecommonwealth.org%2Four-member-countries%2Fbahamas&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4125]:
+                - link "Jump up" [ref=e4127] [cursor=pointer]:
+                  - /url: "#cite_ref-27"
+                  - text: ^
+                - generic [ref=e4128]:
+                  - generic [ref=e4129]:
+                    - link "Ministry of Foreign Affairs of the Republic of Lithuania" [ref=e4130] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Ministry_of_Foreign_Affairs_(Lithuania)
+                    - text: (23 September 2020).
+                    - link "\"Lithuanian Foreign Ministry's statement on the situation in Belarus\"" [ref=e4131] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20220703061115/https://www.mfa.lt/default/en/news/lithuanian-foreign-ministrys-statement-on-the-situation-in-belarus
+                    - text: . Archived from
+                    - link "the original" [ref=e4132] [cursor=pointer]:
+                      - /url: https://www.mfa.lt/default/en/news/lithuanian-foreign-ministrys-statement-on-the-situation-in-belarus
+                    - text: on 3 July 2022
+                    - generic [ref=e4133]: . Retrieved 14 March 2022
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Lithuanian+Foreign+Ministry%27s+statement+on+the+situation+in+Belarus&rft.date=2020-09-23&rft.au=Ministry+of+Foreign+Affairs+of+the+Republic+of+Lithuania&rft_id=https%3A%2F%2Fwww.mfa.lt%2Fdefault%2Fen%2Fnews%2Flithuanian-foreign-ministrys-statement-on-the-situation-in-belarus&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4134]:
+                - link "Jump up" [ref=e4136] [cursor=pointer]:
+                  - /url: "#cite_ref-Stjepanović2015_28-0"
+                  - text: ^
+                - generic [ref=e4137]:
+                  - generic [ref=e4138]:
+                    - text: "Stjepanović, Dejan (2015). \"Dual Substate Citizenship as Institutional Innovation: The Case of Bosnia's Brčko District\". Nationalism and Ethnic Politics. 21 (4): 382–383."
+                    - link "doi" [ref=e4139] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1080/13537113.2015.1095043" [ref=e4140] [cursor=pointer]:
+                      - /url: https://doi.org/10.1080%2F13537113.2015.1095043
+                    - text: .
+                    - link "eISSN" [ref=e4141] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/EISSN_(identifier)
+                    - link "1557-2986" [ref=e4142] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/1557-2986
+                    - text: .
+                    - link "ISSN" [ref=e4143] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "1353-7113" [ref=e4144] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/1353-7113
+                    - text: .
+                    - link "OCLC" [ref=e4145] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/OCLC_(identifier)
+                    - link "5927465455" [ref=e4146] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/oclc/5927465455
+                    - text: .
+                    - link "S2CID" [ref=e4147] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/S2CID_(identifier)
+                    - link "146578107" [ref=e4148] [cursor=pointer]:
+                      - /url: https://api.semanticscholar.org/CorpusID:146578107
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Nationalism+and+Ethnic+Politics&rft.atitle=Dual+Substate+Citizenship+as+Institutional+Innovation%3A+The+Case+of+Bosnia%27s+Br%C4%8Dko+District&rft.volume=21&rft.issue=4&rft.pages=382-383&rft.date=2015&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A146578107%23id-name%3DS2CID&rft.eissn=1557-2986&rft_id=info%3Adoi%2F10.1080%2F13537113.2015.1095043&rft_id=info%3Aoclcnum%2F5927465455&rft.issn=1353-7113&rft.aulast=Stjepanovi%C4%87&rft.aufirst=Dejan&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4149]:
+                - link "Jump up" [ref=e4151] [cursor=pointer]:
+                  - /url: "#cite_ref-30"
+                  - text: ^
+                - generic [ref=e4152]:
+                  - generic [ref=e4153]:
+                    - text: Tanya Basu (14 December 2013).
+                    - 'link "\"Cape Verde Gets New Name: 5 Things to Know About How Maps Change\"" [ref=e4154] [cursor=pointer]':
+                      - /url: https://web.archive.org/web/20181020000546/https://news.nationalgeographic.com/news/2013/12/131212-maps-cabo-verde-cartography-science-cape-verde-africa/
+                    - text: .
+                    - link "National Geographic" [ref=e4156] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/National_Geographic
+                    - text: . Archived from
+                    - link "the original" [ref=e4157] [cursor=pointer]:
+                      - /url: https://news.nationalgeographic.com/news/2013/12/131212-maps-cabo-verde-cartography-science-cape-verde-africa/
+                    - text: on 20 October 2018
+                    - generic [ref=e4158]: . Retrieved 8 October 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=National+Geographic&rft.atitle=Cape+Verde+Gets+New+Name%3A+5+Things+to+Know+About+How+Maps+Change&rft.date=2013-12-14&rft.au=Tanya+Basu&rft_id=https%3A%2F%2Fnews.nationalgeographic.com%2Fnews%2F2013%2F12%2F131212-maps-cabo-verde-cartography-science-cape-verde-africa%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4159]:
+                - link "Jump up" [ref=e4161] [cursor=pointer]:
+                  - /url: "#cite_ref-38"
+                  - text: ^
+                - generic [ref=e4162]:
+                  - generic [ref=e4163]:
+                    - text: Andreas S. Kakouris (9 July 2010).
+                    - link "\"Cyprus is not at peace with Turkey\"" [ref=e4164] [cursor=pointer]:
+                      - /url: http://www.cnn.com/2010/OPINION/07/07/kakouris.cyprus/
+                    - text: . CNN.
+                    - link "Archived" [ref=e4165] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20140518074323/http://www.cnn.com/2010/OPINION/07/07/kakouris.cyprus/
+                    - text: from the original on 18 May 2014
+                    - generic [ref=e4166]: . Retrieved 17 May 2014
+                    - text: . Turkey stands alone in violation of the will of the international community. It is the only country to recognise the "TRNC" and is the only country that does not recognise the Republic of Cyprus and its government.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.atitle=Cyprus+is+not+at+peace+with+Turkey&rft.date=2010-07-09&rft.au=Andreas+S.+Kakouris&rft_id=http%3A%2F%2Fwww.cnn.com%2F2010%2FOPINION%2F07%2F07%2Fkakouris.cyprus%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4167]:
+                - link "Jump up" [ref=e4169] [cursor=pointer]:
+                  - /url: "#cite_ref-41"
+                  - text: ^
+                - generic [ref=e4170]:
+                  - generic [ref=e4171]:
+                    - 'link "\"Home Rule Act of the Faroe Islands : No. 137 of March 23, 1948\"" [ref=e4172] [cursor=pointer]':
+                      - /url: https://web.archive.org/web/20150910005827/http://www.stm.dk/_p_12710.html
+                    - text: . Statsministeriat. Copenhagen. Archived from
+                    - link "the original" [ref=e4173] [cursor=pointer]:
+                      - /url: http://www.stm.dk/_p_12710.html
+                    - text: on 10 September 2015
+                    - generic [ref=e4174]: . Retrieved 20 May 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Statsministeriat&rft.atitle=Home+Rule+Act+of+the+Faroe+Islands+%3A+No.+137+of+March+23%2C+1948&rft_id=http%3A%2F%2Fwww.stm.dk%2F_p_12710.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4175]:
+                - link "Jump up" [ref=e4177] [cursor=pointer]:
+                  - /url: "#cite_ref-42"
+                  - text: ^
+                - generic [ref=e4178]:
+                  - generic [ref=e4179]:
+                    - 'link "\"The Greenland Home Rule Act : Act No. 577 of 29 November 1978\"" [ref=e4180] [cursor=pointer]':
+                      - /url: https://web.archive.org/web/20140214060548/http://www.stm.dk/_p_12712.html
+                    - text: . Statsministeriat. Copenhagen. Archived from
+                    - link "the original" [ref=e4181] [cursor=pointer]:
+                      - /url: http://www.stm.dk/_p_12712.html
+                    - text: on 14 February 2014
+                    - generic [ref=e4182]: . Retrieved 20 May 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Statsministeriat&rft.atitle=The+Greenland+Home+Rule+Act+%3A+Act+No.+577+of+29+November+1978&rft_id=http%3A%2F%2Fwww.stm.dk%2F_p_12712.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4183]:
+                - link "Jump up" [ref=e4185] [cursor=pointer]:
+                  - /url: "#cite_ref-44"
+                  - text: ^
+                - generic [ref=e4186]:
+                  - generic [ref=e4187]:
+                    - link "\"Rotuma Act\"" [ref=e4188] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20100621140255/http://www.itc.gov.fj/lawnet/fiji_act/cap122.html
+                    - text: ". Laws of Fiji (1978 ed.). Suva, Fiji: Government of Fiji. 1927. Archived from"
+                    - link "the original" [ref=e4189] [cursor=pointer]:
+                      - /url: http://www.itc.gov.fj/lawnet/fiji_act/cap122.html
+                    - text: on 21 June 2010
+                    - generic [ref=e4190]: . Retrieved 10 July 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Rotuma+Act&rft.btitle=Laws+of+Fiji&rft.place=Suva%2C+Fiji&rft.edition=1978&rft.pub=Government+of+Fiji&rft.date=1927&rft_id=http%3A%2F%2Fwww.itc.gov.fj%2Flawnet%2Ffiji_act%2Fcap122.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4191]:
+                - link "Jump up" [ref=e4193] [cursor=pointer]:
+                  - /url: "#cite_ref-45"
+                  - text: ^
+                - generic [ref=e4194]:
+                  - generic [ref=e4195]:
+                    - text: Government of Fiji, Office of the Prime Minister (1978).
+                    - 'link "\"Chapter 122: Rotuma Act\"" [ref=e4196] [cursor=pointer]':
+                      - /url: http://www.paclii.org/fj/legis/consol_act/ra103/
+                    - text: . Laws of Fiji.
+                    - link "University of the South Pacific" [ref=e4197] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/University_of_the_South_Pacific
+                    - text: .
+                    - link "Archived" [ref=e4198] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20110301163146/http://www.paclii.org/fj/legis/consol_act/ra103/
+                    - text: from the original on 1 March 2011
+                    - generic [ref=e4199]: . Retrieved 10 November 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Laws+of+Fiji&rft.atitle=Chapter+122%3A+Rotuma+Act&rft.date=1978&rft.au=Government+of+Fiji%2C+Office+of+the+Prime+Minister&rft_id=http%3A%2F%2Fwww.paclii.org%2Ffj%2Flegis%2Fconsol_act%2Fra103%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4200]:
+                - link "Jump up" [ref=e4202] [cursor=pointer]:
+                  - /url: "#cite_ref-48"
+                  - text: ^
+                - generic [ref=e4203]:
+                  - generic [ref=e4204]:
+                    - link "\"The Gambia profile\"" [ref=e4205] [cursor=pointer]:
+                      - /url: https://www.bbc.co.uk/news/world-africa-13376517
+                    - text: . BBC News. 14 February 2018.
+                    - link "Archived" [ref=e4206] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20180311064543/http://www.bbc.co.uk/news/world-africa-13376517
+                    - text: from the original on 11 March 2018
+                    - generic [ref=e4207]: . Retrieved 12 March 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=BBC+News&rft.atitle=The+Gambia+profile&rft.date=2018-02-14&rft_id=https%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Fworld-africa-13376517&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4208]:
+                - link "Jump up" [ref=e4210] [cursor=pointer]:
+                  - /url: "#cite_ref-49"
+                  - text: ^
+                - text: Constitution of Greece, Art. 105.
+              - listitem [ref=e4211]:
+                - link "Jump up" [ref=e4213] [cursor=pointer]:
+                  - /url: "#cite_ref-51"
+                  - text: ^
+                - generic [ref=e4214]:
+                  - generic [ref=e4215]:
+                    - link "\"Iceland | History, Maps, Flag, Population, Climate, & Facts\"" [ref=e4216] [cursor=pointer]:
+                      - /url: https://www.britannica.com/EBchecked/topic/281235/Iceland
+                    - text: . Britannica.
+                    - link "Archived" [ref=e4217] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20110718220132/https://www.britannica.com/EBchecked/topic/281235/Iceland
+                    - text: from the original on 18 July 2011
+                    - generic [ref=e4218]: . Retrieved 2 February 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Britannica&rft.atitle=Iceland+%7C+History%2C+Maps%2C+Flag%2C+Population%2C+Climate%2C+%26+Facts&rft_id=https%3A%2F%2Fwww.britannica.com%2FEBchecked%2Ftopic%2F281235%2FIceland&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4219]:
+                - link "Jump up" [ref=e4221] [cursor=pointer]:
+                  - /url: "#cite_ref-52"
+                  - text: ^
+                - generic [ref=e4222]:
+                  - generic [ref=e4223]:
+                    - 'link "\"Working Paper No. 54 : UNGEGN list of country names (Prepared by the United Nations Group of Experts on Geographical Names)\"" [ref=e4224] [cursor=pointer]':
+                      - /url: https://unstats.un.org/unsd/geoinfo/ungegn/docs/26th-gegn-docs/WP/WP54_UNGEGN%20WG%20Country%20Names%20Document%202011.pdf
+                    - text: (PDF). unstats.un.org. Vienna. May 2011.
+                    - link "Archived" [ref=e4225] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20110811023432/https://unstats.un.org/unsd/geoinfo/ungegn/docs/26th-gegn-docs/WP/WP54_UNGEGN%20WG%20Country%20Names%20Document%202011.pdf
+                    - text: (PDF) from the original on 11 August 2011
+                    - generic [ref=e4226]: . Retrieved 2 February 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=unstats.un.org&rft.atitle=Working+Paper+No.+54+%3A+UNGEGN+list+of+country+names+%28Prepared+by+the+United+Nations+Group+of+Experts+on+Geographical+Names%29&rft.date=2011-05&rft_id=https%3A%2F%2Funstats.un.org%2Funsd%2Fgeoinfo%2Fungegn%2Fdocs%2F26th-gegn-docs%2FWP%2FWP54_UNGEGN%2520WG%2520Country%2520Names%2520Document%25202011.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4227]:
+                - link "Jump up" [ref=e4229] [cursor=pointer]:
+                  - /url: "#cite_ref-53"
+                  - text: ^
+                - generic [ref=e4230]:
+                  - generic [ref=e4231]:
+                    - link "\"Hvert er formlegt heiti landsins okkar?\"" [ref=e4232] [cursor=pointer]:
+                      - /url: http://www.visindavefur.is/svar.php?id=54970
+                    - text: .
+                    - link "Archived" [ref=e4233] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20110722022935/http://visindavefur.is/svar.php?id=54970
+                    - text: from the original on 22 July 2011
+                    - generic [ref=e4234]: . Retrieved 2 February 2016
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Hvert+er+formlegt+heiti+landsins+okkar%3F&rft_id=http%3A%2F%2Fwww.visindavefur.is%2Fsvar.php%3Fid%3D54970&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4235]:
+                - link "Jump up" [ref=e4237] [cursor=pointer]:
+                  - /url: "#cite_ref-55"
+                  - text: ^
+                - generic [ref=e4238]:
+                  - generic [ref=e4239]:
+                    - link "\"Iraqi constitution\"" [ref=e4240] [cursor=pointer]:
+                      - /url: http://arquivo.pt/wayback/20160518175432/http://portal.unesco.org/ci/en/files/20704/11332732681iraqi_constitution_en.pdf/iraqi_constitution_en.pdf
+                    - text: (PDF). Archived from
+                    - link "the original" [ref=e4241] [cursor=pointer]:
+                      - /url: http://portal.unesco.org/ci/en/files/20704/11332732681iraqi_constitution_en.pdf/iraqi_constitution_en.pdf
+                    - text: (PDF) on 18 May 2016.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Iraqi+constitution&rft_id=http%3A%2F%2Fportal.unesco.org%2Fci%2Fen%2Ffiles%2F20704%2F11332732681iraqi_constitution_en.pdf%2Firaqi_constitution_en.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4242]:
+                - link "Jump up" [ref=e4244] [cursor=pointer]:
+                  - /url: "#cite_ref-56"
+                  - text: ^
+                - generic [ref=e4245]:
+                  - generic [ref=e4246]:
+                    - text: Daly, Mary E. (January 2007).
+                    - 'link "\"The Irish Free State/Éire/Republic of Ireland/Ireland: \"A Country by Any Other Name\"?\"" [ref=e4247] [cursor=pointer]':
+                      - /url: https://doi.org/10.1086%2F508399
+                    - text: ". Journal of British Studies. 46 (1). Cambridge University Press on behalf of The North American Conference on British Studies: 72–90."
+                    - link "doi" [ref=e4248] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - generic "Freely accessible" [ref=e4249]:
+                      - link "10.1086/508399" [ref=e4250] [cursor=pointer]:
+                        - /url: https://doi.org/10.1086%2F508399
+                    - text: .
+                    - link "ISSN" [ref=e4251] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISSN_(identifier)
+                    - link "0021-9371" [ref=e4252] [cursor=pointer]:
+                      - /url: https://search.worldcat.org/issn/0021-9371
+                    - text: .
+                    - link "JSTOR" [ref=e4253] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/JSTOR_(identifier)
+                    - link "10.1086/508399" [ref=e4254] [cursor=pointer]:
+                      - /url: https://www.jstor.org/stable/10.1086/508399
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Journal+of+British+Studies&rft.atitle=The+Irish+Free+State%2F%C3%89ire%2FRepublic+of+Ireland%2FIreland%3A+%22A+Country+by+Any+Other+Name%22%3F&rft.volume=46&rft.issue=1&rft.pages=72-90&rft.date=2007-01&rft.issn=0021-9371&rft_id=https%3A%2F%2Fwww.jstor.org%2Fstable%2F10.1086%2F508399%23id-name%3DJSTOR&rft_id=info%3Adoi%2F10.1086%2F508399&rft.aulast=Daly&rft.aufirst=Mary+E.&rft_id=https%3A%2F%2Fdoi.org%2F10.1086%252F508399&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4255]:
+                - link "Jump up" [ref=e4257] [cursor=pointer]:
+                  - /url: "#cite_ref-58"
+                  - text: ^
+                - generic [ref=e4258]:
+                  - generic [ref=e4259]:
+                    - 'link "\"Basic Law: Jerusalem, Capital of Israel\"" [ref=e4260] [cursor=pointer]':
+                      - /url: https://www.knesset.gov.il/laws/special/eng/basic10_eng.htm
+                    - text: . www.knesset.gov.il.
+                    - link "Archived" [ref=e4261] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20140905144734/http://www.knesset.gov.il/laws/special/eng/basic10_eng.htm
+                    - text: from the original on 5 September 2014
+                    - generic [ref=e4262]: . Retrieved 7 July 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=www.knesset.gov.il&rft.atitle=Basic+Law%3A+Jerusalem%2C+Capital+of+Israel&rft_id=https%3A%2F%2Fwww.knesset.gov.il%2Flaws%2Fspecial%2Feng%2Fbasic10_eng.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4263]:
+                - link "Jump up" [ref=e4265] [cursor=pointer]:
+                  - /url: "#cite_ref-dis_59-0"
+                  - text: ^
+                - generic [ref=e4266]:
+                  - generic [ref=e4267]:
+                    - 'link "\"Disputes: International\"" [ref=e4268] [cursor=pointer]':
+                      - /url: https://web.archive.org/web/20110514215411/https://www.cia.gov/library/publications/the-world-factbook/fields/2070.html
+                    - text: . CIA World Factbook. Archived from
+                    - link "the original" [ref=e4269] [cursor=pointer]:
+                      - /url: https://www.cia.gov/library/publications/the-world-factbook/fields/2070.html
+                    - text: on 14 May 2011
+                    - generic [ref=e4270]: . Retrieved 8 November 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Disputes%3A+International&rft.pub=CIA+World+Factbook&rft_id=https%3A%2F%2Fwww.cia.gov%2Flibrary%2Fpublications%2Fthe-world-factbook%2Ffields%2F2070.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4271]:
+                - link "Jump up" [ref=e4273] [cursor=pointer]:
+                  - /url: "#cite_ref-60"
+                  - text: ^
+                - generic [ref=e4274]:
+                  - generic [ref=e4275]:
+                    - text: Bell, Abraham (28 January 2008).
+                    - 'link "\"International Law and Gaza: The Assault on Israel''s Right to Self-Defense\"" [ref=e4276] [cursor=pointer]':
+                      - /url: http://www.jcpa.org/brief/brief005-3.htm
+                    - text: . Jerusalem Issue Brief, Vol. 7, No. 29. Jerusalem Center for Public Affairs.
+                    - link "Archived" [ref=e4277] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20100621082606/http://jcpa.org/brief/brief005-3.htm
+                    - text: from the original on 21 June 2010
+                    - generic [ref=e4278]: . Retrieved 16 July 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Jerusalem+Issue+Brief%2C+Vol.+7%2C+No.+29&rft.atitle=International+Law+and+Gaza%3A+The+Assault+on+Israel%27s+Right+to+Self-Defense&rft.date=2008-01-28&rft.aulast=Bell&rft.aufirst=Abraham&rft_id=http%3A%2F%2Fwww.jcpa.org%2Fbrief%2Fbrief005-3.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4279]:
+                - link "Jump up" [ref=e4281] [cursor=pointer]:
+                  - /url: "#cite_ref-61"
+                  - text: ^
+                - generic [ref=e4282]:
+                  - generic [ref=e4283]:
+                    - text: Salih, Zak M. (17 November 2005).
+                    - link "\"Panelists Disagree Over Gaza's Occupation Status\"" [ref=e4284] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20160303200844/http://www.law.virginia.edu/html/news/2005_fall/gaza.htm
+                    - text: .
+                    - link "University of Virginia School of Law" [ref=e4285] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/University_of_Virginia_School_of_Law
+                    - text: . Archived from
+                    - link "the original" [ref=e4286] [cursor=pointer]:
+                      - /url: http://www.law.virginia.edu/html/news/2005_fall/gaza.htm
+                    - text: on 3 March 2016
+                    - generic [ref=e4287]: . Retrieved 16 July 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Panelists+Disagree+Over+Gaza%27s+Occupation+Status&rft.pub=University+of+Virginia+School+of+Law&rft.date=2005-11-17&rft.aulast=Salih&rft.aufirst=Zak+M.&rft_id=http%3A%2F%2Fwww.law.virginia.edu%2Fhtml%2Fnews%2F2005_fall%2Fgaza.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4288]:
+                - link "Jump up" [ref=e4290] [cursor=pointer]:
+                  - /url: "#cite_ref-62"
+                  - text: ^
+                - generic [ref=e4291]:
+                  - generic [ref=e4292]:
+                    - 'link "\"Israel: ''Disengagement'' Will Not End Gaza Occupation\"" [ref=e4293] [cursor=pointer]':
+                      - /url: https://www.hrw.org/english/docs/2004/10/29/isrlpa9577.htm
+                    - text: . Human Rights Watch. 29 October 2004.
+                    - link "Archived" [ref=e4294] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20081101210931/http://hrw.org/english/docs/2004/10/29/isrlpa9577.htm
+                    - text: from the original on 1 November 2008
+                    - generic [ref=e4295]: . Retrieved 16 July 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Israel%3A+%27Disengagement%27+Will+Not+End+Gaza+Occupation&rft.pub=Human+Rights+Watch&rft.date=2004-10-29&rft_id=https%3A%2F%2Fwww.hrw.org%2Fenglish%2Fdocs%2F2004%2F10%2F29%2Fisrlpa9577.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4296]:
+                - link "Jump up" [ref=e4298] [cursor=pointer]:
+                  - /url: "#cite_ref-occ_63-0"
+                  - text: ^
+                - generic [ref=e4299]:
+                  - generic [ref=e4300]:
+                    - text: Sanger, Andrew (2011).
+                    - link "\"The Contemporary Law of Blockade and the Gaza Freedom Flotilla\"" [ref=e4301] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=hYiIWVlpFzEC&pg=PA429
+                    - text: . In M.N. Schmitt; Louise Arimatsu; Tim McCormack (eds.). Yearbook of International Humanitarian Law - 2010. Vol. 13. Springer Science & Business Media. p. 429.
+                    - link "doi" [ref=e4302] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Doi_(identifier)
+                    - text: ":"
+                    - link "10.1007/978-90-6704-811-8_14" [ref=e4303] [cursor=pointer]:
+                      - /url: https://doi.org/10.1007%2F978-90-6704-811-8_14
+                    - text: .
+                    - link "ISBN" [ref=e4304] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-90-6704-811-8" [ref=e4305] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-90-6704-811-8
+                    - text: . It is this direct external control over Gaza and indirect control over life within Gaza that has led the United Nations, the UN General Assembly, the UN Fact Finding Mission to Gaza, International human rights organisations, US Government websites, the UK Foreign and Commonwealth Office and a significant number of legal commentators, to reject the argument that Gaza is no longer occupied.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=The+Contemporary+Law+of+Blockade+and+the+Gaza+Freedom+Flotilla&rft.btitle=Yearbook+of+International+Humanitarian+Law+-+2010&rft.pages=429&rft.pub=Springer+Science+%26+Business+Media&rft.date=2011&rft_id=info%3Adoi%2F10.1007%2F978-90-6704-811-8_14&rft.isbn=978-90-6704-811-8&rft.aulast=Sanger&rft.aufirst=Andrew&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DhYiIWVlpFzEC%26pg%3DPA429&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+                  - text: "*"
+                  - generic [ref=e4306]:
+                    - link "Scobbie, Iain" [ref=e4307] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Iain_Scobbie
+                    - text: (2012). Elizabeth Wilmshurst (ed.).
+                    - link "International Law and the Classification of Conflicts" [ref=e4308] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=GM90Xp03uuEC&pg=PA295
+                    - text: . Oxford University Press. p. 295.
+                    - link "ISBN" [ref=e4309] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-19-965775-9" [ref=e4310] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-19-965775-9
+                    - text: . Even after the accession to power of Hamas, Israel's claim that it no longer occupies Gaza has not been accepted by UN bodies, most States, nor the majority of academic commentators because of its exclusive control of its border with Gaza and crossing points including the effective control it exerted over the Rafah crossing until at least May 2011, its control of Gaza's maritime zones and airspace which constitute what Aronson terms the 'security envelope' around Gaza, as well as its ability to intervene forcibly at will in Gaza.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=International+Law+and+the+Classification+of+Conflicts&rft.pages=295&rft.pub=Oxford+University+Press&rft.date=2012&rft.isbn=978-0-19-965775-9&rft.aulast=Scobbie&rft.aufirst=Iain&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DGM90Xp03uuEC%26pg%3DPA295&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+                  - text: "*"
+                  - generic [ref=e4311]:
+                    - text: Gawerc, Michelle (2012).
+                    - 'link "Prefiguring Peace: Israeli-Palestinian Peacebuilding Partnerships" [ref=e4312] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=Hka8FZ4UdWUC&pg=PA44
+                    - text: . Lexington Books. p. 44.
+                    - link "ISBN" [ref=e4313] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "9780739166109" [ref=e4314] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/9780739166109
+                    - text: . In other words, while Israel maintained that its occupation of Gaza ended with its unilateral disengagement Palestinians – as well as many human right organisations and international bodies – argued that Gaza was by all intents and purposes still occupied.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Prefiguring+Peace%3A+Israeli-Palestinian+Peacebuilding+Partnerships&rft.pages=44&rft.pub=Lexington+Books&rft.date=2012&rft.isbn=9780739166109&rft.aulast=Gawerc&rft.aufirst=Michelle&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DHka8FZ4UdWUC%26pg%3DPA44&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4315]:
+                - link "Jump up" [ref=e4317] [cursor=pointer]:
+                  - /url: "#cite_ref-68"
+                  - text: ^
+                - generic [ref=e4318]:
+                  - generic [ref=e4319]:
+                    - text: Federal Foreign Office of Germany (November 2009).
+                    - link "\"Beziehungen zu Deutschland\"" [ref=e4320] [cursor=pointer]:
+                      - /url: http://www.auswaertiges-amt.de/diplo/de/Laenderinformationen/Cookinseln/Bilateral.html
+                    - text: . Government of Germany.
+                    - link "Archived" [ref=e4321] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20100723070259/http://www.auswaertiges-amt.de/diplo/de/Laenderinformationen/Cookinseln/Bilateral.html
+                    - text: from the original on 23 July 2010
+                    - generic [ref=e4322]: . Retrieved 16 July 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Beziehungen+zu+Deutschland&rft.pub=Government+of+Germany&rft.date=2009-11&rft.au=Federal+Foreign+Office+of+Germany&rft_id=http%3A%2F%2Fwww.auswaertiges-amt.de%2Fdiplo%2Fde%2FLaenderinformationen%2FCookinseln%2FBilateral.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+                  - text: For more information, see
+                  - link "Foreign relations of the Cook Islands" [ref=e4323] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Foreign_relations_of_the_Cook_Islands
+                  - text: .
+              - listitem [ref=e4324]:
+                - link "Jump up" [ref=e4326] [cursor=pointer]:
+                  - /url: "#cite_ref-69"
+                  - text: ^
+                - generic [ref=e4327]:
+                  - generic [ref=e4328]:
+                    - text: Republic of Nauru Permanent Mission to the United Nations.
+                    - link "\"Foreign Affairs\"" [ref=e4329] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20141004083335/http://www.un.int/nauru/foreignaffairs.html
+                    - text: . United Nations. Archived from
+                    - link "the original" [ref=e4330] [cursor=pointer]:
+                      - /url: http://www.un.int/nauru/foreignaffairs.html
+                    - text: on 4 October 2014
+                    - generic [ref=e4331]: . Retrieved 16 July 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Foreign+Affairs&rft.pub=United+Nations&rft.au=Republic+of+Nauru+Permanent+Mission+to+the+United+Nations&rft_id=http%3A%2F%2Fwww.un.int%2Fnauru%2Fforeignaffairs.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4332]:
+                - generic [ref=e4333]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e4334] [cursor=pointer]:
+                    - /url: "#cite_ref-untreaty1_70-0"
+                    - generic [ref=e4335]: "Jump up to:"
+                  - link [ref=e4336] [cursor=pointer]:
+                    - /url: "#cite_ref-untreaty1_70-1"
+                  - link [ref=e4337] [cursor=pointer]:
+                    - /url: "#cite_ref-untreaty1_70-2"
+                - generic [ref=e4338]:
+                  - generic [ref=e4339]:
+                    - link "\"Article 102, Repertory of Practice of United Nations Organs, Supplement No. 8, Volume VI (1989–1994)\"" [ref=e4340] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20120403031600/http://untreaty.un.org/cod/repertory/art102/english/rep_supp8_vol6-art102_e_advance.pdf
+                    - text: (PDF). untreaty.un.org. Archived from
+                    - link "the original" [ref=e4341] [cursor=pointer]:
+                      - /url: http://untreaty.un.org/cod/repertory/art102/english/rep_supp8_vol6-art102_e_advance.pdf
+                    - text: (PDF) on April 3, 2012
+                    - generic [ref=e4342]: . Retrieved July 15, 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=untreaty.un.org&rft.atitle=Article+102%2C+Repertory+of+Practice+of+United+Nations+Organs%2C+Supplement+No.+8%2C+Volume+VI+%281989%E2%80%931994%29&rft_id=http%3A%2F%2Funtreaty.un.org%2Fcod%2Frepertory%2Fart102%2Fenglish%2Frep_supp8_vol6-art102_e_advance.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4343]:
+                - link "Jump up" [ref=e4345] [cursor=pointer]:
+                  - /url: "#cite_ref-71"
+                  - text: ^
+                - generic [ref=e4346]:
+                  - generic [ref=e4347]:
+                    - link "\"Treaty on Basic Relations between Japan and the Republic of Korea\"" [ref=e4348] [cursor=pointer]:
+                      - /url: http://www.ioc.u-tokyo.ac.jp/~worldjpn/documents/texts/docs/19650622.T1E.html
+                    - text: . ioc.u-tokyo.ac.jp. 22 June 1965.
+                    - link "Archived" [ref=e4349] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20090313123054/http://www.ioc.u-tokyo.ac.jp/~worldjpn/documents/texts/docs/19650622.T1E.html
+                    - text: from the original on 13 March 2009
+                    - generic [ref=e4350]: . Retrieved 27 October 2008
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=ioc.u-tokyo.ac.jp&rft.atitle=Treaty+on+Basic+Relations+between+Japan+and+the+Republic+of+Korea&rft.date=1965-06-22&rft_id=http%3A%2F%2Fwww.ioc.u-tokyo.ac.jp%2F~worldjpn%2Fdocuments%2Ftexts%2Fdocs%2F19650622.T1E.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4351]:
+                - link "Jump up" [ref=e4353] [cursor=pointer]:
+                  - /url: "#cite_ref-73"
+                  - text: ^
+                - text: Constitution of Pakistan, Art. 1.
+              - listitem [ref=e4354]:
+                - link "Jump up" [ref=e4356] [cursor=pointer]:
+                  - /url: "#cite_ref-74"
+                  - text: ^
+                - generic [ref=e4357]:
+                  - generic [ref=e4358]:
+                    - text: Aslam, Tasnim (11 December 2006).
+                    - link "\"Pakistan Does Not Claim Kashmir As An Integral Part...\"" [ref=e4359] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20111213213928/http://www.outlookindia.com/article.aspx?233374
+                    - text: Outlook India. The Outlook Group. Archived from
+                    - link "the original" [ref=e4360] [cursor=pointer]:
+                      - /url: http://www.outlookindia.com/article.aspx?233374
+                    - text: on 13 December 2011
+                    - generic [ref=e4361]: . Retrieved 27 February 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Outlook+India&rft.atitle=Pakistan+Does+Not+Claim+Kashmir+As+An+Integral+Part...&rft.date=2006-12-11&rft.au=Aslam%2C+Tasnim&rft_id=http%3A%2F%2Fwww.outlookindia.com%2Farticle.aspx%3F233374&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4362]:
+                - link "Jump up" [ref=e4364] [cursor=pointer]:
+                  - /url: "#cite_ref-75"
+                  - text: ^
+                - generic [ref=e4365]:
+                  - generic [ref=e4366]:
+                    - text: Williams, Kristen P. (2001).
+                    - 'link "Despite nationalist conflicts: theory and practice of maintaining world peace" [ref=e4367] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=OYmurpH3ahsC
+                    - text: . Greenwood Publishing Group. pp. 154–155.
+                    - link "ISBN" [ref=e4368] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-0-275-96934-9" [ref=e4369] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-275-96934-9
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Despite+nationalist+conflicts%3A+theory+and+practice+of+maintaining+world+peace&rft.pages=154-155&rft.pub=Greenwood+Publishing+Group&rft.date=2001&rft.isbn=978-0-275-96934-9&rft.aulast=Williams&rft.aufirst=Kristen+P.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DOYmurpH3ahsC&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4370]:
+                - link "Jump up" [ref=e4372] [cursor=pointer]:
+                  - /url: "#cite_ref-76"
+                  - text: ^
+                - generic [ref=e4373]:
+                  - generic [ref=e4374]:
+                    - text: Pruthi, R.K. (2001).
+                    - link "An Encyclopaedic Survey Of Global Terrorism In 21st Century" [ref=e4375] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=C3yDkKDbZ3YC
+                    - text: . Anmol Publications Pvt. Ltd. pp. 120–121.
+                    - link "ISBN" [ref=e4376] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-81-261-1091-9" [ref=e4377] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-81-261-1091-9
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=An+Encyclopaedic+Survey+Of+Global+Terrorism+In+21st+Century&rft.pages=120-121&rft.pub=Anmol+Publications+Pvt.+Ltd.&rft.date=2001&rft.isbn=978-81-261-1091-9&rft.aulast=Pruthi&rft.aufirst=R.K.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DC3yDkKDbZ3YC&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4378]:
+                - link "Jump up" [ref=e4380] [cursor=pointer]:
+                  - /url: "#cite_ref-77"
+                  - text: ^
+                - generic [ref=e4381]:
+                  - generic [ref=e4382]:
+                    - link "\"Azad Kashmir Day\"" [ref=e4383] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20140812174212/http://home.ajk.gov.pk/index.php?option=com_content&view=article&id=72&catid=14
+                    - text: . Archived from
+                    - link "the original" [ref=e4384] [cursor=pointer]:
+                      - /url: http://home.ajk.gov.pk/index.php?option=com_content&view=article&id=72&catid=14
+                    - text: on 12 August 2014
+                    - generic [ref=e4385]: . Retrieved 28 July 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Azad+Kashmir+Day&rft_id=http%3A%2F%2Fhome.ajk.gov.pk%2Findex.php%3Foption%3Dcom_content%26view%3Darticle%26id%3D72%26catid%3D14&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4386]:
+                - generic [ref=e4387]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e4388] [cursor=pointer]:
+                    - /url: "#cite_ref-gbtribune.files.wordpress.com_78-0"
+                    - generic [ref=e4389]: "Jump up to:"
+                  - link [ref=e4390] [cursor=pointer]:
+                    - /url: "#cite_ref-gbtribune.files.wordpress.com_78-1"
+                - generic [ref=e4391]:
+                  - generic [ref=e4392]:
+                    - link "\"To Be Published In The Next Issue Of The\"" [ref=e4393] [cursor=pointer]:
+                      - /url: http://gbtribune.files.wordpress.com/2012/09/self-governance-order-2009.pdf
+                    - text: (PDF).
+                    - link "Archived" [ref=e4394] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20140905063539/http://gbtribune.files.wordpress.com/2012/09/self-governance-order-2009.pdf
+                    - text: (PDF) from the original on 5 September 2014
+                    - generic [ref=e4395]: . Retrieved 28 July 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=To+Be+Published+In+The+Next+Issue+Of+The&rft_id=http%3A%2F%2Fgbtribune.files.wordpress.com%2F2012%2F09%2Fself-governance-order-2009.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4396]:
+                - link "Jump up" [ref=e4398] [cursor=pointer]:
+                  - /url: "#cite_ref-AJ&KHistory_79-0"
+                  - text: ^
+                - generic [ref=e4399]:
+                  - generic [ref=e4400]:
+                    - link "\"AJ&K History\"" [ref=e4401] [cursor=pointer]:
+                      - /url: http://www.ajk.gov.pk/history.php
+                    - text: .
+                    - link "Archived" [ref=e4402] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20180106174235/http://www.ajk.gov.pk/history.php
+                    - text: from the original on 6 January 2018
+                    - generic [ref=e4403]: . Retrieved 6 January 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=AJ%26K+History&rft_id=http%3A%2F%2Fwww.ajk.gov.pk%2Fhistory.php&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4404]:
+                - link "Jump up" [ref=e4406] [cursor=pointer]:
+                  - /url: "#cite_ref-80"
+                  - text: ^
+                - generic [ref=e4407]:
+                  - generic [ref=e4408]:
+                    - text: Lansford, Tom (8 April 2014).
+                    - link "Political Handbook of the World 2014" [ref=e4409] [cursor=pointer]:
+                      - /url: https://books.google.com/books?id=z-aRAwAAQBAJ&q=azad+kashmir+gilgit+baltistan&pg=PA1100
+                    - text: . SAGE Publications.
+                    - link "ISBN" [ref=e4410] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "9781483333281" [ref=e4411] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/9781483333281
+                    - generic [ref=e4412]: . Retrieved 5 October 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Political+Handbook+of+the+World+2014&rft.pub=SAGE+Publications&rft.date=2014-04-08&rft.isbn=9781483333281&rft.aulast=Lansford&rft.aufirst=Tom&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Dz-aRAwAAQBAJ%26q%3Dazad%2Bkashmir%2Bgilgit%2Bbaltistan%26pg%3DPA1100&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4413]:
+                - link "Jump up" [ref=e4415] [cursor=pointer]:
+                  - /url: "#cite_ref-81"
+                  - text: ^
+                - generic [ref=e4416]:
+                  - generic [ref=e4417]:
+                    - link "\"The Azad Jammu And Kashmir Interim Constitution Act, 1974\"" [ref=e4418] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20131013171853/http://www.ajkassembly.gok.pk/AJK_Interim_Constitution_Act_1974.pdf
+                    - text: (PDF). Archived from
+                    - link "the original" [ref=e4419] [cursor=pointer]:
+                      - /url: http://www.ajkassembly.gok.pk/AJK_Interim_Constitution_Act_1974.pdf#
+                    - text: (PDF) on 13 October 2013
+                    - generic [ref=e4420]: . Retrieved 28 July 2014
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=The+Azad+Jammu+And+Kashmir+Interim+Constitution+Act%2C+1974&rft_id=http%3A%2F%2Fwww.ajkassembly.gok.pk%2FAJK_Interim_Constitution_Act_1974.pdf%23&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4421]:
+                - link "Jump up" [ref=e4423] [cursor=pointer]:
+                  - /url: "#cite_ref-82"
+                  - text: ^
+                - generic [ref=e4424]:
+                  - generic [ref=e4425]:
+                    - text: Palestine Liberation Organization.
+                    - 'link "\"Road For Palestinian Statehood: Recognition and Admission\"" [ref=e4426] [cursor=pointer]':
+                      - /url: https://web.archive.org/web/20110818214013/http://www.nad-plo.org/etemplate.php?id=5
+                    - text: . Negotiations Affairs Department. Archived from
+                    - link "the original" [ref=e4427] [cursor=pointer]:
+                      - /url: http://www.nad-plo.org/etemplate.php?id=5
+                    - text: on August 18, 2011
+                    - generic [ref=e4428]: . Retrieved July 28, 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Road+For+Palestinian+Statehood%3A+Recognition+and+Admission&rft.pub=Negotiations+Affairs+Department&rft.au=Palestine+Liberation+Organization&rft_id=http%3A%2F%2Fwww.nad-plo.org%2Fetemplate.php%3Fid%3D5&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4429]:
+                - link "Jump up" [ref=e4431] [cursor=pointer]:
+                  - /url: "#cite_ref-83"
+                  - text: ^
+                - generic [ref=e4432]:
+                  - text: "See the following on statehood criteria:"
+                  - list [ref=e4433]:
+                    - listitem [ref=e4434]:
+                      - generic [ref=e4435]:
+                        - text: Mendes, Errol (30 March 2010).
+                        - link "\"Statehood and Palestine for the purposes of Article 12 (3) of the ICC Statute\"" [ref=e4436] [cursor=pointer]:
+                          - /url: http://uclalawforum.com/media/background/gaza/2010-03-30_Mendes-Memo.pdf
+                        - text: (PDF). pp. 28, 33.
+                        - link "Archived" [ref=e4437] [cursor=pointer]:
+                          - /url: https://web.archive.org/web/20110831190057/http://uclalawforum.com/media/background/gaza/2010-03-30_Mendes-Memo.pdf
+                        - text: (PDF) from the original on 31 August 2011
+                        - generic [ref=e4438]: . Retrieved 17 April 2011
+                        - text: ":"
+                      - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Statehood+and+Palestine+for+the+purposes+of+Article+12+%283%29+of+the+ICC+Statute&rft.pages=28%2C+33&rft.date=2010-03-30&rft.au=Mendes%2C+Errol&rft_id=http%3A%2F%2Fuclalawforum.com%2Fmedia%2Fbackground%2Fgaza%2F2010-03-30_Mendes-Memo.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+                      - text: "\"...the Palestinian State also meets the traditional criteria under the Montevideo Convention...\"; \"...the fact that a majority of states have recognised Palestine as a State should easily fulfil the requisite state practice\"."
+                    - listitem [ref=e4439]:
+                      - generic [ref=e4440]:
+                        - text: McKinney, Kathryn M. (1994).
+                        - 'link "\"The Legal Effects of the Israeli-PLO Declaration ofPrinciples: Steps Toward Statehood for Palestine\"" [ref=e4441] [cursor=pointer]':
+                          - /url: https://web.archive.org/web/20110722063030/http://lawpublications.seattleu.edu/cgi/viewcontent.cgi?article=1438&context=sulr&sei-redir=1#search=%22palestine+%22constitutive+theory%22+statehood%22
+                        - text: ". Seattle University Law Review. 18 (93). Seattle University: 97. Archived from"
+                        - link "the original" [ref=e4442] [cursor=pointer]:
+                          - /url: http://lawpublications.seattleu.edu/cgi/viewcontent.cgi?article=1438&context=sulr&sei-redir=1#search=%22palestine+%22constitutive+theory%22+statehood%22
+                        - text: on 22 July 2011
+                        - generic [ref=e4443]: . Retrieved 17 April 2011
+                        - text: ":"
+                      - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Seattle+University+Law+Review&rft.atitle=The+Legal+Effects+of+the+Israeli-PLO+Declaration+ofPrinciples%3A+Steps+Toward+Statehood+for+Palestine&rft.volume=18&rft.issue=93&rft.pages=97&rft.date=1994&rft.au=McKinney%2C+Kathryn+M.&rft_id=http%3A%2F%2Flawpublications.seattleu.edu%2Fcgi%2Fviewcontent.cgi%3Farticle%3D1438%26context%3Dsulr%26sei-redir%3D1%23search%3D%2522palestine%2B%2522constitutive%2Btheory%2522%2Bstatehood%2522&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+                      - text: "\"It is possible, however, to argue for Palestinian statehood based on the constitutive theory\"."
+                    - listitem [ref=e4444]:
+                      - generic [ref=e4445]:
+                        - text: McDonald, Avril (Spring 2009).
+                        - 'link "\"Operation Cast Lead: Drawing the Battle Lines of the Legal Dispute\"" [ref=e4446] [cursor=pointer]':
+                          - /url: https://litigation-essentials.lexisnexis.com/webcd/app?action=DocumentDisplay&crawlid=1&doctype=cite&docid=16+Hum.+Rts.+Br.+25&srctype=smi&srcid=3B15&key=74ccae52ba220673512e7784449388f0
+                        - text: . Human Rights Brief. 25. Washington College of Law, Center for Human Rights and Humanitarian Law.
+                        - link "Archived" [ref=e4447] [cursor=pointer]:
+                          - /url: https://web.archive.org/web/20120329201731/https://litigation-essentials.lexisnexis.com/webcd/app?action=DocumentDisplay&crawlid=1&doctype=cite&docid=16+Hum.+Rts.+Br.+25&srctype=smi&srcid=3B15&key=74ccae52ba220673512e7784449388f0
+                        - text: from the original on 29 March 2012
+                        - generic [ref=e4448]: . Retrieved 17 April 2011
+                        - text: ":"
+                      - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Human+Rights+Brief&rft.atitle=Operation+Cast+Lead%3A+Drawing+the+Battle+Lines+of+the+Legal+Dispute&rft.ssn=spring&rft.volume=25&rft.date=2009&rft.au=McDonald%2C+Avril&rft_id=https%3A%2F%2Flitigation-essentials.lexisnexis.com%2Fwebcd%2Fapp%3Faction%3DDocumentDisplay%26crawlid%3D1%26doctype%3Dcite%26docid%3D16%2BHum.%2BRts.%2BBr.%2B25%26srctype%3Dsmi%26srcid%3D3B15%26key%3D74ccae52ba220673512e7784449388f0&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+                      - text: "\"Whether one applies the criteria of statehood set out in the Montevideo Convention or the more widely accepted constitutive theory of statehood, Palestine might be considered a state.\""
+              - listitem [ref=e4449]:
+                - generic [ref=e4450]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e4451] [cursor=pointer]:
+                    - /url: "#cite_ref-unnms_84-0"
+                    - generic [ref=e4452]: "Jump up to:"
+                  - link [ref=e4453] [cursor=pointer]:
+                    - /url: "#cite_ref-unnms_84-1"
+                - generic [ref=e4454]:
+                  - generic [ref=e4455]:
+                    - link "\"Non-member States and Entities\"" [ref=e4456] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20090509204646/http://www.un.org/en/members/nonmembers.shtml
+                    - text: . United Nations. 29 February 2008. Archived from
+                    - link "the original" [ref=e4457] [cursor=pointer]:
+                      - /url: https://www.un.org/en/members/nonmembers.shtml
+                    - text: on 9 May 2009
+                    - generic [ref=e4458]: . Retrieved 30 August 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Non-member+States+and+Entities&rft.pub=United+Nations&rft.date=2008-02-29&rft_id=https%3A%2F%2Fwww.un.org%2Fen%2Fmembers%2Fnonmembers.shtml&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4459]:
+                - link "Jump up" [ref=e4461] [cursor=pointer]:
+                  - /url: "#cite_ref-85"
+                  - text: ^
+                - generic [ref=e4462]:
+                  - generic [ref=e4463]:
+                    - text: United Nations Educational, Scientific and Cultural Organization.
+                    - 'link "\"Arab States: Palestine\"" [ref=e4464] [cursor=pointer]':
+                      - /url: http://www.unesco.org/new/en/unesco/worldwide/arab-states/palestine/
+                    - text: . United Nations.
+                    - link "Archived" [ref=e4465] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20120104131813/http://www.unesco.org/new/en/unesco/worldwide/arab-states/palestine/
+                    - text: from the original on 4 January 2012
+                    - generic [ref=e4466]: . Retrieved 3 December 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Arab+States%3A+Palestine&rft.pub=United+Nations&rft.au=United+Nations+Educational%2C+Scientific+and+Cultural+Organization&rft_id=http%3A%2F%2Fwww.unesco.org%2Fnew%2Fen%2Funesco%2Fworldwide%2Farab-states%2Fpalestine%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4467]:
+                - link "Jump up" [ref=e4469] [cursor=pointer]:
+                  - /url: "#cite_ref-86"
+                  - text: ^
+                - generic [ref=e4470]:
+                  - generic [ref=e4471]:
+                    - 'link "\"The Palestinians: Background and U.S. Relations\"" [ref=e4472] [cursor=pointer]':
+                      - /url: https://fas.org/sgp/crs/mideast/RL34074.pdf
+                    - text: (PDF). 18 March 2021. pp. 40–41.
+                    - link "Archived" [ref=e4473] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210513163558/https://fas.org/sgp/crs/mideast/RL34074.pdf
+                    - text: (PDF) from the original on 13 May 2021
+                    - generic [ref=e4474]: . Retrieved 11 April 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=The+Palestinians%3A+Background+and+U.S.+Relations&rft.pages=40-41&rft.date=2021-03-18&rft_id=https%3A%2F%2Ffas.org%2Fsgp%2Fcrs%2Fmideast%2FRL34074.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4475]:
+                - link "Jump up" [ref=e4477] [cursor=pointer]:
+                  - /url: "#cite_ref-88"
+                  - text: ^
+                - generic [ref=e4478]:
+                  - generic [ref=e4479]:
+                    - text: Brendan Cole (6 May 2026).
+                    - link "\"North Korea Abandons Reunification With South Korea in Historic Shift\"" [ref=e4480] [cursor=pointer]:
+                      - /url: https://www.newsweek.com/north-korea-abandons-reunification-with-south-korea-in-historic-shift-11917312
+                    - text: .
+                    - link "Newsweek" [ref=e4482] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Newsweek
+                    - generic [ref=e4483]: . Retrieved 1 June 2026
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Newsweek&rft.atitle=North+Korea+Abandons+Reunification+With+South+Korea+in+Historic+Shift&rft.date=2026-05-06&rft.au=Brendan+Cole&rft_id=https%3A%2F%2Fwww.newsweek.com%2Fnorth-korea-abandons-reunification-with-south-korea-in-historic-shift-11917312&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4484]:
+                - link "Jump up" [ref=e4486] [cursor=pointer]:
+                  - /url: "#cite_ref-90"
+                  - text: ^
+                - generic [ref=e4487]:
+                  - generic [ref=e4488]:
+                    - text: Keun Min.
+                    - link "\"Greetings\"" [ref=e4489] [cursor=pointer]:
+                      - /url: http://english.jeju.go.kr/contents/index.php?mid=02
+                    - text: . Jeju Special Self-Governing Province.
+                    - link "Archived" [ref=e4490] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20130502123553/http://english.jeju.go.kr/contents/index.php?mid=02
+                    - text: from the original on 2 May 2013
+                    - generic [ref=e4491]: . Retrieved 10 November 2010
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Greetings&rft.pub=Jeju+Special+Self-Governing+Province&rft.au=Keun+Min&rft_id=http%3A%2F%2Fenglish.jeju.go.kr%2Fcontents%2Findex.php%3Fmid%3D02&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4492]:
+                - generic [ref=e4493]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e4494] [cursor=pointer]:
+                    - /url: "#cite_ref-UNISFA2017_91-0"
+                    - generic [ref=e4495]: "Jump up to:"
+                  - link [ref=e4496] [cursor=pointer]:
+                    - /url: "#cite_ref-UNISFA2017_91-1"
+                - generic [ref=e4497]:
+                  - generic [ref=e4498]:
+                    - link "\"Statement from UNISFA on the recent spate of attacks in Abyei\"" [ref=e4499] [cursor=pointer]:
+                      - /url: https://unisfa.unmissions.org/statement-unisfa-recent-spate-attacks-abyei
+                    - text: . UNmissions.org. 18 October 2017.
+                    - link "Archived" [ref=e4500] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20180213022254/https://unisfa.unmissions.org/statement-unisfa-recent-spate-attacks-abyei
+                    - text: from the original on 13 February 2018
+                    - generic [ref=e4501]: . Retrieved 12 February 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=UNmissions.org&rft.atitle=Statement+from+UNISFA+on+the+recent+spate+of+attacks+in+Abyei&rft.date=2017-10-18&rft_id=https%3A%2F%2Funisfa.unmissions.org%2Fstatement-unisfa-recent-spate-attacks-abyei&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4502]:
+                - generic [ref=e4503]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e4504] [cursor=pointer]:
+                    - /url: "#cite_ref-AbyeiName_92-0"
+                    - generic [ref=e4505]: "Jump up to:"
+                  - link [ref=e4506] [cursor=pointer]:
+                    - /url: "#cite_ref-AbyeiName_92-1"
+                - generic [ref=e4507]:
+                  - generic [ref=e4508]:
+                    - link "\"Abyei Administration Area Changes Name\"" [ref=e4509] [cursor=pointer]:
+                      - /url: http://www.gurtong.net/ECM/Editorial/tabid/124/ctl/ArticleView/mid/519/articleId/17103/Abyei-Administration-Area-Changes-Name.aspx
+                    - text: . Gurtong.net. 29 July 2015.
+                    - link "Archived" [ref=e4510] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20180213022037/http://www.gurtong.net/ECM/Editorial/tabid/124/ctl/ArticleView/mid/519/articleId/17103/Abyei-Administration-Area-Changes-Name.aspx
+                    - text: from the original on 13 February 2018
+                    - generic [ref=e4511]: . Retrieved 12 February 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Gurtong.net&rft.atitle=Abyei+Administration+Area+Changes+Name&rft.date=2015-07-29&rft_id=http%3A%2F%2Fwww.gurtong.net%2FECM%2FEditorial%2Ftabid%2F124%2Fctl%2FArticleView%2Fmid%2F519%2FarticleId%2F17103%2FAbyei-Administration-Area-Changes-Name.aspx&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4512]:
+                - link "Jump up" [ref=e4514] [cursor=pointer]:
+                  - /url: "#cite_ref-99"
+                  - text: ^
+                - generic [ref=e4515]:
+                  - generic [ref=e4516]:
+                    - link "\"Bilateral relations of the Holy See\"" [ref=e4517] [cursor=pointer]:
+                      - /url: https://www.vatican.va/roman_curia/secretariat_state/documents/rc_seg-st_20010123_holy-see-relations_en.html
+                    - text: . Holy See website.
+                    - link "Archived" [ref=e4518] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20140709142833/https://www.vatican.va/roman_curia/secretariat_state/documents/rc_seg-st_20010123_holy-see-relations_en.html
+                    - text: from the original on 9 July 2014
+                    - generic [ref=e4519]: . Retrieved 5 June 2012
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Bilateral+relations+of+the+Holy+See&rft.pub=Holy+See+website&rft_id=https%3A%2F%2Fwww.vatican.va%2Froman_curia%2Fsecretariat_state%2Fdocuments%2Frc_seg-st_20010123_holy-see-relations_en.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4520]:
+                - generic [ref=e4521]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e4522] [cursor=pointer]:
+                    - /url: "#cite_ref-ASOTREC_100-0"
+                    - generic [ref=e4523]: "Jump up to:"
+                  - link [ref=e4524] [cursor=pointer]:
+                    - /url: "#cite_ref-ASOTREC_100-1"
+                - generic [ref=e4525]:
+                  - generic [ref=e4526]:
+                    - link "Абхазия, Южная Осетия и Приднестровье признали независимость друг друга и призвали всех к этому же" [ref=e4527] [cursor=pointer]:
+                      - /url: http://www.newsru.com/russia/17nov2006/aup.html
+                    - text: (in Russian). newsru.com. 17 November 2006.
+                    - link "Archived" [ref=e4528] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20090416050525/http://www.newsru.com/russia/17nov2006/aup.html
+                    - text: from the original on 16 April 2009
+                    - generic [ref=e4529]: . Retrieved 5 June 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=%D0%90%D0%B1%D1%85%D0%B0%D0%B7%D0%B8%D1%8F%2C+%D0%AE%D0%B6%D0%BD%D0%B0%D1%8F+%D0%9E%D1%81%D0%B5%D1%82%D0%B8%D1%8F+%D0%B8+%D0%9F%D1%80%D0%B8%D0%B4%D0%BD%D0%B5%D1%81%D1%82%D1%80%D0%BE%D0%B2%D1%8C%D0%B5+%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D0%BB%D0%B8+%D0%BD%D0%B5%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C+%D0%B4%D1%80%D1%83%D0%B3+%D0%B4%D1%80%D1%83%D0%B3%D0%B0+%D0%B8+%D0%BF%D1%80%D0%B8%D0%B7%D0%B2%D0%B0%D0%BB%D0%B8+%D0%B2%D1%81%D0%B5%D1%85+%D0%BA+%D1%8D%D1%82%D0%BE%D0%BC%D1%83+%D0%B6%D0%B5&rft.pub=newsru.com&rft.date=2006-11-17&rft_id=http%3A%2F%2Fwww.newsru.com%2Frussia%2F17nov2006%2Faup.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4530]:
+                - link "Jump up" [ref=e4532] [cursor=pointer]:
+                  - /url: "#cite_ref-101"
+                  - text: ^
+                - generic [ref=e4533]:
+                  - generic [ref=e4534]:
+                    - link "\"United Nations Interim Administration Mission in Kosovo\"" [ref=e4535] [cursor=pointer]:
+                      - /url: https://www.un.org/en/peacekeeping/missions/unmik/
+                    - text: . UN.
+                    - link "Archived" [ref=e4536] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20141225015010/http://www.un.org/en/peacekeeping/missions/unmik/
+                    - text: from the original on 25 December 2014
+                    - generic [ref=e4537]: . Retrieved 8 January 2015
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=UN&rft.atitle=United+Nations+Interim+Administration+Mission+in+Kosovo&rft_id=https%3A%2F%2Fwww.un.org%2Fen%2Fpeacekeeping%2Fmissions%2Funmik%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4538]:
+                - link "Jump up" [ref=e4540] [cursor=pointer]:
+                  - /url: "#cite_ref-102"
+                  - text: ^
+                - generic [ref=e4541]:
+                  - generic [ref=e4542]:
+                    - link "\"\"Sijera Leone je 18. država koja je povukla priznanje tzv. Kosova\"\"" [ref=e4543] [cursor=pointer]:
+                      - /url: http://www.mfa.gov.rs/sr/index.php/pres-servis/saopstenja/22340--18-k-sl03032020?lang=lat
+                    - text: .
+                    - link "Archived" [ref=e4544] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210130005310/http://www.mfa.gov.rs/sr/index.php/pres-servis/saopstenja/22340--18-k-sl03032020?lang=lat
+                    - text: from the original on 30 January 2021
+                    - generic [ref=e4545]: . Retrieved 27 July 2020
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=%22Sijera+Leone+je+18.+dr%C5%BEava+koja+je+povukla+priznanje+tzv.+Kosova%22&rft_id=http%3A%2F%2Fwww.mfa.gov.rs%2Fsr%2Findex.php%2Fpres-servis%2Fsaopstenja%2F22340--18-k-sl03032020%3Flang%3Dlat&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4546]:
+                - link "Jump up" [ref=e4548] [cursor=pointer]:
+                  - /url: "#cite_ref-103"
+                  - text: ^
+                - generic [ref=e4549]:
+                  - generic [ref=e4550]:
+                    - link "\"Cyprus\"" [ref=e4551] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20210109202203/https://www.cia.gov/the-world-factbook/countries/cyprus/
+                    - text: ", The World Factbook, Central Intelligence Agency, 7 June 2023, archived from"
+                    - link "the original" [ref=e4552] [cursor=pointer]:
+                      - /url: https://www.cia.gov/the-world-factbook/countries/cyprus/
+                    - text: on 9 January 2021
+                    - generic [ref=e4553]: ", retrieved 11 June 2023"
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=The+World+Factbook&rft.atitle=Cyprus&rft.date=2023-06-07&rft_id=https%3A%2F%2Fwww.cia.gov%2Fthe-world-factbook%2Fcountries%2Fcyprus%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4554]:
+                - link "Jump up" [ref=e4556] [cursor=pointer]:
+                  - /url: "#cite_ref-104"
+                  - text: ^
+                - generic [ref=e4557]:
+                  - generic [ref=e4558]:
+                    - link "United Nations General Assembly" [ref=e4559] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/United_Nations_General_Assembly
+                    - text: (21 November 1979).
+                    - link "\"A/RES/34/37 – Question of Western Sahara\"" [ref=e4560] [cursor=pointer]:
+                      - /url: https://documents.un.org/doc/resolution/gen/nr0/376/64/pdf/nr037664.pdf
+                    - text: (PDF).
+                    - link "Archived" [ref=e4561] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20260525193334/https://documents.un.org/doc/resolution/gen/nr0/376/64/pdf/nr037664.pdf
+                    - text: "(PDF) from the original on 25 May 2026. p. 204:"
+                    - generic [ref=e4562]: Recommends to that end that the Frente Popular para la Liberacion de Saguia el-Hamra y de Rio de Oro, the representative of the people of Western Sahara, ...
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=A%2FRES%2F34%2F37+%E2%80%93+Question+of+Western+Sahara&rft.pages=204&rft.date=1979-11-21&rft.au=United+Nations+General+Assembly&rft_id=https%3A%2F%2Fdocuments.un.org%2Fdoc%2Fresolution%2Fgen%2Fnr0%2F376%2F64%2Fpdf%2Fnr037664.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4563]:
+                - link "Jump up" [ref=e4565] [cursor=pointer]:
+                  - /url: "#cite_ref-105"
+                  - text: ^
+                - generic [ref=e4566]:
+                  - generic [ref=e4567]:
+                    - link "United Nations General Assembly" [ref=e4568] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/United_Nations_General_Assembly
+                    - text: (11 November 1980).
+                    - link "\"A/RES/35/19 – Question of Western Sahara\"" [ref=e4569] [cursor=pointer]:
+                      - /url: https://documents.un.org/doc/resolution/gen/nr0/390/38/pdf/nr039038.pdf
+                    - text: (PDF).
+                    - link "Archived" [ref=e4570] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20260108201041/https://documents.un.org/doc/resolution/gen/nr0/390/38/pdf/nr039038.pdf
+                    - text: "(PDF) from the original on 8 January 2026. p. 214:"
+                    - generic [ref=e4571]: Urges, to that end, Morocco and the Frente Popular para la Liberación de Saguia el-Hamra y de Rio de Oro, representative of the people of Western Sahara, to enter into direct negotiations ...
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=A%2FRES%2F35%2F19+%E2%80%93+Question+of+Western+Sahara&rft.pages=214&rft.date=1980-11-11&rft.au=United+Nations+General+Assembly&rft_id=https%3A%2F%2Fdocuments.un.org%2Fdoc%2Fresolution%2Fgen%2Fnr0%2F390%2F38%2Fpdf%2Fnr039038.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4572]:
+                - generic [ref=e4573]:
+                  - text: ^
+                  - link "Jump up to:" [ref=e4574] [cursor=pointer]:
+                    - /url: "#cite_ref-montevideo_106-0"
+                    - generic [ref=e4575]: "Jump up to:"
+                  - link [ref=e4576] [cursor=pointer]:
+                    - /url: "#cite_ref-montevideo_106-1"
+                - generic [ref=e4577]:
+                  - generic [ref=e4578]:
+                    - text: Ker-Lindsay, James (2012).
+                    - 'link "The Foreign Policy of Counter Secession: Preventing the Recognition of Contested States" [ref=e4579] [cursor=pointer]':
+                      - /url: https://books.google.com/books?id=4PwmeRG9QsUC
+                    - text: .
+                    - link "Oxford University Press" [ref=e4580] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Oxford_University_Press
+                    - text: . p. 53.
+                    - link "ISBN" [ref=e4581] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "9780199698394" [ref=e4582] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/9780199698394
+                    - text: .
+                    - link "Archived" [ref=e4583] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20131009041217/http://books.google.com/books?id=4PwmeRG9QsUC
+                    - text: from the original on 9 October 2013
+                    - generic [ref=e4584]: . Retrieved 24 September 2013
+                    - text: ". In addition to the four cases of contested statehood described above, there are three other territories that have unilaterally declared independence and are generally regarded as having met the Montevideo criteria for statehood but have not been recognised by any states: Transnistria, Nagorny Karabakh, and Somaliland."
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Foreign+Policy+of+Counter+Secession%3A+Preventing+the+Recognition+of+Contested+States&rft.pages=53&rft.pub=Oxford+University+Press&rft.date=2012&rft.isbn=9780199698394&rft.aulast=Ker-Lindsay&rft.aufirst=James&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D4PwmeRG9QsUC&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4585]:
+                - link "Jump up" [ref=e4587] [cursor=pointer]:
+                  - /url: "#cite_ref-FailureofStates_107-0"
+                  - text: ^
+                - generic [ref=e4588]:
+                  - generic [ref=e4589]:
+                    - text: Kreuter, Aaron (2010).
+                    - 'link "\"Self-Determination, Sovereignty, and the Failure of States: Somaliland and the Case for Justified Secession\"" [ref=e4590] [cursor=pointer]':
+                      - /url: https://web.archive.org/web/20130927082111/http://minnjil.org/wp-content/uploads/2010/04/kreuterweb-pdf.pdf
+                    - text: (PDF).
+                    - link "Minnesota Journal of International Law" [ref=e4592] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Minnesota_Journal_of_International_Law
+                    - text: . 19 (2).
+                    - link "University of Minnesota Law School" [ref=e4593] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/University_of_Minnesota_Law_School
+                    - text: ": 380–381. Archived from"
+                    - link "the original" [ref=e4594] [cursor=pointer]:
+                      - /url: http://minnjil.org/wp-content/uploads/2010/04/kreuterweb-pdf.pdf
+                    - text: (PDF) on 27 September 2013
+                    - generic [ref=e4595]: . Retrieved 24 September 2013
+                    - text: . Considering each of these factors, Somaliland has a colorable argument that it meets the theoretical requirements of statehood. ... On these bases, Somaliland appears to have a strong claim to statehood.
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Minnesota+Journal+of+International+Law&rft.atitle=Self-Determination%2C+Sovereignty%2C+and+the+Failure+of+States%3A+Somaliland+and+the+Case+for+Justified+Secession&rft.volume=19&rft.issue=2&rft.pages=380-381&rft.date=2010&rft.aulast=Kreuter&rft.aufirst=Aaron&rft_id=http%3A%2F%2Fminnjil.org%2Fwp-content%2Fuploads%2F2010%2F04%2Fkreuterweb-pdf.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4596]:
+                - link "Jump up" [ref=e4598] [cursor=pointer]:
+                  - /url: "#cite_ref-StrangeCase_108-0"
+                  - text: ^
+                - generic [ref=e4599]:
+                  - generic [ref=e4600]:
+                    - text: Arieff, Alexis.
+                    - link "\"de facto Statehood? The Strange Case of Somaliland\"" [ref=e4601] [cursor=pointer]:
+                      - /url: http://yalejournal.org/wp-content/uploads/2011/01/083206arieff.pdf
+                    - text: (PDF).
+                    - link "Yale Journal of International Affairs" [ref=e4603] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Yale_Journal_of_International_Affairs
+                    - text: "(Spring/Summer 2008). International Affairs Council at Yale: 1–79."
+                    - link "Archived" [ref=e4604] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20111213214545/http://yalejournal.org/wp-content/uploads/2011/01/083206arieff.pdf
+                    - text: (PDF) from the original on 13 December 2011
+                    - generic [ref=e4605]: . Retrieved 17 April 2011
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Yale+Journal+of+International+Affairs&rft.atitle=de+facto+Statehood%3F+The+Strange+Case+of+Somaliland&rft.issue=Spring%2FSummer+2008&rft.pages=1-79&rft.aulast=Arieff&rft.aufirst=Alexis&rft_id=http%3A%2F%2Fyalejournal.org%2Fwp-content%2Fuploads%2F2011%2F01%2F083206arieff.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4606]:
+                - link "Jump up" [ref=e4608] [cursor=pointer]:
+                  - /url: "#cite_ref-SomalilandIsraelRecognition_109-0"
+                  - text: ^
+                - generic [ref=e4609]:
+                  - generic [ref=e4610]:
+                    - link "\"Netanyahu announces Israel will recognize Republic of Somaliland\"" [ref=e4611] [cursor=pointer]:
+                      - /url: https://www.ynetnews.com/article/b1fdufhq11g
+                    - text: .
+                    - link "Ynet" [ref=e4613] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Ynet
+                    - text: . 26 December 2025.
+                    - link "Archived" [ref=e4614] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20251226180400/https://www.ynetnews.com/article/b1fdufhq11g
+                    - text: from the original on 26 December 2025
+                    - generic [ref=e4615]: . Retrieved 26 December 2025
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Ynet&rft.atitle=Netanyahu+announces+Israel+will+recognize+Republic+of+Somaliland&rft.date=2025-12-26&rft_id=https%3A%2F%2Fwww.ynetnews.com%2Farticle%2Fb1fdufhq11g&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4616]:
+                - link "Jump up" [ref=e4618] [cursor=pointer]:
+                  - /url: "#cite_ref-Somalilandprofile_110-0"
+                  - text: ^
+                - generic [ref=e4619]:
+                  - generic [ref=e4620]:
+                    - link "\"Somaliland profile\"" [ref=e4621] [cursor=pointer]:
+                      - /url: https://www.bbc.co.uk/news/world-africa-14115069
+                    - text: .
+                    - link "BBC News" [ref=e4623] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/BBC_News
+                    - text: . 14 December 2017.
+                    - link "Archived" [ref=e4624] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20170423054426/http://www.bbc.co.uk/news/world-africa-14115069
+                    - text: from the original on 23 April 2017
+                    - generic [ref=e4625]: . Retrieved 27 January 2018
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=BBC+News&rft.atitle=Somaliland+profile&rft.date=2017-12-14&rft_id=https%3A%2F%2Fwww.bbc.co.uk%2Fnews%2Fworld-africa-14115069&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4626]:
+                - link "Jump up" [ref=e4628] [cursor=pointer]:
+                  - /url: "#cite_ref-111"
+                  - text: ^
+                - generic [ref=e4629]:
+                  - generic [ref=e4630]:
+                    - text: Jansen, Dinah (2009).
+                    - 'link "\"The Conflict between Self-Determination and Territorial Integrity: the South Ossetian Paradigm\"" [ref=e4631] [cursor=pointer]':
+                      - /url: https://es.scribd.com/document/31659924/The-Conflict-between-Self-Determination-and-Territorial-Integrity-The-South-Ossetian-Paradigm
+                    - text: ". Geopolitics Vs. Global Governance: Reinterpreting International Security. Centre for Foreign Policy Studies, University of Dalhousie: 222–242."
+                    - link "ISBN" [ref=e4632] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                    - link "978-1-896440-61-3" [ref=e4633] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-1-896440-61-3
+                    - text: .
+                    - link "Archived" [ref=e4634] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20180819063355/https://es.scribd.com/document/31659924/The-Conflict-between-Self-Determination-and-Territorial-Integrity-The-South-Ossetian-Paradigm
+                    - text: from the original on 19 August 2018
+                    - generic [ref=e4635]: . Retrieved 14 December 2017
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Geopolitics+Vs.+Global+Governance%3A+Reinterpreting+International+Security&rft.atitle=The+Conflict+between+Self-Determination+and+Territorial+Integrity%3A+the+South+Ossetian+Paradigm&rft.pages=222-242&rft.date=2009&rft.isbn=978-1-896440-61-3&rft.au=Jansen%2C+Dinah&rft_id=https%3A%2F%2Fes.scribd.com%2Fdocument%2F31659924%2FThe-Conflict-between-Self-Determination-and-Territorial-Integrity-The-South-Ossetian-Paradigm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4636]:
+                - link "Jump up" [ref=e4638] [cursor=pointer]:
+                  - /url: "#cite_ref-cnnAbSO_112-0"
+                  - text: ^
+                - generic [ref=e4639]:
+                  - generic [ref=e4640]:
+                    - link "\"Russia condemned for recognising rebel regions\"" [ref=e4641] [cursor=pointer]:
+                      - /url: http://www.cnn.com/2008/WORLD/europe/08/26/russia.vote.georgia/index.html
+                    - text: . CNN.com. Cable News Network. 26 August 2008.
+                    - link "Archived" [ref=e4642] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20080829045537/http://www.cnn.com/2008/WORLD/europe/08/26/russia.vote.georgia/index.html
+                    - text: from the original on 29 August 2008
+                    - generic [ref=e4643]: . Retrieved 26 August 2008
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=CNN.com&rft.atitle=Russia+condemned+for+recognising+rebel+regions&rft.date=2008-08-26&rft_id=http%3A%2F%2Fwww.cnn.com%2F2008%2FWORLD%2Feurope%2F08%2F26%2Frussia.vote.georgia%2Findex.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4644]:
+                - link "Jump up" [ref=e4646] [cursor=pointer]:
+                  - /url: "#cite_ref-113"
+                  - text: ^
+                - generic [ref=e4647]:
+                  - generic [ref=e4648]:
+                    - link "\"Ma refers to China as ROC territory in magazine interview\"" [ref=e4649] [cursor=pointer]:
+                      - /url: http://www.taipeitimes.com/News/taiwan/archives/2008/10/08/2003425320
+                    - text: .
+                    - link "Taipei Times" [ref=e4651] [cursor=pointer]:
+                      - /url: https://en.wikipedia.org/wiki/Taipei_Times
+                    - text: . 8 October 2008.
+                    - link "Archived" [ref=e4652] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20090603213128/http://www.taipeitimes.com/News/taiwan/archives/2008/10/08/2003425320
+                    - text: from the original on 3 June 2009
+                    - generic [ref=e4653]: . Retrieved 13 October 2008
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Taipei+Times&rft.atitle=Ma+refers+to+China+as+ROC+territory+in+magazine+interview&rft.date=2008-10-08&rft_id=http%3A%2F%2Fwww.taipeitimes.com%2FNews%2Ftaiwan%2Farchives%2F2008%2F10%2F08%2F2003425320&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4654]:
+                - link "Jump up" [ref=e4656] [cursor=pointer]:
+                  - /url: "#cite_ref-114"
+                  - text: ^
+                - generic [ref=e4657]:
+                  - generic [ref=e4658]:
+                    - link "中華民國國情介紹" [ref=e4659] [cursor=pointer]:
+                      - /url: https://www.ey.gov.tw/state/News_Content3.aspx?n=A88B8E342A02AD0A&s=F1B6AD3B065E43D8
+                    - text: . 2.16.886.101.20003. 22 March 2017.
+                    - link "Archived" [ref=e4660] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20180702041112/https://www.ey.gov.tw/state/News_Content3.aspx?n=A88B8E342A02AD0A&s=F1B6AD3B065E43D8
+                    - text: from the original on 2 July 2018
+                    - generic [ref=e4661]: . Retrieved 20 April 2022
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=2.16.886.101.20003&rft.atitle=%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%9C%8B%E6%83%85%E4%BB%8B%E7%B4%B9&rft.date=2017-03-22&rft_id=https%3A%2F%2Fwww.ey.gov.tw%2Fstate%2FNews_Content3.aspx%3Fn%3DA88B8E342A02AD0A%26s%3DF1B6AD3B065E43D8&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4662]:
+                - link "Jump up" [ref=e4664] [cursor=pointer]:
+                  - /url: "#cite_ref-115"
+                  - text: ^
+                - generic [ref=e4665]:
+                  - generic [ref=e4666]:
+                    - text: van der Wees, Gerrit.
+                    - link "\"Is Taiwan's International Space Expanding or Contracting?\"" [ref=e4667] [cursor=pointer]:
+                      - /url: https://thediplomat.com/2021/12/is-taiwans-international-space-expanding-or-contracting/
+                    - text: . thediplomat.com. The Diplomat.
+                    - link "Archived" [ref=e4668] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20230709172602/https://thediplomat.com/2021/12/is-taiwans-international-space-expanding-or-contracting/
+                    - text: from the original on 9 July 2023
+                    - generic [ref=e4669]: . Retrieved 16 December 2021
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=thediplomat.com&rft.atitle=Is+Taiwan%27s+International+Space+Expanding+or+Contracting%3F&rft.aulast=van+der+Wees&rft.aufirst=Gerrit&rft_id=https%3A%2F%2Fthediplomat.com%2F2021%2F12%2Fis-taiwans-international-space-expanding-or-contracting%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4670]:
+                - link "Jump up" [ref=e4672] [cursor=pointer]:
+                  - /url: "#cite_ref-117"
+                  - text: ^
+                - generic [ref=e4673]:
+                  - generic [ref=e4674]:
+                    - link "\"Transnistria profile – Overview\"" [ref=e4675] [cursor=pointer]:
+                      - /url: https://www.bbc.com/news/world-europe-18286268
+                    - text: . BBC News. 20 November 2022.
+                    - link "Archived" [ref=e4676] [cursor=pointer]:
+                      - /url: https://web.archive.org/web/20230405014442/https://www.bbc.com/news/world-europe-18286268
+                    - text: from the original on 5 April 2023
+                    - generic [ref=e4677]: . Retrieved 11 June 2023
+                    - text: .
+                  - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=BBC+News&rft.atitle=Transnistria+profile+%E2%80%93+Overview&rft.date=2022-11-20&rft_id=https%3A%2F%2Fwww.bbc.com%2Fnews%2Fworld-europe-18286268&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+          - region "Bibliography" [ref=e4678]:
+            - heading "Bibliography" [level=2] [ref=e4680]
+            - list [ref=e4682]:
+              - listitem [ref=e4683]:
+                - generic [ref=e4684]:
+                  - text: "Bissio, Roberto Remo, ed. (1995). The World: A Third World Guide: 1995/96. Montevideo: Instituto del Tercer Mundo."
+                  - link "ISBN" [ref=e4685] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0-85598-291-1" [ref=e4686] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-85598-291-1
+                  - text: .
+                  - link "OCLC" [ref=e4687] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/OCLC_(identifier)
+                  - link "476299738" [ref=e4688] [cursor=pointer]:
+                    - /url: https://search.worldcat.org/oclc/476299738
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+World%3A+A+Third+World+Guide%3A+1995%2F96&rft.place=Montevideo&rft.pub=Instituto+del+Tercer+Mundo&rft.date=1995&rft_id=info%3Aoclcnum%2F476299738&rft.isbn=978-0-85598-291-1&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4689]:
+                - generic [ref=e4690]:
+                  - link "\"Countries or areas, codes and abbreviations\"" [ref=e4691] [cursor=pointer]:
+                    - /url: http://unstats.un.org/unsd/methods/m49/m49alpha.htm
+                  - text: . Statistics Division, United Nations. 1 April 2010.
+                  - link "Archived" [ref=e4692] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20140628144412/http://unstats.un.org/unsd/methods/m49/m49alpha.htm
+                  - text: from the original on 28 June 2014
+                  - generic [ref=e4693]: . Retrieved 19 August 2007
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Countries+or+areas%2C+codes+and+abbreviations&rft.pub=Statistics+Division%2C+United+Nations&rft.date=2010-04-01&rft_id=http%3A%2F%2Funstats.un.org%2Funsd%2Fmethods%2Fm49%2Fm49alpha.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4694]:
+                - generic [ref=e4695]:
+                  - text: Davis, Tim (19 February 2009).
+                  - link "\"World Countries and States List\"" [ref=e4696] [cursor=pointer]:
+                    - /url: http://www.timdavis.com.au/data/
+                  - text: . TimDavis.com.au.
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=TimDavis.com.au&rft.atitle=World+Countries+and+States+List&rft.date=2009-02-19&rft.aulast=Davis&rft.aufirst=Tim&rft_id=http%3A%2F%2Fwww.timdavis.com.au%2Fdata%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4697]:
+                - generic [ref=e4698]:
+                  - link "\"Geographic Names\"" [ref=e4699] [cursor=pointer]:
+                    - /url: https://www.un.org/Depts/Cartographic/english/geoinfo/geoname.pdf
+                  - text: (PDF). Department of Public Information, Cartographic Section, United Nations. 7 September 2000.
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Geographic+Names&rft.pub=Department+of+Public+Information%2C+Cartographic+Section%2C+United+Nations&rft.date=2000-09-07&rft_id=https%3A%2F%2Fwww.un.org%2FDepts%2FCartographic%2Fenglish%2Fgeoinfo%2Fgeoname.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4700]:
+                - generic [ref=e4701]:
+                  - link "\"ISO 3166-1 Country names and code elements\"" [ref=e4702] [cursor=pointer]:
+                    - /url: http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm
+                  - text: . International Organization for Standardization. 2010.
+                  - link "Archived" [ref=e4703] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20131223122703/http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm
+                  - text: from the original on 23 December 2013
+                  - generic [ref=e4704]: . Retrieved 10 September 2011
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=ISO+3166-1+Country+names+and+code+elements&rft.pub=International+Organization+for+Standardization&rft.date=2010&rft_id=http%3A%2F%2Fwww.iso.org%2Fiso%2Fcountry_codes%2Fiso_3166_code_lists%2Fcountry_names_and_code_elements.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4705]:
+                - generic [ref=e4706]:
+                  - link "\"List of countries, territories and currencies\"" [ref=e4707] [cursor=pointer]:
+                    - /url: http://publications.europa.eu/code/en/en-5000500.htm
+                  - text: . Publications Office of the European Union. 4 May 2010.
+                  - link "Archived" [ref=e4708] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20181225012123/http://publications.europa.eu/code/en/en-5000500.htm
+                  - text: from the original on 25 December 2018
+                  - generic [ref=e4709]: . Retrieved 19 August 2007
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=List+of+countries%2C+territories+and+currencies&rft.pub=Publications+Office+of+the+European+Union&rft.date=2010-05-04&rft_id=http%3A%2F%2Fpublications.europa.eu%2Fcode%2Fen%2Fen-5000500.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4710]:
+                - generic [ref=e4711]:
+                  - link "\"The World Factbook\"" [ref=e4712] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20070607060922/https://www.cia.gov/library/publications/the-world-factbook/index.html
+                  - text: ". United States: Central Intelligence Agency. 2010. Archived from"
+                  - link "the original" [ref=e4713] [cursor=pointer]:
+                    - /url: https://www.cia.gov/library/publications/the-world-factbook/index.html
+                  - text: on 7 June 2007.
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=The+World+Factbook&rft.place=United+States&rft.pub=Central+Intelligence+Agency&rft.date=2010&rft_id=https%3A%2F%2Fwww.cia.gov%2Flibrary%2Fpublications%2Fthe-world-factbook%2Findex.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4714]:
+                - generic [ref=e4715]:
+                  - text: World of Information (Firm), and International Chamber of Commerce (2003).
+                  - 'link "Middle East Review 2003/04: The Economic and Business Report" [ref=e4716] [cursor=pointer]':
+                    - /url: https://books.google.com/books?id=NYszJtC66FAC&q=%22official%20name%22%20palestine&pg=PA161
+                  - text: "(27th ed.). London: Kogan Page. p. 161."
+                  - link "ISBN" [ref=e4717] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/ISBN_(identifier)
+                  - link "978-0-7494-4066-4" [ref=e4718] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Special:BookSources/978-0-7494-4066-4
+                  - text: .
+                  - link "OCLC" [ref=e4719] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/OCLC_(identifier)
+                  - link "51992589" [ref=e4720] [cursor=pointer]:
+                    - /url: https://search.worldcat.org/oclc/51992589
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Middle+East+Review+2003%2F04%3A+The+Economic+and+Business+Report&rft.place=London&rft.pages=161&rft.edition=27th&rft.pub=Kogan+Page&rft.date=2003&rft_id=info%3Aoclcnum%2F51992589&rft.isbn=978-0-7494-4066-4&rft.au=World+of+Information+%28Firm%29%2C+and+International+Chamber+of+Commerce&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DNYszJtC66FAC%26q%3D%2522official%2520name%2522%2520palestine%26pg%3DPA161&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+              - listitem [ref=e4721]:
+                - generic [ref=e4722]:
+                  - text: Slayden, Greg.
+                  - link "\"The Countries of the World\"" [ref=e4723] [cursor=pointer]:
+                    - /url: https://peakbagger.com/PBGeog/countries.aspx
+                  - text: . PeakBagger.com.
+                  - link "Archived" [ref=e4724] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20200724064538/https://peakbagger.com/PBGeog/countries.aspx
+                  - text: from the original on 24 July 2020
+                  - generic [ref=e4725]: . Retrieved 24 July 2020
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=PeakBagger.com&rft.atitle=The+Countries+of+the+World&rft.aulast=Slayden&rft.aufirst=Greg&rft_id=https%3A%2F%2Fpeakbagger.com%2FPBGeog%2Fcountries.aspx&rfr_id=info%3Asid%2Fen.wikipedia.org%3AList+of+sovereign+states"
+            - navigation "Earth" [ref=e4726]:
+              - table [ref=e4727]:
+                - rowgroup [ref=e4728]:
+                  - row "[show] v · t · e Earth" [ref=e4729]:
+                    - columnheader "[show] v · t · e Earth" [ref=e4730]:
+                      - button "[show]" [ref=e4731] [cursor=pointer]
+                      - list [ref=e4733]:
+                        - listitem [ref=e4734]:
+                          - link "v" [ref=e4735] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template:Earth
+                          - text: ·
+                        - listitem [ref=e4736]:
+                          - link "t" [ref=e4737] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template_talk:Earth
+                          - text: ·
+                        - listitem [ref=e4738]:
+                          - link "e" [ref=e4739] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Special:EditPage/Template:Earth
+                      - link "Earth" [ref=e4741] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Earth
+                  - row: ·
+                  - row: · · · · · · ·
+                  - row: · · · · ·
+                  - row: · · · · · ·
+                  - row: () · · · · · · · · · · ·
+                  - row: · · · · · · ·
+                  - row: () · · · · · · · ·
+                  - row: · · · · · · · ·
+                  - row: · · · · () · ·
+                  - row: · · · · ·
+                  - row: · · · ·
+                  - row
+            - navigation "List of sovereign states and dependent territories by continent" [ref=e4742]:
+              - table [ref=e4743]:
+                - rowgroup [ref=e4744]:
+                  - row "[show] v · t · e List of sovereign states and dependent territories by continent" [ref=e4745]:
+                    - columnheader "[show] v · t · e List of sovereign states and dependent territories by continent" [ref=e4746]:
+                      - button "[show]" [ref=e4747] [cursor=pointer]
+                      - list [ref=e4749]:
+                        - listitem [ref=e4750]:
+                          - link "v" [ref=e4751] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template:Lists_of_sovereign_states_and_dependent_territories_by_continent
+                          - text: ·
+                        - listitem [ref=e4752]:
+                          - link "t" [ref=e4753] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template_talk:Lists_of_sovereign_states_and_dependent_territories_by_continent
+                          - text: ·
+                        - listitem [ref=e4754]:
+                          - link "e" [ref=e4755] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Special:EditPage/Template:Lists_of_sovereign_states_and_dependent_territories_by_continent
+                      - link "List of sovereign states and dependent territories by continent" [ref=e4757] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_sovereign_states_and_dependent_territories_by_continent
+                  - row: · · · · · ·
+                  - row: ·
+                  - row
+                  - row
+            - navigation "Lists of political entities by century" [ref=e4758]:
+              - table [ref=e4759]:
+                - rowgroup [ref=e4760]:
+                  - row "[show] v · t · e Lists of political entities by century" [ref=e4761]:
+                    - columnheader "[show] v · t · e Lists of political entities by century" [ref=e4762]:
+                      - button "[show]" [ref=e4763] [cursor=pointer]
+                      - list [ref=e4765]:
+                        - listitem [ref=e4766]:
+                          - link "v" [ref=e4767] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template:Lists_of_political_entities_by_century
+                          - text: ·
+                        - listitem [ref=e4768]:
+                          - link "t" [ref=e4769] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template_talk:Lists_of_political_entities_by_century
+                          - text: ·
+                        - listitem [ref=e4770]:
+                          - link "e" [ref=e4771] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Special:EditPage/Template:Lists_of_political_entities_by_century
+                      - link "Lists of political entities by century" [ref=e4773] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/Lists_of_political_entities_by_century
+                  - row: · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
+                  - row: · · · · · · · · · · · · · · · · · · · · · · · ·
+            - navigation "States with limited recognition" [ref=e4774]:
+              - table [ref=e4775]:
+                - rowgroup [ref=e4776]:
+                  - row "[show] v · t · e States with limited recognition" [ref=e4777]:
+                    - columnheader "[show] v · t · e States with limited recognition" [ref=e4778]:
+                      - button "[show]" [ref=e4779] [cursor=pointer]
+                      - list [ref=e4781]:
+                        - listitem [ref=e4782]:
+                          - link "v" [ref=e4783] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template:States_with_limited_recognition
+                          - text: ·
+                        - listitem [ref=e4784]:
+                          - link "t" [ref=e4785] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Template_talk:States_with_limited_recognition
+                          - text: ·
+                        - listitem [ref=e4786]:
+                          - link "e" [ref=e4787] [cursor=pointer]:
+                            - /url: https://en.wikipedia.org/wiki/Special:EditPage/Template:States_with_limited_recognition
+                      - link "States with limited recognition" [ref=e4789] [cursor=pointer]:
+                        - /url: https://en.wikipedia.org/wiki/List_of_states_with_limited_recognition
+                  - row
+                  - row: () · () · ( · ) · () · ( · )
+                  - row: () · ( · · ) · ()
+                  - row: ( · ) · ( · ) · ( · ) · ( · ) · ( · ) · ( · ) ()
+            - navigation "Portals" [ref=e4790]:
+              - generic [ref=e4791]:
+                - link "Portals" [ref=e4792] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/wiki/Wikipedia:Contents/Portals
+                - text: ":"
+              - list [ref=e4793]:
+                - listitem [ref=e4794]:
+                  - link "icon" [ref=e4797] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:P_countries-vector.svg
+                    - img "icon" [ref=e4798]
+                  - link "Countries" [ref=e4799] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Countries
+                - listitem [ref=e4800]:
+                  - img "icon" [ref=e4804]
+                  - link "Geography" [ref=e4805] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Geography
+                - listitem [ref=e4806]:
+                  - link "Lists" [ref=e4810] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Lists
+                - listitem [ref=e4811]:
+                  - link "icon" [ref=e4814] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:A_coloured_voting_box.svg
+                    - img "icon" [ref=e4815]
+                  - link "Politics" [ref=e4816] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:Politics
+                - listitem [ref=e4817]:
+                  - link [ref=e4820] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/File:The_Blue_Marble,_AS17-148-22727.jpg
+                  - link "World" [ref=e4821] [cursor=pointer]:
+                    - /url: https://en.wikipedia.org/wiki/Portal:World
+        - generic [ref=e4823]:
+          - link "Category" [ref=e4824] [cursor=pointer]:
+            - /url: /wiki/Help:Category
+          - text: ":"
+          - list [ref=e4825]:
+            - listitem [ref=e4826]:
+              - link "Lists of countries" [ref=e4827] [cursor=pointer]:
+                - /url: /wiki/Category:Lists_of_countries
+    - contentinfo [ref=e4829]:
+      - list [ref=e4830]:
+        - listitem [ref=e4831]: This page was last edited on 24 September 2026, at 16:24 (UTC).
+        - listitem [ref=e4832]:
+          - text: Page was rendered with
+          - link "Parsoid" [ref=e4833] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/wiki/Special:MyLanguage/Parsoid
+          - text: .
+        - listitem [ref=e4834]:
+          - text: Text is available under the
+          - link "Creative Commons Attribution-ShareAlike 4.0 License" [ref=e4835] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License
+          - text: ; additional terms may apply. By using this site, you agree to the
+          - link "Terms of Use" [ref=e4836] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use
+          - text: and
+          - link "Privacy Policy" [ref=e4837] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+          - text: . Wikipedia® is a registered trademark of the
+          - link "Wikimedia Foundation, Inc." [ref=e4838] [cursor=pointer]:
+            - /url: https://wikimediafoundation.org/
+          - text: ", a non-profit organization."
+      - list:
+        - listitem [ref=e4839]:
+          - link "Privacy policy" [ref=e4840] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+        - listitem [ref=e4841]:
+          - link "About Wikipedia" [ref=e4842] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:About
+        - listitem [ref=e4843]:
+          - link "Disclaimers" [ref=e4844] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:General_disclaimer
+        - listitem [ref=e4845]:
+          - link "Contact Wikipedia" [ref=e4846] [cursor=pointer]:
+            - /url: //en.wikipedia.org/wiki/Wikipedia:Contact_us
+        - listitem [ref=e4847]:
+          - link "Legal & safety contacts" [ref=e4848] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information
+        - listitem [ref=e4849]:
+          - link "Code of Conduct" [ref=e4850] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct
+        - listitem [ref=e4851]:
+          - link "Developers" [ref=e4852] [cursor=pointer]:
+            - /url: https://developer.wikimedia.org
+        - listitem [ref=e4853]:
+          - link "Statistics" [ref=e4854] [cursor=pointer]:
+            - /url: https://stats.wikimedia.org/#/en.wikipedia.org
+        - listitem [ref=e4855]:
+          - link "Cookie statement" [ref=e4856] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement
+        - listitem [ref=e4857]:
+          - link "Mobile view" [ref=e4858] [cursor=pointer]:
+            - /url: //en.wikipedia.org/w/index.php?title=List_of_sovereign_states&mobileaction=toggle_view_mobile
+      - list [ref=e4859]:
+        - listitem [ref=e4860]:
+          - link "Wikimedia Foundation" [ref=e4861] [cursor=pointer]:
+            - /url: https://www.wikimedia.org/
+            - img "Wikimedia Foundation" [ref=e4863]
+        - listitem [ref=e4864]:
+          - link "Powered by MediaWiki" [ref=e4865] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/
+            - img "Powered by MediaWiki" [ref=e4867]
+  - generic [ref=e4868]:
+    - list
+```
+
+# Test source
+
+```ts
+  1  |     import { test, expect } from '@playwright/test';
+  2  | 
+  3  | 
+  4  | 
+  5  |     test("Test1", async ({page})=>{
+  6  | 
+  7  |         await page.goto("https://en.wikipedia.org/wiki/List_of_sovereign_states");
+  8  | 
+  9  |         const country="Afghanistan"
+  10 | 
+> 11 |         await page.locator("#mwbw tbody tr").getByRole("link", {name:country}).click();
+     |                                                                                ^ Error: locator.click: Error: strict mode violation: locator('#mwbw tbody tr').getByRole('link', { name: 'Afghanistan' }) resolved to 2 elements:
+  12 | 
+  13 | 
+  14 | 
+  15 | 
+  16 |     })
+```

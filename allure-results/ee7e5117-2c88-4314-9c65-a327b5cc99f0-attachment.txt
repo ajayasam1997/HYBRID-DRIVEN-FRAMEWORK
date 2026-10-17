@@ -1,0 +1,2 @@
+GET
+https://demo.playwright.dev/api-mocking/api/v1/fruits

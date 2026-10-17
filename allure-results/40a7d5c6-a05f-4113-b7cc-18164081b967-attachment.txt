@@ -1,0 +1,5 @@
+4
+locator('#rows').locator('tr').first().locator('td').first() memory using is locator('#rows').locator('tr').first().locator('td').nth(4)
+locator('#rows').locator('tr').nth(1).locator('td').first() memory using is locator('#rows').locator('tr').nth(1).locator('td').nth(4)
+locator('#rows').locator('tr').nth(2).locator('td').first() memory using is locator('#rows').locator('tr').nth(2).locator('td').nth(4)
+locator('#rows').locator('tr').nth(3).locator('td').first() memory using is locator('#rows').locator('tr').nth(3).locator('td').nth(4)

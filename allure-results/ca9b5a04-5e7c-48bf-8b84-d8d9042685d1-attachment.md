@@ -1,0 +1,112 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: alertTests.spec.js >> alert Tests @alertTests >> clickONNewTab @clickOnNewTab
+- Location: tests\alertTests.spec.js:64:30
+
+# Error details
+
+```
+Error: page.goto: Test ended.
+Call log:
+  - navigating to "https://testautomationpractice.blogspot.com/", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  1  |             import * as urls from "../config/urls.js"
+  2  |             import {chromium} from "@playwright/test";
+  3  |             import {test, expect } from "../fixtures/fixture1.js"
+  4  |             import PlaywrightPractice from "../pages/AutomationNew/PlaywrightPracticePage.js";
+  5  | 
+  6  |             test.describe("alert Tests @alertTests", ()=>{
+  7  |                 test.describe.configure({mode:"parallel", timeout:50000, retries:1})
+  8  |                 test.beforeEach("preTest", async({page})=>{
+  9  | 
+> 10 |                     await page.goto(urls.AUT_URL);
+     |                                ^ Error: page.goto: Test ended.
+  11 | 
+  12 |                 })
+  13 |                 test.afterEach("postTest", async ({page},testInfo)=>{
+  14 | 
+  15 |                     if(testInfo.status!==testInfo.expectedStatus){
+  16 |                         await page.screenshot({path:`screenshots/${testInfo.title}.png`})
+  17 |                     //await page.screenshot({path: `screenshots/${testInfo.title}.png` });
+  18 |                     }})
+  19 | 
+  20 |                         test("promptAlert @promptAlert", async ({playWrightPractice, page})=>{
+  21 | 
+  22 |                             page.on("dialog",async (dialog)=>{
+  23 | 
+  24 |                                 await expect(dialog.type()).toBe("prompt");
+  25 |                                 await expect(dialog.defaultValue()).toContain("Harry Potter");
+  26 |                                 await dialog.accept("Something");
+  27 |                             })
+  28 | 
+  29 |                             await playWrightPractice.clickOnPromptAlert();
+  30 | 
+  31 | 
+  32 |                         })
+  33 | 
+  34 |                         test("confirmation @confirm", async ({playWrightPractice, page})=>{
+  35 | 
+  36 |                             page.on("dialog", async (dialog)=>{
+  37 | 
+  38 |                                 expect(await dialog.type()).toBe("confirm")
+  39 |                                 expect(await dialog.message()).toContain("Press a button!");
+  40 |                                 await dialog.accept();
+  41 |                             })
+  42 |                             await playWrightPractice.clickOnConfirmAlert();
+  43 |                             await expect(page.getByText("You pressed OK!")).toBeVisible();
+  44 | 
+  45 | 
+  46 |                         })
+  47 | 
+  48 |                         test("popupWindow @popUpWindow", async ({playWrightPractice, page})=>{
+  49 | 
+  50 |                         // const browser= await chromium.launch();
+  51 |                         //const context=await browser.newContext();
+  52 |                         // const page1=await context.newPage();
+  53 | 
+  54 |                         //const pagePromise=page.context().waitForEvent("page");
+  55 | 
+  56 |                         await playWrightPractice.clickOnWindowsPopUp();
+  57 | 
+  58 |                         //const page2=await pagePromise;
+  59 | 
+  60 |                         //await page2.waitForLoadState("load");
+  61 | 
+  62 |                         })
+  63 | 
+  64 |                         test.only("clickONNewTab @clickOnNewTab", async ({playWrightPractice, page})=>{
+  65 | 
+  66 |                         // await page.goto("https://playwright.dev/");
+  67 | 
+  68 |                         // const browser= await chromium.launch();
+  69 |                         //const context=await browser.newContext();
+  70 |                         // const page1=await context.newPage();
+  71 | 
+  72 |                         // const pagePromise=page.context().waitForEvent("page");
+  73 | 
+  74 |                         //  await page.getByRole("link", {name:"GitHub"}).and(page.locator(".footer__link-item")).click();
+  75 | 
+  76 |                         await playWrightPractice.clickOnNewTab();
+  77 | 
+  78 |                         //const page2=await pagePromise;
+  79 | 
+  80 |                         //await page2.waitForLoadState("load");
+  81 | 
+  82 |                         })
+  83 | 
+  84 |                 }
+  85 |             )
+  86 | 
+  87 | 
+```

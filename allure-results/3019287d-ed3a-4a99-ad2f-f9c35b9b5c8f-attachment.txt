@@ -1,0 +1,5 @@
+4
+Chrome---0.18 MB/s
+Firefox---0.92 MB/s
+System---0.59 MB/s
+Internet Explorer---0.89 MB/s
