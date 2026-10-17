@@ -28,7 +28,7 @@
 
             //Assert the mock values;
 
-            await expect(page.getByText("ajay")).toBeVisible();
+            await expect(page.getByText("ajayasam")).toBeVisible();
 
 
         })
