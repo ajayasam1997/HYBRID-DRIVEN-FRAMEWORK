@@ -42,7 +42,7 @@
         depositpaid: true,
         bookingdates: {
             checkin: "2026-08-01",
-            checkout: "2026-08-05"
+            checkout: "2026-08-10"
         },
         additionalneeds: "Breakfast"
         };
